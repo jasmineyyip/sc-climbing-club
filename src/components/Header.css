@@ -1,17 +1,19 @@
 .header {
-    width: 100%;
-    max-width: 100vw;
+    max-width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 50px;
+    height: 80px;
+    padding-right: 50px;
+    padding-left: 50px;
     background-color: #fff;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    box-sizing: border-box;
+    border-bottom: 1px solid #E5E5E5;
 }
 
 .logo img {
-    height: 60px;
+    height: 100px;
+    position: relative;
+    transform: translateY(39px);
 }
 
 .nav {
@@ -33,6 +35,7 @@
 }
 
 .socials {
+    width: 140px;
     display: flex;
     gap: 20px;
 }
@@ -45,4 +48,21 @@
 
 .socials a:hover {
     color: #990000;
+}
+
+/* breakpoint for screens smaller than 1000px */
+@media (max-width: 1000px) {
+    .header {
+        padding-right: 30px;
+        padding-left: 30px;
+    }
+    .logo img {
+        height: 80px;
+    }
+    .nav {
+        gap: 30px;
+    }
+    .socials {
+        width: 80px;
+    }
 }

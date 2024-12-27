@@ -15,19 +15,17 @@ const Header = () => {
                 <a href="#">Practice</a>
                 <a href="#">Trips</a>
                 <a href="#">Comp Team</a>
-                <a href="#">DEI Initiatives</a>
-                <a href="#">Info</a>
-                <a href="#">Resources</a>
+                <a href="#">DEI & Resources</a>
             </nav>
 
             <div className="socials">
-                <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.facebook.com/SC.Climbing.Team/" target="_blank" rel="noopener noreferrer">
                     <FontAwesomeIcon icon={faFacebookF} />
                 </a>
-                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.instagram.com/trojanclimbing/" target="_blank" rel="noopener noreferrer">
                     <FontAwesomeIcon icon={faInstagram} />
                 </a>
-                <a href="https://slack.com" target="_blank" rel="noopener noreferrer">
+                <a href="https://scclimbingclub.slack.com/join/shared_invite/zt-2ufleb601-i6GfJqTQ0vcd1A8UPfRvsA#/shared-invite/email" target="_blank" rel="noopener noreferrer">
                     <FontAwesomeIcon icon={faSlack} />
                 </a>
             </div>
