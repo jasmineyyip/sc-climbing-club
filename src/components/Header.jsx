@@ -11,7 +11,8 @@ const Header = () => {
             </div>
 
             <nav className="nav">
-                <a href="#">Our Values</a>
+                <a href="#">Values</a>
+                <a href="#">Become a Member</a>
                 <a href="#">Practice</a>
                 <a href="#">Trips</a>
                 <a href="#">Comp Team</a>

@@ -1,0 +1,315 @@
+.home {
+    justify-content: center;
+    align-items: center;
+    margin: 50px;
+}
+
+.section {
+    text-align: center;
+    padding: 50px 0;
+    margin: auto;
+}
+
+.banner {
+    position: relative;
+    margin: 0 auto;
+    overflow: hidden;
+    max-height: 500px;
+}
+
+.banner-video {
+    margin: auto;
+}
+
+/* .banner img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+} */
+
+.banner-text {
+    bottom: 20px;
+    text-align: center;
+    color: black;
+    font-weight: bold;
+    padding-bottom: 20px;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 40px;
+}
+
+.banner-text h1, p {
+    margin: 0;
+}
+
+.subheading {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 40px;
+}
+
+.section.welcome {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+
+.section.welcome .body {
+    text-align: center;
+    max-width: 800px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.6em;
+    margin: 0;
+}
+
+.button-var1 {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.button-text-var1 {
+    border-radius: 0px;
+    background-color: black;
+    color: white;
+    font-family: 'Gothic A1', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    text-decoration: none;
+    padding: 12px 40px;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.button-text-var1:hover {
+    background-color: black;
+    color: white;
+}
+
+.button-text-var2 {
+    border-radius: 0px;
+    background-color: black;
+    color: white;
+    font-family: 'Gothic A1', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    text-decoration: none;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    width: 100%;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+.button-text-var2:hover {
+    background-color: black;
+    color: white;
+    border-color: black;
+}
+
+/* What do we do? Section */
+.overview {
+    text-align: center;
+    justify-content: center;
+}
+
+.rect-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+    width: fit-content;
+}
+
+.rect {
+    width: 350px;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: center;
+}
+
+.image-container {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80%;
+}
+
+.image-container img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.text-container {
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Gothic A1', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+/* Interactive Map Section */
+.footprints-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    text-align: center;
+}
+
+.footprints-text {
+    max-width: 700px;
+}
+
+.footprints-image {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+}
+
+.footprints p.body {
+    margin: auto;
+    font-size: 16px;
+    line-height: 1.6em;
+    width: 100%;
+}
+
+.map-container {
+    display: flex;
+    margin: 60px auto;
+    width: 90%;
+    height: 500px;
+}
+
+.details-box {
+    width: 300px;
+    height: min-content;
+    border-radius: 10px;
+    padding: 20px;
+    border: 1.5px solid #E5E5E5;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+    background-color: white;
+}
+
+.trip-image {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.trip-info {
+    padding-top: 10px;
+}
+
+.trip-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.trip-name {
+    font-size: 30px;
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+.trip-place {
+    font-family: 'Gothic A1', sans-serif;
+    color: #B0B0B0;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.trip-description {
+    font-size: 16px;
+    color: #333;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    margin: 8px 0;
+}
+
+.map-wrapper {
+    width: 70%;
+    margin-left: 40px;
+    position: relative;
+}
+
+.map-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.location-pin {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    font-size: 24px;
+    transition: color 0.2s ease-in-out;
+}
+
+
+/* Partnerships */
+.section.partnerships {
+    width: 80%;
+    padding-bottom: 100px;
+}
+
+.logos-grid {
+    padding-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    grid-template-rows: repeat(2, 1fr); /* 2 rows */
+    gap: 10px; /* Adjust spacing */
+    max-width: 600px; /* Adjust based on need */
+    margin: auto;
+}
+
+.logo-container img {
+    width: 100%; /* Adjust as needed */
+    transition: filter 0.3s ease-in-out, opacity 0.3s ease-in-out, transform 0.3s ease-in-out; /* Smooth transition effect */
+}
+
+.greyed-out img {
+    filter: grayscale(100%); /* Turns non-hovered images grey */
+    opacity: 0.4; /* Optional: reduce opacity for a faded effect */
+}
+  
+  .logo-container {
+    width: 140px; /* Fixed square size */
+    height: 140px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+  
+  .logo-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }  
+
+.confetti-image {
+    width: 300px;
+    height: 300px;
+    object-fit: contain;
+}
