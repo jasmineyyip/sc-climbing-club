@@ -48,12 +48,12 @@ const overviewItems = [
 ];
 
 const sponsorItems = [
-    cotopaxi,
-    evolv,
-    brightstone, 
-    hitorii,
-    stronghold, 
-    touchstone
+    { logo: cotopaxi, url: "https://www.cotopaxi.com" },
+    { logo: evolv, url: "https://www.evolvsports.com/en-us" },
+    { logo: brightstone, url: "https://brightstoneclimbing.com/" },
+    { logo: hitorii, url: "https://hitorii.com/" },
+    { logo: stronghold, url: "https://strongholdclimb.com/" },
+    { logo: touchstone, url: "https://touchstoneclimbing.com/" }
   ];
 
 // list of trip locations with x, y coordinates
@@ -121,14 +121,6 @@ const HomePage = () => {
         }
         }
     }, [currentText, index, isDeleting]);
-
-    useEffect(() => {
-        const interval = setInterval(() => {
-          setCurrentFontIndex((prevIndex) => (prevIndex + 1) % fontStyles.length);
-        }, 1500); // change font every second
-    
-        return () => clearInterval(interval); // cleanup on unmount
-      }, []);
     
     return (
         <div className="home">
@@ -235,27 +227,30 @@ const HomePage = () => {
                 <div className="footprints-header">
                     <img src={confettiLeft} alt="Left Image" className="confetti-image" />
                     <div className="footprints-text">
-                        <h1 className="subheading">Partnerships</h1>
-                        <p className="body">
+                    <h1 className="subheading">Partnerships</h1>
+                    <p className="body">
                         We partner with local businesses and organizations to enhance the climbing community. Through shared resources, sponsorships, and events, we work together to support our climbers.
-                        </p>
-                        {/* sponsors grid */}
-                        <div className="logos-grid">
-                            {sponsorItems.map((logo, index) => (
-                                <div
-                                    key={index}
-                                    className={`logo-container ${hoveredIndex !== null && hoveredIndex !== index ? "greyed-out" : ""}`}
-                                    onMouseEnter={() => setHoveredIndex(index)}
-                                    onMouseLeave={() => setHoveredIndex(null)}
-                                >
-                                    <img src={logo} alt={`Logo ${index + 1}`} />
-                                </div>
-                            ))}
-                        </div>
+                    </p>
+                    {/* Sponsors Grid */}
+                    <div className="logos-grid">
+                        {sponsorItems.map((sponsor, index) => (
+                        <a 
+                            key={index} 
+                            href={sponsor.url} 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            className={`logo-container ${hoveredIndex !== null && hoveredIndex !== index ? "greyed-out" : ""}`}
+                            onMouseEnter={() => setHoveredIndex(index)}
+                            onMouseLeave={() => setHoveredIndex(null)}
+                        >
+                            <img src={sponsor.logo} alt={`Logo ${index + 1}`} />
+                        </a>
+                        ))}
+                    </div>
                     </div>
                     <img src={confettiRight} alt="Right Image" className="confetti-image" />
                 </div>
-            </div>       
+            </div>   
         </div>
     );
 };

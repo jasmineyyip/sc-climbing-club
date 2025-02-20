@@ -30,20 +30,27 @@
 .banner-text {
     bottom: 20px;
     text-align: center;
-    color: black;
     font-weight: bold;
     padding-bottom: 20px;
     font-family: 'Bebas Neue', sans-serif;
     font-size: 40px;
 }
 
-.banner-text h1, p {
+.banner-text h1 {
     margin: 0;
+    color: #be4031;
+}
+
+.banner-text p {
+    margin: 0;
+    /* color: #e0ded3; */
+    color: #676158;
 }
 
 .subheading {
     font-family: 'Bebas Neue', sans-serif;
     font-size: 40px;
+    color: #be4031;
 }
 
 .section.welcome {
@@ -60,6 +67,7 @@
     font-weight: 400;
     line-height: 1.6em;
     margin: 0;
+    color: #676158;
 }
 
 .button-var1 {

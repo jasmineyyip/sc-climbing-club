@@ -22,7 +22,7 @@
 
 .nav a {
     text-decoration: none;
-    color: #333;
+    color: #676158;
     font-weight: 700;
     font-size: 15px;
     position: relative;
@@ -30,7 +30,7 @@
 }
 
 .nav a:hover {
-    color: #990000;
+    color: #333;
 }
 
 .socials {
@@ -40,13 +40,13 @@
 }
 
 .socials a {
-    color: #333;
+    color: #676158;
     font-size: 20px;
     transition: color 0.3s ease;
 }
 
 .socials a:hover {
-    color: #990000;
+    color: #333;
 }
 
 /* breakpoint for screens smaller than 1000px */
