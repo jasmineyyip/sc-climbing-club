@@ -6,7 +6,7 @@
 
 .footer-wrapper {
     margin: 0;
-    background-color: black;
+    background-color: #12141b;
     height: fit-content;
 }
 
@@ -89,7 +89,7 @@
 
 .liner p {
     margin: 20px;
-    color: white;
+    color: #cecece;
     font-size: 14px;
     font-weight: 600;
 }   

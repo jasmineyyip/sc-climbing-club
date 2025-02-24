@@ -33,6 +33,8 @@ import hitorii from '../assets/sponsors/hitorii.png';
 import stronghold from '../assets/sponsors/stronghold.png';
 import touchstone from '../assets/sponsors/touchstone.png';
 
+import Map from '../components/Map'
+
 // typewriter
 const teamNames = ['Trojans.', 'Beginners.', 'Comp Climbers.', 'Women.', 'Queer Climbers.', 'BIPOC Climbers.', 'International Students.', 'Everyone.'];
 const typingSpeed = 120;
@@ -133,13 +135,13 @@ const HomePage = () => {
                 </p>
                 </div>
             </div>
-            <video width="900" autoPlay loop muted playsInline className="banner-video" style={{ display: 'block' }}>
-                    <source src={bannerVideo} type="video/mp4" />
-                    Your browser does not support the video tag.
-                </video>
+            {/* <video width="900" autoPlay loop muted playsInline className="banner-video" style={{ display: 'block' }}>
+                <source src={bannerVideo} type="video/mp4" />
+                Your browser does not support the video tag.
+            </video> */}
             {/* welcome section */}
             <div className="section welcome">
-                <h1 className="subheading">Welcome to the USC Climbing Team</h1>
+                {/* <h1 className="subheading">Welcome to the USC Climbing Team</h1> */}
                 <p className="body">We are USC's largest student-run climbing club, dedicated to getting Trojans outside and active. Whether you’re an experienced climber or completely new to the sport, we have trips and events for everyone to explore, connect, and challenge themselves beyond the city limits of LA.</p>
                 <div className="button-var1">
                     <a href="https://slack.com" target="_blank" rel="noopener noreferrer" className="button-text-var1">
@@ -171,6 +173,7 @@ const HomePage = () => {
                     </a>
                 </div>
             </div>
+            <Map />
             {/* interactive map section */}
             <div className="section footprints">
                 <div className="footprints-header">
