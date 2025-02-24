@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import './HomePage.css';
 import bannerVideo from '../assets/banner.mp4';
 
@@ -62,7 +62,9 @@ const HomePage = () => {
     const [index, setIndex] = useState(0);
     const [isDeleting, setIsDeleting] = useState(false); // typewriter
     const [hoveredIndex, setHoveredIndex] = useState(null); // sponsorship hover effect
+    const videoRef = useRef(null);
 
+    // auto typer
     useEffect(() => {
         const currentWord = teamNames[index];
         
@@ -87,6 +89,20 @@ const HomePage = () => {
         }
         }
     }, [currentText, index, isDeleting]);
+
+    // video trigger
+    useEffect(() => {
+        const video = videoRef.current;
+    
+        if (video) {
+          const playPromise = video.play();
+          if (playPromise !== undefined) {
+            playPromise.catch((error) => {
+              console.log("Autoplay blocked, user interaction required:", error);
+            });
+          }
+        }
+      }, []);
     
     return (
         <div className="home">
@@ -99,14 +115,23 @@ const HomePage = () => {
                 </p>
                 </div>
             </div>
-            {/* <video width="1000" autoPlay loop muted playsInline className="banner-video" style={{ display: 'block', borderRadius: 20 }}>
-                <source src={bannerVideo} type="video/mp4" />
-                Your browser does not support the video tag.
-            </video> */}
-            <video width="1000" controls autoplay muted loop playsinline style={{ display: 'block', margin: 'auto', borderRadius: 20 }}>
+            <video 
+                ref={videoRef} 
+                id="myVideo" 
+                width="1000" 
+                controls 
+                autoplay 
+                muted 
+                loop 
+                playsinline 
+                style={{ display: 'block', margin: 'auto', borderRadius: 20 }}
+            >
                 <source src="https://firebasestorage.googleapis.com/v0/b/sc-climbing-club.firebasestorage.app/o/banner.mp4?alt=media&token=59ca3831-edac-4a87-8826-542222eb5e84" type="video/mp4" />
                 Your browser does not support the video tag.
             </video>
+            <script>
+                document.getElementById('vid').play();
+            </script>
             {/* welcome section */}
             <div className="section welcome">
                 {/* <h1 className="subheading">Welcome to the USC Climbing Team</h1> */}
