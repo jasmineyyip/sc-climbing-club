@@ -13,13 +13,12 @@ import tripsImg from '../assets/overview/trips.png';
 import compImg from '../assets/overview/comp.png';
 import socialImg from '../assets/overview/social.png';
 import gearImg from '../assets/overview/gear.png';
-// trips
-import redRockImg from '../assets/trips/redrocks.png'
-import bishopImg from '../assets/trips/bishop.jpeg'
-import cdmImg from '../assets/trips/coronadelmar.jpeg'
 // footprints
 import leftFootprint from '../assets/footprint-yellow.png'
 import rightFootprint from '../assets/footprint-red.png'
+// fireworks
+import leftFirework from '../assets/left-firework.png'
+import rightFirework from '../assets/right-firework.png'
 // confetti
 import confettiLeft from '../assets/confetti-left.png'
 import confettiRight from '../assets/confetti-right.png'
@@ -43,8 +42,8 @@ const pauseTime = 2000;
 
 const overviewItems = [
     { img: practiceImg, text: 'Practices twice a week' },
-    { img: tripsImg, text: 'Free trips every weekend' },
-    { img: compImg, text: 'Competitive team' },
+    { img: tripsImg, text: 'Free outdoor trips every weekend' },
+    { img: compImg, text: 'Compete in collegiate' },
     { img: socialImg, text: 'Social events' },
     { img: gearImg, text: 'Gear discounts & Club merch' },
 ];
@@ -58,42 +57,7 @@ const sponsorItems = [
     { logo: touchstone, url: "https://touchstoneclimbing.com/" }
   ];
 
-// list of trip locations with x, y coordinates
-const locations = [
-    { 
-        id: 1, 
-        name: "Red Rock Canyon", 
-        place: "Las Vegas, NV", 
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.", 
-        nickname: "Red Rock", 
-        image: redRockImg,
-        x: 130, 
-        y: 260 
-    },
-    { 
-        id: 2, 
-        name: "Bishop", 
-        place: "Bishop, CA", 
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.", 
-        nickname: "Bishop", 
-        image: bishopImg, 
-        x: 90, 
-        y: 220 
-    },
-    { 
-        id: 3, 
-        name: "Corona Del Mar", 
-        place: "Newport Beach, CA", 
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.", 
-        nickname: "Corona Del Mar", 
-        image: cdmImg, 
-        x: 70, 
-        y: 280 
-    }
-]
-
 const HomePage = () => {
-    const [selectedLocation, setSelectedLocation] = useState(locations[0]); // default location
     const [currentText, setCurrentText] = useState('');
     const [index, setIndex] = useState(0);
     const [isDeleting, setIsDeleting] = useState(false); // typewriter
@@ -135,10 +99,10 @@ const HomePage = () => {
                 </p>
                 </div>
             </div>
-            {/* <video width="900" autoPlay loop muted playsInline className="banner-video" style={{ display: 'block' }}>
+            <video width="1000" autoPlay loop muted playsInline className="banner-video" style={{ display: 'block', borderRadius: 20 }}>
                 <source src={bannerVideo} type="video/mp4" />
                 Your browser does not support the video tag.
-            </video> */}
+            </video>
             {/* welcome section */}
             <div className="section welcome">
                 {/* <h1 className="subheading">Welcome to the USC Climbing Team</h1> */}
@@ -179,7 +143,7 @@ const HomePage = () => {
                     <img src={leftFootprint} alt="Left Image" className="footprints-image" />
                     <div className="footprints-text">
                         <h1 className="subheading">Our Footprints</h1>
-                        <p className="body">
+                        <p className="subtitle">
                             We organize free trips for our members every weekend, exploring new climbing spots and building community. 
                             It’s our way of making climbing accessible and creating shared experiences.
                         </p>
@@ -193,12 +157,26 @@ const HomePage = () => {
                     </a>
                 </div>
             </div>
-            <div className="section partnerships">
+            {/* eboard section */}
+            <div className="section eboard">
+                <div className="eboard-header">
+                    <img src={leftFirework} alt="Left Image" className="firework-image" />
+                    <div className="eboard-text">
+                        <h1 className="subheading">Meet E-board</h1>
+                        <p className="subtitle">
+                        Meet the team behind the USC Climbing Team! Our e-board members work tirelessly to organize practices, plan exciting outdoor trips, and host fun social events that bring our community together.
+                        </p>
+                    </div>
+                    <img src={rightFirework} alt="Right Image" className="firework-image" />
+                </div>
+            </div>
+            {/* sponsor section */}
+            <div className="section sponsors">
                 <div className="footprints-header">
                     <img src={confettiLeft} alt="Left Image" className="confetti-image" />
                     <div className="footprints-text">
-                    <h1 className="subheading">Partnerships</h1>
-                    <p className="body">
+                    <h1 className="subheading">Sponsors</h1>
+                    <p className="subtitle">
                         We partner with local businesses and organizations to enhance the climbing community. Through shared resources, sponsorships, and events, we work together to support our climbers.
                     </p>
                     {/* Sponsors Grid */}

@@ -1,7 +1,6 @@
 .mountain-range {
     width: 100%;
-    position: absolute;
-    transform: translateY(-50px);
+    display: block;
 }
 
 .footer-wrapper {

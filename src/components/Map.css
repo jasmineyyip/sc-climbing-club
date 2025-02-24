@@ -5,7 +5,7 @@ svg.states {
 	display: block;
 	margin: 0 auto;
 }
-path {
+path.state {
 	fill: #eae9e8;
 	stroke: #fff;
 	stroke-width: 1;
@@ -20,23 +20,86 @@ a.state:hover {
 	transition: color 0s;
 }
 
+.map-container {
+    display: flex;
+    margin: 60px auto;
+    width: 90%;
+    height: 520px;
+}
+
+.details-box {
+    width: 320px;
+    height: min-content;
+    border-radius: 10px;
+    padding: 20px;
+    border: 1.5px solid #E5E5E5;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+    background-color: white;
+}
+
+.trip-image {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.trip-info {
+    padding-top: 10px;
+}
+
+.trip-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.trip-name {
+    font-size: 30px;
+    font-family: "Thunder Bold LC", sans-serif;
+    text-transform: uppercase;
+    color: #1e1e21;
+}
+
+.trip-place {
+    color: #B0B0B0;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.trip-description {
+    font-size: 16px;
+    color: #333;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    margin: 8px 0;
+}
+
 /* Map Marker Styling */
 .map-marker {
 	stroke: white;
 	stroke-width: 1px;
 	cursor: pointer;
 	transition: r 0.2s ease-in-out;
-  }
+}
   
-  /* On hover, increase size by adjusting radius (r) instead of scaling */
-  .map-marker:hover {
-	r: 8;
-  }
+/* On hover, increase size by adjusting radius (r) instead of scaling */
+.map-marker:hover {
+	r: 6;
+}
   
-  /* Label Style */
-  .map-label {
+/* Label Style */
+.map-label {
 	font-size: 12px;
 	font-family: Arial, sans-serif;
 	fill: black;
-  }
+}
   

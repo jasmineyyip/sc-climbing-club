@@ -75,7 +75,7 @@
     flex-direction: column;
     text-align: center;
     align-items: center;
-    padding: 10px 0;
+    padding: 60px 0 0 0;
 }
 
 .section.welcome .body {
@@ -131,6 +131,14 @@
     background-color: black;
     color: white;
     border-color: black;
+}
+
+p.subtitle {
+    margin: auto;
+    font-size: 18px;
+    line-height: 1.6em;
+    width: 100%;
+    color: #5c5c5c;
 }
 
 /* What do we do? Section */
@@ -194,7 +202,7 @@
 }
 
 .footprints-text {
-    max-width: 700px;
+    max-width: 800px;
 }
 
 .footprints-image {
@@ -203,89 +211,29 @@
     object-fit: contain;
 }
 
-.footprints p.body {
-    margin: auto;
-    font-size: 18px;
-    line-height: 1.6em;
-    width: 100%;
-    color: #5c5c5c;
-}
-
-.map-container {
+/* E-board */
+.eboard-header {
     display: flex;
-    margin: 60px auto;
-    width: 90%;
-    height: 500px;
-}
-
-.details-box {
-    width: 320px;
-    height: min-content;
-    border-radius: 10px;
-    padding: 20px;
-    border: 1.5px solid #E5E5E5;
-    text-align: left;
-    display: flex;
-    flex-direction: column;
-    margin-top: 40px;
-    background-color: white;
-}
-
-.trip-image {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-    border-radius: 5px;
-}
-
-.trip-info {
-    padding-top: 10px;
-}
-
-.trip-header {
-    display: flex;
-    justify-content: space-between;
     align-items: center;
-    font-size: 18px;
-    font-weight: bold;
+    justify-content: center;
+    gap: 20px;
+    text-align: center;
 }
 
-.trip-name {
-    font-size: 30px;
-    font-family: "Thunder Bold LC", sans-serif;
-    text-transform: uppercase;
-    color: #1e1e21;
+.eboard-text {
+    max-width: 800px;
 }
 
-.trip-place {
-    color: #B0B0B0;
-    font-size: 14px;
-    font-weight: 400;
-}
-
-.trip-description {
-    font-size: 16px;
-    color: #333;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-    margin: 8px 0;
+.firework-image {
+    width: 180px;
+    height: 180px;
+    object-fit: contain;
 }
 
 /* Partnerships */
-.section.partnerships {
+.section.sponsors {
     width: 80%;
     padding-bottom: 100px;
-}
-
-.partnerships p.body {
-    margin: auto;
-    font-size: 18px;
-    line-height: 1.6em;
-    width: 100%;
-    color: #5c5c5c;
 }
 
 .logos-grid {
