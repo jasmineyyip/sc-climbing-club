@@ -99,8 +99,12 @@ const HomePage = () => {
                 </p>
                 </div>
             </div>
-            <video width="1000" autoPlay loop muted playsInline className="banner-video" style={{ display: 'block', borderRadius: 20 }}>
+            {/* <video width="1000" autoPlay loop muted playsInline className="banner-video" style={{ display: 'block', borderRadius: 20 }}>
                 <source src={bannerVideo} type="video/mp4" />
+                Your browser does not support the video tag.
+            </video> */}
+            <video width="1000" controls autoplay muted loop playsinline style={{ display: 'block', margin: 'auto', borderRadius: 20 }}>
+                <source src="https://firebasestorage.googleapis.com/v0/b/sc-climbing-club.firebasestorage.app/o/banner.mp4?alt=media&token=59ca3831-edac-4a87-8826-542222eb5e84" type="video/mp4" />
                 Your browser does not support the video tag.
             </video>
             {/* welcome section */}
