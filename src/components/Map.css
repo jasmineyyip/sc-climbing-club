@@ -4,11 +4,9 @@ svg.states {
 	color: white;
 	display: block;
 	margin: 0 auto;
-	max-width: 1000px;
 }
 path {
-	/* fill: #eae9e8; */
-    fill: currentColor;
+	fill: #eae9e8;
 	stroke: #fff;
 	stroke-width: 1;
 }
@@ -21,3 +19,24 @@ a.state:hover {
 	color: #a00;
 	transition: color 0s;
 }
+
+/* Map Marker Styling */
+.map-marker {
+	stroke: white;
+	stroke-width: 1px;
+	cursor: pointer;
+	transition: r 0.2s ease-in-out;
+  }
+  
+  /* On hover, increase size by adjusting radius (r) instead of scaling */
+  .map-marker:hover {
+	r: 8;
+  }
+  
+  /* Label Style */
+  .map-label {
+	font-size: 12px;
+	font-family: Arial, sans-serif;
+	fill: black;
+  }
+  

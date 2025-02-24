@@ -173,7 +173,6 @@ const HomePage = () => {
                     </a>
                 </div>
             </div>
-            <Map />
             {/* interactive map section */}
             <div className="section footprints">
                 <div className="footprints-header">
@@ -187,39 +186,7 @@ const HomePage = () => {
                     </div>
                     <img src={rightFootprint} alt="Right Image" className="footprints-image" />
                 </div>
-                <div className="map-container">
-                    {/* Left Panel - Detail Box */}
-                    <div className="details-box">
-                        <img src={selectedLocation.image} alt={selectedLocation.name} className="trip-image" />
-                        <div className="trip-info">
-                            <div className="trip-header">
-                                <span className="trip-name">{selectedLocation.name}</span>
-                                <span className="trip-place">{selectedLocation.place}</span>
-                            </div>
-                            <p className="trip-description">{selectedLocation.description}</p>
-                            <button className="button-text-var2">View {selectedLocation.nickname} trips</button>
-                        </div>
-                    </div>
-
-                    {/* Right Panel - Interactive Map */}
-                    <div className="map-wrapper">
-                        <img src={usMap} alt="US Map" className="map-image" />
-                        {locations.map((loc) => (
-                            <div
-                                key={loc.id}
-                                onClick={() => setSelectedLocation(loc)}
-                                className="location-pin"
-                                style={{
-                                    top: `${loc.y}px`,
-                                    left: `${loc.x}px`,
-                                    color: selectedLocation.id === loc.id ? "#990000" : "#FFCC00",
-                                }}
-                            >
-                                <FontAwesomeIcon icon={faLocationDot} />
-                            </div>
-                        ))}
-                    </div>
-                </div>
+                <Map />
                 <div className="button-var1">
                     <a href="https://slack.com" target="_blank" rel="noopener noreferrer" className="button-text-var1">
                         View all trips
