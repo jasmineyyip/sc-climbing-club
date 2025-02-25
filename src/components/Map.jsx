@@ -7,7 +7,7 @@ import redRockImg from '../assets/trips/redrocks.png'
 import bishopImg from '../assets/trips/bishop.jpeg'
 import cdmImg from '../assets/trips/coronadelmar.jpeg'
 import malibuImg from '../assets/trips/malibucreek.png'
-import pointDumeImg from '../assets/trips/pointDume.jpg'
+import pointDumeImg from '../assets/trips/pointdume.jpg'
 
 // list of trip locations with x, y coordinates
 const locations = [
