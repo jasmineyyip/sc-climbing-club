@@ -2,6 +2,7 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMapMarkerAlt, faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import './Trip.css'; // Import CSS file
+import placeholderImage from '../assets/trips/placeholder.png'
 
 const Trip = ({ trip }) => {
   // Ensure climbTypes is an array and filter out empty/null values
@@ -16,13 +17,14 @@ const Trip = ({ trip }) => {
   const displayDate = trip.startDate === trip.endDate 
     ? trip.startDate 
     : `${trip.startDate} - ${trip.endDate}`;
+  
+  // Check if coverPicture exists and is a valid URL
+  const isValidImage = trip.coverPicture && trip.coverPicture.length > 0;
+  const coverImage = isValidImage ? trip.coverPicture : placeholderImage;
 
   return (
     <div className="trip-card">
-      {/* Cover Image */}
-      {trip.coverPicture && trip.coverPicture.length > 0 && (
-        <img src={trip.coverPicture} alt="Trip Cover" className="trip-image" />
-      )}
+      <img src={coverImage} alt="Trip Cover" className="trip-image" />
 
       {/* First Row: Location & Date */}
       <div className="trip-row first">
