@@ -38,9 +38,9 @@ const Trip = ({ trip }) => {
       {/* Second Row: Trip Name & Arrow */}
       <div className="trip-row second">
         <span className="trip-name">{trip.tripName}</span>
-        <a href="#" className="trip-arrow">
+        {/* <a href="#" className="trip-arrow">
           <FontAwesomeIcon icon={faArrowRight} />
-        </a>
+        </a> */}
       </div>
 
       {/* Description */}

@@ -185,7 +185,7 @@ const HomePage = () => {
                 </div>
             </div>
             {/* eboard section */}
-            <div className="section eboard">
+            {/* <div className="section eboard">
                 <div className="eboard-header">
                     <img src={leftFirework} alt="Left Image" className="firework-image" />
                     <div className="eboard-text">
@@ -196,7 +196,7 @@ const HomePage = () => {
                     </div>
                     <img src={rightFirework} alt="Right Image" className="firework-image" />
                 </div>
-            </div>
+            </div> */}
             {/* sponsor section */}
             <div className="section sponsors">
                 <div className="footprints-header">

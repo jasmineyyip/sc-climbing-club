@@ -41,6 +41,7 @@
 
 .filter-row {
     display: flex;
+    padding: 6px 0;
 }
 
 .filter-icon {

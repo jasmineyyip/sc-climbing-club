@@ -33,7 +33,7 @@
     transition: color 0.3s ease;
     margin: auto;
     padding: 0 26px;
-    transition: 0.1xs ease-in-out;
+    transition: all 0.1s ease-in-out;
 }
 
 .nav a:hover {

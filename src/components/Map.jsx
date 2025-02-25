@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "./Map.css";
 
 // trips
@@ -42,6 +43,11 @@ const locations = [
 
 const Map = () => {
   const [selectedLocation, setSelectedLocation] = useState(locations[0]); // default location
+  const navigate = useNavigate();
+
+  const handleNavigate = () => {
+    navigate("/trips", { state: { searchQuery: selectedLocation.nickname } });
+  };
 
   return (
     <div className="map-container">
@@ -54,7 +60,9 @@ const Map = () => {
                   <span className="location-place">{selectedLocation.place}</span>
               </div>
               <p className="location-description">{selectedLocation.description}</p>
-              <button className="button-text-var2">View {selectedLocation.nickname} trips</button>
+              <button className="button-text-var2" onClick={handleNavigate}>
+                  View {selectedLocation.nickname} trips
+              </button>
           </div>
       </div>
 

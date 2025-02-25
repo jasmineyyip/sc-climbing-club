@@ -2,6 +2,7 @@ import './Header.css';
 import logo from '../assets/logo.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebookF, faInstagram, faSlack } from '@fortawesome/free-brands-svg-icons';
+import { faHouse } from '@fortawesome/free-solid-svg-icons';
 
 const Header = () => {
     return (
@@ -11,6 +12,9 @@ const Header = () => {
             </div>
 
             <nav className="nav">
+                <a href="/">
+                    <FontAwesomeIcon icon={faHouse} />
+                </a>
                 <a href="#">values</a>
                 <a href="#">membership</a>
                 <a href="#">practice</a>

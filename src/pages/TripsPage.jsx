@@ -1,6 +1,7 @@
+import { useLocation } from "react-router-dom";
 import React, { useEffect, useState } from "react";
 import { db } from "../firebase";
-import { collection, getDocs, doc, getDoc } from "firebase/firestore";
+import { collection, getDocs } from "firebase/firestore";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Trip from "../components/Trip";
@@ -9,11 +10,18 @@ import { faFilter } from "@fortawesome/free-solid-svg-icons";
 import './TripsPage.css';
 
 const TripsPage = () => {
+  const location = useLocation();
   const [trips, setTrips] = useState([]);
   const [filteredTrips, setFilteredTrips] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedTags, setSelectedTags] = useState([]); // Stores selected filter tags
   const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    if (location.state?.searchQuery) {
+      setSearchTerm(location.state.searchQuery);
+    }
+  }, [location.state]);
 
   useEffect(() => {
     const fetchTrips = async () => {
@@ -110,7 +118,7 @@ const TripsPage = () => {
           className="search-bar"
         />
       </div>
-
+      
       {/* 🎛 Advanced Filter */}
       <div className="filter-container">
           <div className="filter-row">
