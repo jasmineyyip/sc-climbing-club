@@ -10,9 +10,9 @@
 }
 
 .logo img {
-    height: 100px;
+    height: 80px;
     position: relative;
-    transform: translateY(40px);
+    transform: translateY(30px);
 }
 
 .nav {

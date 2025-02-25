@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './homePage.css';
-import bannerVideo from '../assets/banner.mp4';
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 
@@ -20,8 +20,6 @@ import rightFirework from '../assets/right-firework.png'
 // confetti
 import confettiLeft from '../assets/confetti-left.png'
 import confettiRight from '../assets/confetti-right.png'
-// map
-import usMap from '../assets/map/us-map.png';
 // sponsors
 import brightstone from '../assets/sponsors/brightstone.png';
 import cotopaxi from '../assets/sponsors/cotopaxi.png';
@@ -61,6 +59,7 @@ const HomePage = () => {
     const [isDeleting, setIsDeleting] = useState(false); // typewriter
     const [hoveredIndex, setHoveredIndex] = useState(null); // sponsorship hover effect
     const videoRef = useRef(null);
+    const navigate = useNavigate();
 
     // auto typer
     useEffect(() => {
@@ -119,10 +118,10 @@ const HomePage = () => {
                 id="myVideo" 
                 width="1000" 
                 controls 
-                autoplay 
+                autoPlay 
                 muted 
                 loop 
-                playsinline 
+                playsInline 
                 style={{ display: 'block', margin: 'auto', borderRadius: 20 }}
             >
                 <source src="https://firebasestorage.googleapis.com/v0/b/sc-climbing-club.firebasestorage.app/o/banner.mp4?alt=media&token=59ca3831-edac-4a87-8826-542222eb5e84" type="video/mp4" />
@@ -180,9 +179,9 @@ const HomePage = () => {
                 </div>
                 <Map />
                 <div className="button-var1">
-                    <a href="https://slack.com" target="_blank" rel="noopener noreferrer" className="button-text-var1">
+                    <button onClick={() => navigate('/trips')} className="button-text-var1">
                         View all trips
-                    </a>
+                    </button>
                 </div>
             </div>
             {/* eboard section */}
