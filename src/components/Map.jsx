@@ -47,13 +47,13 @@ const Map = () => {
     <div className="map-container">
       {/* Left Panel - Detail Box */}
       <div className="details-box">
-          <img src={selectedLocation.image} alt={selectedLocation.name} className="trip-image" />
-          <div className="trip-info">
-              <div className="trip-header">
-                  <span className="trip-name">{selectedLocation.name}</span>
-                  <span className="trip-place">{selectedLocation.place}</span>
+          <img src={selectedLocation.image} alt={selectedLocation.name} className="location-image" />
+          <div className="location-info">
+              <div className="location-header">
+                  <span className="location-name">{selectedLocation.name}</span>
+                  <span className="location-place">{selectedLocation.place}</span>
               </div>
-              <p className="trip-description">{selectedLocation.description}</p>
+              <p className="location-description">{selectedLocation.description}</p>
               <button className="button-text-var2">View {selectedLocation.nickname} trips</button>
           </div>
       </div>

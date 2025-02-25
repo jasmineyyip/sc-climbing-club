@@ -1,6 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { db } from "../firebase"; // Ensure correct Firebase import
 import { collection, getDocs, doc, getDoc } from "firebase/firestore";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
+import Trip from "../components/Trip"; // Import the Trip component
+import './tripsPage.css';
 
 const TripsPage = () => {
   const [trips, setTrips] = useState([]);
@@ -15,6 +19,10 @@ const TripsPage = () => {
 
         for (const tripDoc of tripsSnapshot.docs) {
           const trip = { id: tripDoc.id, ...tripDoc.data() };
+
+          // ✅ Convert Firestore Timestamps to JS Date Strings
+          trip.startDate = trip.startDate?.toDate().toLocaleDateString("en-US");
+          trip.endDate = trip.endDate?.toDate().toLocaleDateString("en-US");
 
           // Fetch trip leads' details
           const tripLeadsDetails = await Promise.all(
@@ -45,26 +53,21 @@ const TripsPage = () => {
   }
 
   return (
-    <div style={{ padding: "20px" }}>
-      <h2>Trips</h2>
-      {trips.map((trip) => (
-        <div key={trip.id} style={{ borderBottom: "1px solid #ddd", paddingBottom: "10px", marginBottom: "20px" }}>
-          <h3>{trip.tripName}</h3>
-          <p><strong>Location:</strong> {trip.location}</p>
-          <p><strong>Type:</strong> {trip.tripType}</p>
-          <p><strong>Dates:</strong> {trip.startDate.toDate().toDateString()} - {trip.endDate.toDate().toDateString()}</p>
-          <p><strong>Climb Types:</strong> {trip.climbTypes.join(", ")}</p>
-          <h4>Trip Leads:</h4>
-          <div style={{ display: "flex", gap: "10px", flexWrap: "wrap" }}>
-            {trip.tripLeadsDetails.map((lead) => (
-              <div key={lead.id} style={{ textAlign: "center" }}>
-                <img src={lead.headshot} alt={lead.name} style={{ width: "60px", height: "60px", borderRadius: "50%" }} />
-                <p>{lead.name}</p>
-              </div>
-            ))}
+    <div className="trips-container">
+      <Header />
+      <div className="banner">
+          <div className="banner-text">
+          <h1>Trips</h1>
           </div>
-        </div>
-      ))}
+      </div>
+      
+      <div className="trips-list">
+        {trips.map((trip) => (
+          <Trip key={trip.id} trip={trip} />
+        ))}
+      </div>
+
+      <Footer />
     </div>
   );
 };

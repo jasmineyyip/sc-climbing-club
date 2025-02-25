@@ -40,47 +40,47 @@ a.state:hover {
     background-color: white;
 }
 
-.trip-image {
+.location-image {
     width: 100%;
     height: 180px;
     object-fit: cover;
     border-radius: 5px;
 }
 
-.trip-info {
-    padding-top: 10px;
+.location-info {
+    padding-top: 14px;
 }
 
-.trip-header {
+.location-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     font-size: 18px;
-    font-weight: bold;
 }
 
-.trip-name {
-    font-size: 30px;
-    font-family: "Thunder Bold LC", sans-serif;
+.location-name {
+    font-size: 32px;
+    font-family: "Thunder LC", sans-serif;
     text-transform: uppercase;
+    font-weight: 400;
     color: #1e1e21;
 }
 
-.trip-place {
+.location-place {
     color: #B0B0B0;
     font-size: 14px;
     font-weight: 400;
 }
 
-.trip-description {
+.location-description {
     font-size: 16px;
-    color: #333;
+    color: #5c5c5c;
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
-    margin: 8px 0;
+    margin: 6px 0;
 }
 
 /* Map Marker Styling */

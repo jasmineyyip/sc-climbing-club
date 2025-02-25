@@ -13,9 +13,23 @@
 }
 
 @font-face {
-    font-family: 'Thunder Bold LC';
+    font-family: "PP Mori";
+    src: url("../assets/fonts/PPMori-SemiBold.otf") format("opentype");
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Thunder LC';
     src: url('../assets/fonts/Thunder-BoldLC.woff2') format("woff2");
-    font-weight: bold;
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Thunder LC';
+    src: url('../assets/fonts/Thunder-SemiBoldLC.woff2') format("woff2");
+    font-weight: 600;
     font-style: normal;
 }
 
@@ -51,7 +65,7 @@
     margin: 0;
     color: #1e1e21;
     font-size: 160px;
-    font-family: "Thunder Bold LC", sans-serif;
+    font-family: "Thunder LC", sans-serif;
     margin-bottom: -16px;
     text-transform: uppercase;
 }
@@ -64,7 +78,7 @@
 }
 
 .subheading {
-    font-family: "Thunder Bold LC", sans-serif;
+    font-family: "Thunder LC", sans-serif;
     font-size: 50px;
     color: #1e1e21;
     text-transform: uppercase;
@@ -98,7 +112,6 @@
     background-color: #1e1e21;
     color: white;
     font-family: "PP Mori", sans-serif;
-    font-weight: 600;
     font-size: 16px;
     text-decoration: none;
     padding: 12px 40px;

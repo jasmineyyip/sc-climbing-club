@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import './HomePage.css';
+import './homePage.css';
 import bannerVideo from '../assets/banner.mp4';
 import Header from "../components/Header";
 import Footer from "../components/Footer";
