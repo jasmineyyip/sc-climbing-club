@@ -6,6 +6,8 @@ import "./Map.css";
 import redRockImg from '../assets/trips/redrocks.png'
 import bishopImg from '../assets/trips/bishop.jpeg'
 import cdmImg from '../assets/trips/coronadelmar.jpeg'
+import malibuImg from '../assets/trips/malibucreek.png'
+import pointDumeImg from '../assets/trips/pointDume.jpg'
 
 // list of trip locations with x, y coordinates
 const locations = [
@@ -38,6 +40,26 @@ const locations = [
         image: cdmImg, 
         x: 230, 
         y: 360 
+    },
+    { 
+        id: 4, 
+        name: "Malibu Creek", 
+        place: "Malibu, CA", 
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.", 
+        nickname: "Malibu Creek", 
+        image: malibuImg, 
+        x: 214, 
+        y: 336 
+    },
+    { 
+        id: 5, 
+        name: "Point Dume", 
+        place: "Malibu, CA", 
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.", 
+        nickname: "Point Dume", 
+        image: pointDumeImg, 
+        x: 208, 
+        y: 340 
     }
   ]
 

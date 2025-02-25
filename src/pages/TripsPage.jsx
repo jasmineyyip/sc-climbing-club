@@ -37,8 +37,8 @@ const TripsPage = () => {
           trip.startDate = trip.startDate?.toDate().toLocaleDateString("en-US");
           trip.endDate = trip.endDate?.toDate().toLocaleDateString("en-US");
 
-          // Ensure trip title, tripType, and climbTypes are safe values
-          trip.title = trip.title?.toString() || "";
+          // Ensure trip name, tripType, and climbTypes are safe values
+          trip.tripName = trip.tripName?.toString() || "";
           trip.tripType = trip.tripType?.toString() || "";
           trip.climbTypes = Array.isArray(trip.climbTypes) ? trip.climbTypes : [];
 
@@ -68,7 +68,7 @@ const TripsPage = () => {
     if (searchTerm) {
       const keyword = searchTerm.toLowerCase();
       filtered = filtered.filter((trip) =>
-        trip.title.toLowerCase().includes(keyword)
+        trip.tripName.toLowerCase().includes(keyword)
       );
     }
 
