@@ -1,10 +1,8 @@
 import React, { useState, useEffect, useRef } from 'react';
 import './HomePage.css';
 import bannerVideo from '../assets/banner.mp4';
-
-// font awesome
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faLocationDot } from "@fortawesome/free-solid-svg-icons";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
 
 // import images directly
 // overview
@@ -106,6 +104,7 @@ const HomePage = () => {
     
     return (
         <div className="home">
+            <Header />   
             {/* banner section */}
             <div className="banner">
                 <div className="banner-text">
@@ -228,6 +227,7 @@ const HomePage = () => {
                     <img src={confettiRight} alt="Right Image" className="confetti-image" />
                 </div>
             </div>   
+            <Footer />
         </div>
     );
 };

@@ -14,7 +14,7 @@ const Header = () => {
                 <a href="#">values</a>
                 <a href="#">membership</a>
                 <a href="#">practice</a>
-                <a href="#">trips</a>
+                <a href="trips">trips</a>
                 <a href="#">comp team</a>
                 <a href="#">dei & resources</a>
             </nav>

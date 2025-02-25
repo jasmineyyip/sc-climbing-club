@@ -22,7 +22,7 @@
 .home {
     justify-content: center;
     align-items: center;
-    margin: 50px;
+    /* margin: 50px; */
 }
 
 .section {
@@ -193,6 +193,10 @@ p.subtitle {
 }
 
 /* Interactive Map Section */
+.section.footprints {
+    width: 90%;
+}
+
 .footprints-header {
     display: flex;
     align-items: center;
