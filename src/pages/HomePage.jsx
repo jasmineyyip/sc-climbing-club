@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
-import './homePage.css';
+import './HomePage.css';
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 

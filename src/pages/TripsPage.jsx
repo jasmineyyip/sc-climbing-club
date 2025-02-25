@@ -6,7 +6,7 @@ import Footer from "../components/Footer";
 import Trip from "../components/Trip";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFilter } from "@fortawesome/free-solid-svg-icons";
-import "./tripsPage.css";
+import "./TripsPage.css";
 
 const TripsPage = () => {
   const [trips, setTrips] = useState([]);
