@@ -133,7 +133,7 @@ const HomePage = () => {
             {/* welcome section */}
             <div className="section welcome">
                 {/* <h1 className="subheading">Welcome to the USC Climbing Team</h1> */}
-                <p className="body">We are USC's largest student-run climbing club, dedicated to getting Trojans outside and active. Whether you’re an experienced climber or completely new to the sport, we have trips and events for everyone to explore, connect, and challenge themselves beyond the city limits of LA.</p>
+                <p className="body">We are USC’s largest sport club, dedicated to exploring the outdoors and being active in the climbing community. Whether you’re an experienced climber or completely new to the sport, we have outdoor trips and climbing events for everyone to explore, connect, and challenge themselves!</p>
                 <div className="button-var1">
                     <a href="https://slack.com" target="_blank" rel="noopener noreferrer" className="button-text-var1">
                         Become a Member
