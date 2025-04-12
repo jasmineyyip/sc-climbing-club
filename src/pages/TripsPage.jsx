@@ -14,7 +14,7 @@ const TripsPage = () => {
   const [trips, setTrips] = useState([]);
   const [filteredTrips, setFilteredTrips] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
-  const [selectedTags, setSelectedTags] = useState([]); // Stores selected filter tags
+  const [selectedTags, setSelectedTags] = useState([]); // Stores selected filter tags 
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {

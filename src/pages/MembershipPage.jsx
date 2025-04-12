@@ -62,7 +62,7 @@ const MembershipPage = () => {
     <div className="home">
       <Header />
       <h1 className='subheading big'>Membership</h1>
-      <div className="section perks-section">
+      <div className="perks-section">
         <div className="perks-container">
           {/* Left Side */}
           <div className="perks-detail">
@@ -153,6 +153,7 @@ const MembershipPage = () => {
             <div className="step-header">
               <div className="step-number">3</div>
               <div className="step-info">
+                <span className="step-tag">For practice</span>
                 <div className="step-title">Get Gym Access</div>
               </div>
             </div>

@@ -1,5 +1,5 @@
 .section {
-    padding: 0px 20px;
+    padding: 80px 0;
     text-align: center;
 }
   
@@ -19,7 +19,7 @@
   /* Tiny Cards (Join USC Climbing) */
   .perks-container {
     background-color: white;
-    width: 70%;
+    width: 1000px;
     margin: auto;
     display: flex;
     justify-content: space-between;
@@ -27,6 +27,8 @@
     flex-wrap: wrap;
     margin-top: 2rem;
     padding: 20px;
+    border-radius: 10px;
+    border: 1.5px solid #E5E5E5;
   }
   
   .perks-detail {
@@ -92,21 +94,28 @@
   }
   
   .tiny-card.selected {
-    background-color: #c00;
+    background-color: #1e1e21;
     color: white;
   }  
   
   /* Step Cards */
+  .card-grid.step-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: flex-start;
+    width: calc(3 * 340px + 2 * 20px);
+    margin: auto;
+    margin-bottom: 100px;
+  }
+
   .step-card {
-    width: 300px;
+    width: 340px;
     background-color: #ffffff;
     border: 1.5px solid #E5E5E5;
     text-align: left;
     padding: 20px;
     border-radius: 10px;
-    flex-grow: 1;
-    max-width: 30%;
-    min-width: 260px;
     box-sizing: border-box;
   }
   
@@ -133,9 +142,10 @@
     right: 0;
     font-size: 12px;
     color: #ffffff;
-    background-color: black;
-    border-radius: 8px;
-    padding: 6px 10px;
+    color: #1e1e21;
+    background-color: #FFCC02;
+    border-radius: 6px;
+    padding: 4px 8px 3px 8px;
   }
   
   .step-title {
@@ -159,19 +169,24 @@
   }
   
   /* Responsive */
-  @media (max-width: 1024px) {
-    .step-card {
-      max-width: 45%;
+  @media (max-width: 1000px) {
+    .perks-container {
+      width: min-content;
+    }
+    .perks-detail {
+      display: none;
+    }
+    .tiny-card {
+      color: #ffffff;
+      background-color: #1e1e21;
+    }
+    .card-grid.step-cards {
+      max-width: calc(2 * 340px + 1 * 20px);
     }
   }
   
-  @media (max-width: 768px) {
-    .step-card,
-    .tiny-card {
-      max-width: 90%;
+  @media (max-width: 768px) {  
+    .card-grid.step-cards {
+      max-width: calc(1 * 323px);
     }
-  
-    .card-grid {
-      justify-content: center;
-    }
-  }  
+  } 
