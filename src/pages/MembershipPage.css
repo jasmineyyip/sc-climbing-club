@@ -1,35 +1,100 @@
 .section {
-    padding: 40px 20px;
+    padding: 0px 20px;
     text-align: center;
-  }
+}
   
-  .subheading {
-    font-size: 32px;
-    margin-bottom: 30px;
-  }
+.subheading.big {
+    text-align: center;
+    font-size: 160px;
+    margin: 80px 0 -16px 0;
+}
   
-  .card-grid {
+.card-grid {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
-  }
+}
   
   /* Tiny Cards (Join USC Climbing) */
-  .tiny-card {
-    width: 150px;
-    text-align: center;
-    padding: 15px;
-    border-radius: 10px;
-    background-color: #f6f6f6;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  .perks-container {
+    background-color: white;
+    width: 70%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+    padding: 20px;
   }
   
-  .tiny-card-logo {
-    width: 40px;
-    height: 40px;
-    margin-bottom: 10px;
+  .perks-detail {
+    width: 45%;
+    padding-right: 2rem;
+    text-align: left;
   }
+
+  .perks-detail h3 {
+    font-size: 16px;
+  }
+  
+  .perks-detail h2 {
+    font-size: 24px;
+  }
+  
+  .perk-desc {
+    margin-top: 1rem;
+    font-size: 1rem;
+    color: #444;
+  }
+  
+  .perk-nav-buttons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+
+  .perk-nav-buttons button {
+    outline: none;
+    box-shadow: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .perk-nav-buttons button:focus,
+  .perk-nav-buttons button:focus-visible,
+  .perk-nav-buttons button:hover {
+    outline: none;
+    box-shadow: none;
+  }
+  
+  .perk-nav-buttons button:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+  }
+  
+  .perks-grid {
+    width: 50%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+  
+  .tiny-card {
+    height: 120px;
+    width: 120px;
+    padding: 1rem;
+    background-color: #f4f3ee;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .tiny-card.selected {
+    background-color: #c00;
+    color: white;
+  }  
   
   /* Step Cards */
   .step-card {
@@ -52,9 +117,9 @@
   }
   
   .step-number {
-    font-size: 36px;
+    font-size: 80px;
     font-weight: bold;
-    color: #a80000;
+    font-family: "Thunder LC", sans-serif;
     margin-right: 15px;
   }
   

@@ -1,19 +1,21 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import './MembershipPage.css';
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCampground, faAward, faTags, faMoneyBillWave, faToolbox, faPeopleGroup, faShirt, faTrophy, faHandshakeAngle, faHeart } from '@fortawesome/free-solid-svg-icons';
+
 const joinItems = [
-  { text: 'FREE outdoor trips every weekend', img: 'your_logo1.png' },
-  { text: 'Monthly scholarships', img: 'your_logo2.png' },
-  { text: 'Gear discounts from sponsors', img: 'your_logo3.png' },
-  { text: 'Refunded $50 Cliffs of Id initiation fee', img: 'your_logo4.png' },
-  { text: 'Gear lending program', img: 'your_logo5.png' },
-  { text: 'Social events: mixers, bonfires, etc.', img: 'your_logo6.png' },
-  { text: 'Free team gear and merch', img: 'your_logo7.png' },
-  { text: 'Competition team', img: 'your_logo8.png' },
-  { text: 'Affinity groups (POC, womxn, queer)', img: 'your_logo9.png' },
-  { text: 'Amazing, swole-loving community!', img: 'your_logo10.png' },
+  { text: 'FREE outdoor trips every weekend', icon: faCampground, desc: 'Every weekend, we head outdoors to climb, hike, and connect with nature — all for free!' },
+  { text: 'Monthly scholarships', icon: faAward, desc: 'Members can apply for exclusive monthly climbing-related scholarships.' },
+  { text: 'Gear discounts from sponsors', icon: faTags, desc: 'Save on gear from our climbing sponsors with exclusive discount codes.' },
+  { text: 'Refunded $50 Cliffs of Id initiation fee', icon: faMoneyBillWave, desc: 'We cover your $50 initiation fee when you sign up for Touchstone.' },
+  { text: 'Gear lending program', icon: faToolbox, desc: 'Need gear for a trip? Borrow from our lending library at no cost.' },
+  { text: 'Social events: mixers, bonfires, etc.', icon: faPeopleGroup, desc: 'Join community mixers, bonfires, and themed social nights year-round.' },
+  { text: 'Free team gear and merch', icon: faShirt, desc: 'Get free USC Climbing merch including shirts, stickers, and more!' },
+  { text: 'Competition team', icon: faTrophy, desc: 'Join our comp team to represent USC and climb with fellow crushers.' },
+  { text: 'Affinity groups (POC, womxn, queer)', icon: faHandshakeAngle, desc: 'Find your community through inclusive affinity groups and events.' },
 ];
 
 const steps = [
@@ -44,19 +46,48 @@ const steps = [
 ];
 
 const MembershipPage = () => {
+  const [selectedIndex, setSelectedIndex] = useState(0);
   return (
     <div className="home">
       <Header />
+      <h1 className='subheading big'>Membership</h1>
+      <div className="section perks-section">
+        <div className="perks-container">
+          {/* Left Side */}
+          <div className="perks-detail">
+            <h3>PERKS</h3>
+            <h2>{joinItems[selectedIndex].text}</h2>
+            <p className="perk-desc">{joinItems[selectedIndex].desc}</p>
 
-      <div className="section">
-        <h1 className="subheading">Join USC Climbing!</h1>
-        <div className="card-grid small-cards">
-          {joinItems.map((item, index) => (
-            <div className="tiny-card" key={index}>
-              <img src={item.img} alt={item.text} className="tiny-card-logo" />
-              <p>{item.text}</p>
+            <div className="perk-nav-buttons">
+              <button 
+                disabled={selectedIndex === 0} 
+                onClick={() => setSelectedIndex(selectedIndex - 1)}
+              >
+                ←
+              </button>
+              <button 
+                disabled={selectedIndex === joinItems.length - 1} 
+                onClick={() => setSelectedIndex(selectedIndex + 1)}
+              >
+                →
+              </button>
             </div>
-          ))}
+          </div>
+
+          {/* Right Side */}
+          <div className="perks-grid">
+            {joinItems.map((item, index) => (
+              <div 
+                key={index}
+                className={`tiny-card ${index === selectedIndex ? 'selected' : ''}`}
+                onClick={() => setSelectedIndex(index)}
+              >
+                <FontAwesomeIcon icon={item.icon} size="2x" />
+                <p>{item.text}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
 
