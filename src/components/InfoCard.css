@@ -1,0 +1,58 @@
+.info-card-link {
+    text-decoration: none;
+    display: block;
+  }
+  
+  .info-card {
+    width: 100%;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    transition: transform 0.1s ease-in-out, box-shadow 0.1s ease-in-out;
+  }
+  
+  /* .info-card:hover {
+    transform: translateY(-2px);
+    cursor: pointer;
+  } */
+  
+  .info-top-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: bold;
+  }
+  
+  .info-left {
+    display: flex;
+    align-items: center;
+  }
+  
+  .info-logo {
+    width: 22px;
+    height: 22px;
+    object-fit: contain;
+    margin-right: 6px; /* smaller gap */
+  }
+  
+  .info-name {
+    font-size: 16px;
+    margin-left: 5px;
+    color: black;
+  }
+  
+  .info-handle {
+    font-size: 16px;
+    white-space: nowrap;
+  }  
+  
+  .info-supplementary {
+    font-weight: normal;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 14px;
+    text-align: left;
+    color: black;
+  }  
