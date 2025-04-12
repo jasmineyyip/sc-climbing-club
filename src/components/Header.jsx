@@ -16,7 +16,7 @@ const Header = () => {
                     <FontAwesomeIcon icon={faHouse} />
                 </a>
                 <a href="#">values</a>
-                <a href="#">membership</a>
+                <a href="membership">membership</a>
                 <a href="#">practice</a>
                 <a href="trips">trips</a>
                 <a href="#">comp team</a>
