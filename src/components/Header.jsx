@@ -20,7 +20,7 @@ const Header = () => {
                 <a href="#">practice</a>
                 <a href="trips">trips</a>
                 <a href="#">comp team</a>
-                <a href="#">dei & resources</a>
+                <a href="#">resources</a>
             </nav>
 
             <div className="socials">
