@@ -18,15 +18,15 @@ import cliffsLogo from '../assets/socials/cliffs_logo.png';
 import logo from '../assets/logo.png';
 
 const joinItems = [
-  { text: 'FREE outdoor trips every weekend', icon: faCampground, desc: 'Every weekend, we head outdoors to climb, hike, and connect with nature — all for free!' },
-  { text: 'Monthly scholarships', icon: faAward, desc: 'Members can apply for exclusive monthly climbing-related scholarships.' },
-  { text: 'Gear discounts from sponsors', icon: faTags, desc: 'Save on gear from our climbing sponsors with exclusive discount codes.' },
-  { text: 'Refunded $50 Cliffs of Id initiation fee', icon: faMoneyBillWave, desc: 'We cover your $50 initiation fee when you sign up for Touchstone.' },
-  { text: 'Gear lending program', icon: faToolbox, desc: 'Need gear for a trip? Borrow from our lending library at no cost.' },
-  { text: 'Social events: mixers, bonfires, etc.', icon: faPeopleGroup, desc: 'Join community mixers, bonfires, and themed social nights year-round.' },
-  { text: 'Free team gear and merch', icon: faShirt, desc: 'Get free USC Climbing merch including shirts, stickers, and more!' },
+  { text: 'FREE outdoor trips every weekend', icon: faCampground, desc: 'We organize free outdoor trips every weekend - from local LA crags all the way to Nevada, Utah, and Arizona!' },
+  { text: 'Monthly scholarships', icon: faAward, desc: 'We offer monthly scholarships to help reduce the barrier to access to climbing' },
+  { text: 'Gear discounts from sponsors', icon: faTags, desc: 'Gear discounts from our sponsors (often free and highly discounted!)' },
+  { text: 'Refunded $50 Cliffs of Id initiation fee', icon: faMoneyBillWave, desc: 'We refund the $50 initiation fee at Cliffs of Id, the gym we train at! It’s cheaper to pay our $30 dues and get the initiation fee waived than to go to Cliffs on your own!' },
+  { text: 'Gear lending program', icon: faToolbox, desc: 'Need gear for a trip? Borrow from us at no cost.' },
+  { text: 'Social events: mixers, bonfires, etc.', icon: faPeopleGroup, desc: 'We organize social events throughout the semester - mixers, formals, bonfires, etc.' },
+  { text: 'Free team gear and merch', icon: faShirt, desc: 'Get free USC Climbing merch including t-shirts, stickers, and more!' },
   { text: 'Competition team', icon: faTrophy, desc: 'Join our comp team to represent USC and climb with fellow crushers.' },
-  { text: 'Affinity groups (POC, womxn, queer)', icon: faHandshakeAngle, desc: 'Find your community through inclusive affinity groups and events.' },
+  { text: 'Affinity groups (POC, womxn, queer)', icon: faHandshakeAngle, desc: 'Find your community through affinity groups for underrepresented communities, such as POC, womxn, queer, and international climbers.' },
 ];
 
 const steps = [
