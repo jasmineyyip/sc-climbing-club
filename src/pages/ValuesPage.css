@@ -1,0 +1,70 @@
+.banner-text {
+    position: absolute;
+    bottom: 30px;
+    width: 100%;
+    text-align: center;
+}
+
+.banner-text h1 {
+    margin: 0;
+    color: white;
+    font-size: 160px;
+    font-family: "Thunder LC", sans-serif;
+    margin-bottom: -16px;
+    text-transform: uppercase;
+}
+
+.value-section {
+    padding: 50px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.value-container {
+    width: 70%;
+}
+
+.value-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.value-content.reverse {
+    flex-direction: row-reverse;
+}
+
+.value-image {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 8px;
+}
+
+.value-text {
+    flex: 1;
+    min-width: 300px;
+}
+
+.value-text h2 {
+    font-family: "Thunder LC", sans-serif;
+    margin-bottom: 10px;
+    font-size: 50px;
+    color: #1e1e21;
+    text-transform: uppercase;
+}
+
+.value-text p {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+
+    .value-content,
+    .value-content.reverse {
+        flex-direction: column;
+    }
+}

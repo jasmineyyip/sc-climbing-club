@@ -1,0 +1,89 @@
+import React from 'react';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
+import valueBanner from '../assets/banners/valuesbanner.png';
+import value1 from '../assets/values/value-1.png';
+import value2 from '../assets/values/value-2.png';
+import value3 from '../assets/values/value-3.png';
+import './ValuesPage.css'; // Create this CSS file accordingly
+
+const ValuesPage = () => {
+    return (
+        <>
+            <Header />
+            {/* Banner Section */}
+            <div className="banner-section" style={{ padding: '50px 100px' }}>
+                <div className="banner-image" style={{ position: 'relative' }}>
+                    <img
+                        src={valueBanner}
+                        alt="Our Values"
+                        style={{ width: '100%', height: 'auto', borderRadius: '0px' }}
+                    />
+                    <div className="banner-text">
+                        <h1>Our Values</h1>
+                    </div>
+                </div>
+            </div>
+
+            {/* Section 1 */}
+            <div className="value-section">
+                <div className="value-container">
+                    <div className="value-content">
+                        <img src={value1} alt="Who we are" className="value-image" />
+                        <div className="value-text">
+                            <h2>Who we are</h2>
+                            <p>
+                                We are a group of USC students who want to get strong together and
+                                uplift each other in such an amazing sport! Whether you have never
+                                climbed before, have tried climbing a couple times, or are a regular
+                                to the gym, we are the place for you! Come join us on amazing trips,
+                                practices, and climbing events filled with amazing people and an
+                                encouraging space :)
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {/* Section 2 */}
+            <div className="value-section">
+                <div className="value-container">
+                    <div className="value-content reverse">
+                        <img src={value2} alt="Community" className="value-image" />
+                        <div className="value-text">
+                            <h2>Community</h2>
+                            <p>
+                                Our club is truly for everyone! Attendance to practices and trips are
+                                not mandatory (but encouraged) - truly immerse yourself in the club
+                                as little or as much as you’d like.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {/* Section 3 */}
+            <div className="value-section">
+                <div className="value-container">
+                    <div className="value-content">
+                        <img src={value3} alt="Embrace The Challenge" className="value-image" />
+                        <div className="value-text">
+                            <h2>Embrace The Challenge</h2>
+                            <p>
+                                We are a club that thrives off of a challenge. Whether that be through
+                                solving the mental puzzle of the crux of a V5 at Cliffs, or committing
+                                to a scary dyno on ropes outdoors, we love to conquer the move. We
+                                come together to encourage learning and enjoyment, and truly embrace
+                                the wonderful nature around us.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <Footer />
+        </>
+    );
+};
+
+export default ValuesPage;
