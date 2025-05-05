@@ -3,6 +3,7 @@ import logo from '../assets/logo.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebookF, faInstagram, faSlack } from '@fortawesome/free-brands-svg-icons';
 import { faHouse } from '@fortawesome/free-solid-svg-icons';
+import { NavLink } from 'react-router-dom';
 
 const Header = () => {
     return (
@@ -12,15 +13,15 @@ const Header = () => {
             </div>
 
             <nav className="nav">
-                <a href="/">
+                <NavLink to="/" end className={({ isActive }) => isActive ? "active" : ""}>
                     <FontAwesomeIcon icon={faHouse} />
-                </a>
-                <a href="#">values</a>
-                <a href="membership">membership</a>
-                <a href="#">practice</a>
-                <a href="trips">trips</a>
-                <a href="#">comp team</a>
-                <a href="#">resources</a>
+                </NavLink>
+                <NavLink to="/values" className={({ isActive }) => isActive ? "active" : ""}>values</NavLink>
+                <NavLink to="/membership" className={({ isActive }) => isActive ? "active" : ""}>membership</NavLink>
+                <NavLink to="/practice" className={({ isActive }) => isActive ? "active" : ""}>practice</NavLink>
+                <NavLink to="/trips" className={({ isActive }) => isActive ? "active" : ""}>trips</NavLink>
+                <NavLink to="/comp-team" className={({ isActive }) => isActive ? "active" : ""}>comp team</NavLink>
+                <NavLink to="/resources" className={({ isActive }) => isActive ? "active" : ""}>resources</NavLink>
             </nav>
 
             <div className="socials">
