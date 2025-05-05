@@ -1,6 +1,7 @@
 /* subheadings (h2) */
 .value-text h2,
 .dei-intro-text h2,
+.scholarships-intro-text h2,
 .scholarships-text h2 {
     font-family: "Thunder LC", sans-serif;
     margin-bottom: 10px;
@@ -9,7 +10,6 @@
     text-transform: uppercase;
     text-align: center;
 }
-
 
 .banner-text {
     position: absolute;
@@ -50,9 +50,11 @@
 }
 
 .value-image {
+    display: block;
     width: 100%;
     max-width: 400px;
     border-radius: 8px;
+    margin: 0 auto;
 }
 
 .value-text {
@@ -67,11 +69,12 @@
 
 /* dei section */
 .dei-section {
-    width: 70%;
     margin: auto;
 }
 
 .dei-intro {
+    width: 70%;
+    margin: auto;
     padding-bottom: 100px;
 }
 
@@ -79,8 +82,9 @@
 .aff-groups {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: flex-start;
     margin-top: 40px;
+    gap: 10px;
 }
 
 .aff-group-card {
@@ -121,15 +125,72 @@
     text-decoration: underline;
 }
 
-.scholarships-text {
+.scholarships-intro-text {
+    margin: auto;
+    width: 70%;
     padding-bottom: 50px;
 }
 
-/* Mobile responsive */
-@media (max-width: 768px) {
+.card-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
 
+/* Mobile responsive */
+@media (max-width: 1400px) {
+    .aff-groups {
+        max-width: calc(3 * 241px + 2 * 10px);
+        margin: auto;
+    }
+}
+
+@media (max-width: 1061px) {
+    .banner-text h1 {
+        font-size: 120px;
+    }
+
+    .aff-groups {
+        max-width: calc(2 * 241px + 1 * 10px);
+    }
+}
+
+@media (max-width: 768px) {
+    .banner-text h1 {
+        font-size: 90px;
+    }
+    
     .value-content,
     .value-content.reverse {
+        gap: 0px;
         flex-direction: column;
+    }
+}
+
+@media (max-width: 703px) {
+    .aff-groups {
+        max-width: calc(241px);
+    }
+}
+
+@media (max-width: 530px) {
+    .banner-text {
+        bottom: 10px;
+    }
+
+    .banner-text h1 {
+        font-size: 60px;
+    }
+
+    .value-container,
+    .dei-section,
+    .dei-intro,
+    .scholarships-intro-text {
+        width: 90%;
+    }
+
+    .value-content {
+        gap: 0;
     }
 }
