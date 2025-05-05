@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './Header.css';
-import logo from '../assets/logo.png';
+import logo from '../assets/logo-notext.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faInstagram, faSlack } from '@fortawesome/free-brands-svg-icons';
 import { faBars, faXmark, faHouse } from '@fortawesome/free-solid-svg-icons';
