@@ -4,7 +4,7 @@
     justify-content: space-between;
     align-items: center;
     height: 80px;
-    padding-right: 50px;
+    padding-right: 0px;
     padding-left: 50px;
     background-color: #f5f3ef;
 }
@@ -20,8 +20,8 @@
     height: 48px;
     border-radius: 30px;
     background-color: #e1e1df;
-    margin-top: 20px;
     padding: 0 4px;
+    margin: 20px 40px 0;
 }
 
 .nav a {
@@ -68,22 +68,71 @@
     color: #1e1e21;
 }
 
-/* breakpoint for screens smaller than 1000px */
+/* Hide desktop nav and show hamburger on small screens */
+.hamburger {
+    display: none;
+    font-size: 28px;
+    padding-top: 20px;
+    color: #1e1e21;
+    cursor: pointer;
+    z-index: 999;
+}
+
 @media (max-width: 1000px) {
+    .desktop-nav {
+        display: none;
+    }
+
     .header {
-        padding-right: 30px;
-        padding-left: 30px;
+        padding-right: 50px;
     }
 
-    .logo img {
-        height: 80px;
-    }
-
-    .nav {
-        gap: 30px;
+    .hamburger {
+        display: block;
     }
 
     .socials {
-        width: 80px;
+        display: none;
     }
+}
+
+/* Mobile slide-in panel */
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 60vw;
+    height: 100vh;
+    background-color: #1e1e20;
+    color: #f4f3ee;
+    display: flex;
+    flex-direction: column;
+    transform: translateX(100%);
+    transition: transform 0.4s ease-in-out;
+    z-index: 1000;
+    padding: 30px;
+}
+
+.mobile-menu.open {
+    transform: translateX(0%);
+}
+
+.close-btn {
+    font-size: 30px;
+    align-self: flex-end;
+    cursor: pointer;
+}
+
+.mobile-nav {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.mobile-nav a {
+    color: #f4f3ee;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 500;
 }
