@@ -1,0 +1,73 @@
+.step-card {
+    width: 340px;
+    background-color: #ffffff;
+    border: 1.5px solid #E5E5E5;
+    text-align: left;
+    padding: 20px;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+.step-header {
+    height: 100px;
+    display: flex;
+    align-items: flex-start;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.step-info {
+    position: relative;
+    height: 100px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.step-tag {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 12px;
+    color: #1e1e21;
+    background-color: #FFCC02;
+    border-radius: 6px;
+    padding: 4px 8px 3px 8px;
+}
+
+.step-title {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.step-number {
+    font-size: 120px;
+    font-weight: bold;
+    font-family: "Thunder LC", sans-serif;
+    margin-right: 15px;
+    line-height: 1;
+}
+
+.step-detail {
+    margin: 10px 0;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* Responsive */
+@media (max-width: 1000px) {
+    .step-card {
+        width: 100%;
+        max-width: 340px;
+        margin: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .step-card {
+        width: 100%;
+        max-width: 323px;
+    }
+}

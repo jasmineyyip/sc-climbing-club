@@ -115,11 +115,15 @@ const ValuesPage = () => {
                         </div>
                     </div>
                 </div>
-                {/* <div className="scholarships">
+                <div className="scholarships">
                     <div className="scholarships-text">
                         <h2>Financial Access & Scholarships</h2>
+                        <p>One of our biggest initiatives is reducing the barrier to access to climbing for our members. Climbing bills add up, from the gear to the gym membership to our dues, so we try to give back as much as we can through the USC Climbing Team Scholarships and our Financial Aid Options. To increase access and help with costs, the USC Climbing Club offers scholarships for some members. The scholarship consists of a stipend from the club to be used for charges from Touchstone. We may not be able to fulfill every request each month, so be sure to check the other financial aid options (in particular, the <a href="https://touchstoneclimbing.com/commitment-programs/" target="_blank">Touchstone ATC program)</a>.</p>
                     </div>
-                </div> */}
+                    <div className="scholarships-text">
+                        <h2>Apply for Scholarships</h2>
+                    </div>
+                </div>
             </div>
 
             <Footer />

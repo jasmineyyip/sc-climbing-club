@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import InfoCard from '../components/InfoCard';
+import StepCard from '../components/StepCard';
 import './MembershipPage.css';
 
 // font awesome
@@ -71,14 +72,14 @@ const MembershipPage = () => {
             <p className="perk-desc">{joinItems[selectedIndex].desc}</p>
 
             <div className="perk-nav-buttons">
-              <button 
-                disabled={selectedIndex === 0} 
+              <button
+                disabled={selectedIndex === 0}
                 onClick={() => setSelectedIndex(selectedIndex - 1)}
               >
                 ←
               </button>
-              <button 
-                disabled={selectedIndex === joinItems.length - 1} 
+              <button
+                disabled={selectedIndex === joinItems.length - 1}
                 onClick={() => setSelectedIndex(selectedIndex + 1)}
               >
                 →
@@ -89,7 +90,7 @@ const MembershipPage = () => {
           {/* Right Side */}
           <div className="perks-grid">
             {joinItems.map((item, index) => (
-              <div 
+              <div
                 key={index}
                 className={`tiny-card ${index === selectedIndex ? 'selected' : ''}`}
                 onClick={() => setSelectedIndex(index)}
@@ -106,111 +107,92 @@ const MembershipPage = () => {
         <h1 className="subheading">How to become a member</h1>
         <div className="card-grid step-cards">
           {/* Step 1 */}
-          <div className="step-card">
-            <div className="step-header">
-              <div className="step-number">1</div>
-              <div className="step-info">
-                <div className="step-title">Join Slack</div>
-              </div>
-            </div>
-            <div className="step-detail">
-              Join our slack! This is our main point of contact to our members.
-            </div>
-            <InfoCard
-                logo={slackLogo}
-                name="Slack"
-                handle={null}
-                link="https://scclimbingclub.slack.com/ssb/redirect"
-            />
-          </div>
+          <StepCard
+            step="1"
+            title="Join Slack"
+            detail="Join our slack! This is our main point of contact to our members."
+            infoCards={[
+              {
+                logo: slackLogo,
+                name: "Slack",
+                link: "https://scclimbingclub.slack.com/ssb/redirect"
+              }
+            ]}
+          />
 
           {/* Step 2 */}
-          <div className="step-card">
-            <div className="step-header">
-              <div className="step-number">2</div>
-              <div className="step-info">
-                <div className="step-title">Pay Dues</div>
-              </div>
-            </div>
-            <div className="step-detail">
-              Pay $30 dues on either Venmo or Zelle. This helps us keep trips and events running!
-            </div>
-            <InfoCard
-                logo={venmoLogo}
-                name="Venmo"
-                handle="@oweneastman"
-                supplementary="Last four digits of phone number is 3969"
-            />
-            <InfoCard
-                logo={zelleLogo}
-                name="Zelle"
-                handle="425-533-3969"
-            />
-          </div>
+          <StepCard
+            step="2"
+            title="Pay Dues"
+            detail="Pay $30 dues on either Venmo or Zelle. This helps us keep trips and events running!"
+            infoCards={[
+              {
+                logo: venmoLogo,
+                name: "Venmo",
+                handle: "@oweneastman",
+                supplementary: "Last four digits of phone number is 3969"
+              },
+              {
+                logo: zelleLogo,
+                name: "Zelle",
+                handle: "425-533-3969"
+              }
+            ]}
+          />
 
           {/* Step 3 */}
-          <div className="step-card">
-            <div className="step-header">
-              <div className="step-number">3</div>
-              <div className="step-info">
-                <span className="step-tag">For practice</span>
-                <div className="step-title">Get Gym Access</div>
-              </div>
-            </div>
-            <div className="step-detail">
-              Purchase a touchstone gym college student membership for $97/month. Cliffs of Id, a touchstone gym, is where we host team practices! Once you have paid club dues, your initiation fee of $50 will be waived - just let a touchstone staff know that you are with USC Climbing.
-            </div>
-            <InfoCard
-                logo={touchstoneLogo}
-                name="Touchstone Climbing"
-                link="https://touchstoneclimbing.com/cliffs-of-id/members/"
-            /> 
-          </div>
+          <StepCard
+            step="3"
+            title="Get Gym Access"
+            tag="For practice"
+            detail="Purchase a touchstone gym college student membership for $97/month. Cliffs of Id, a touchstone gym, is where we host team practices! Once you have paid club dues, your initiation fee of $50 will be waived - just let a touchstone staff know that you are with USC Climbing."
+            infoCards={[
+              {
+                logo: touchstoneLogo,
+                name: "Touchstone Climbing",
+                link: "https://touchstoneclimbing.com/cliffs-of-id/members/"
+              }
+            ]}
+          />
 
           {/* Step 4 */}
-          <div className="step-card">
-            <div className="step-header">
-              <div className="step-number">4</div>
-              <div className="step-info">
-                <span className="step-tag">For trips</span>
-                <div className="step-title">IM League Registration</div>
-              </div>
-            </div>
-            <div className="step-detail">
-              If you are interested in going on outdoor trips or competing with our collegiate team, you have to create an account with IM League and pay an additional $25 to register yourself under USC’s student organizations (for safety and representation purposes).
-            </div>
-            <InfoCard
-                logo={imleagueLogo}
-                name="IM League Registration"
-                link="https://myrecsports.usc.edu/Membership/Index"
-            /> 
-          </div>
+          <StepCard
+            step="4"
+            title="IM League Registration"
+            tag="For trips"
+            detail="If you are interested in going on outdoor trips or competing with our collegiate team, you have to create an account with IM League and pay an additional $25 to register yourself under USC’s student organizations (for safety and representation purposes)."
+            infoCards={[
+              {
+                logo: imleagueLogo,
+                name: "IM League Registration",
+                link: "https://myrecsports.usc.edu/Membership/Index"
+              }
+            ]}
+          />
 
           {/* Step 5 */}
-          <div className="step-card">
-            <div className="step-header">
-              <div className="step-number">5</div>
-              <div className="step-info">
-                <div className="step-title">Come to Practice</div>
-              </div>
-            </div>
-            <div className="step-detail">
-              <p>We have practice twice a week at Cliffs of Id.</p>
-              <p>Tuesday 7:00pm-9:00pm</p>
-              <p>Thursday 7:30pm-9:30pm</p>
-              <p>No cars? No worries! Check out our #carpool channel on Slack and ask for a ride.</p>
-            </div>
-            <InfoCard
-                logo={cliffsLogo}
-                name="Cliffs of Id"
-                link="https://touchstoneclimbing.com/cliffs-of-id/"
-            /> 
-            <InfoCard
-                logo={logo}
-                name="More about practices"
-                link="" // TODO: direct to practice page
-            /> 
-          </div>
+          <StepCard
+            step="5"
+            title="Come to Practice"
+            detail={[
+              "We have practice twice a week at Cliffs of Id.",
+              "Tuesday 7:00pm–9:00pm",
+              "Thursday 7:30pm–9:30pm",
+              "No cars? No worries! Check out our #carpool channel on Slack and ask for a ride."
+            ]}
+            infoCards={[
+              {
+                logo: cliffsLogo,
+                name: "Cliffs of Id",
+                link: "https://touchstoneclimbing.com/cliffs-of-id/"
+              },
+              {
+                logo: logo,
+                name: "More about practices",
+                link: "" // TODO: add practice page link
+              }
+            ]}
+          />
         </div>
       </div>
 
