@@ -35,6 +35,8 @@
     width: 45%;
     padding-right: 2rem;
     text-align: left;
+    position: relative;
+    height: 488px;
   }
 
   .perks-detail h3 {
@@ -52,9 +54,11 @@
   }
   
   .perk-nav-buttons {
+    position: absolute;
+    bottom: 20px; 
+    left: 0;
     display: flex;
     gap: 1rem;
-    margin-top: 2rem;
   }
 
   .perk-nav-buttons button {
