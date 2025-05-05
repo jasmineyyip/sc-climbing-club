@@ -6,27 +6,27 @@ import Footer from "../components/Footer";
 
 // import images directly
 // overview
-import practiceImg from '../assets/overview/practice.png';
-import tripsImg from '../assets/overview/trips.png';
-import compImg from '../assets/overview/comp.png';
-import socialImg from '../assets/overview/social.png';
-import gearImg from '../assets/overview/gear.png';
+import practiceImg from '../assets/home/overview/practice.png';
+import tripsImg from '../assets/home/overview/trips.png';
+import compImg from '../assets/home/overview/comp.png';
+import socialImg from '../assets/home/overview/social.png';
+import gearImg from '../assets/home/overview/gear.png';
 // footprints
-import leftFootprint from '../assets/footprint-yellow.png'
-import rightFootprint from '../assets/footprint-red.png'
+import leftFootprint from '../assets/home/graphics/footprint-yellow.png'
+import rightFootprint from '../assets/home/graphics/footprint-red.png'
 // fireworks
-import leftFirework from '../assets/left-firework.png'
-import rightFirework from '../assets/right-firework.png'
+import leftFirework from '../assets/home/graphics/left-firework.png'
+import rightFirework from '../assets/home/graphics/right-firework.png'
 // confetti
-import confettiLeft from '../assets/confetti-left.png'
-import confettiRight from '../assets/confetti-right.png'
+import confettiLeft from '../assets/home/graphics/confetti-left.png'
+import confettiRight from '../assets/home/graphics/confetti-right.png'
 // sponsors
-import brightstone from '../assets/sponsors/brightstone.png';
-import cotopaxi from '../assets/sponsors/cotopaxi.png';
-import evolv from '../assets/sponsors/evolv.png';
-import hitorii from '../assets/sponsors/hitorii.png';
-import stronghold from '../assets/sponsors/stronghold.png';
-import touchstone from '../assets/sponsors/touchstone.png';
+import brightstone from '../assets/home/sponsors/brightstone.png';
+import cotopaxi from '../assets/home/sponsors/cotopaxi.png';
+import evolv from '../assets/home/sponsors/evolv.png';
+import hitorii from '../assets/home/sponsors/hitorii.png';
+import stronghold from '../assets/home/sponsors/stronghold.png';
+import touchstone from '../assets/home/sponsors/touchstone.png';
 
 import Map from '../components/Map'
 

@@ -9,12 +9,12 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCampground, faAward, faTags, faMoneyBillWave, faToolbox, faPeopleGroup, faShirt, faTrophy, faHandshakeAngle, faHeart } from '@fortawesome/free-solid-svg-icons';
 
 // social icons
-import slackLogo from '../assets/socials/slack_logo.png';
-import venmoLogo from '../assets/socials/venmo_logo.png';
-import zelleLogo from '../assets/socials/zelle_logo.png';
-import touchstoneLogo from '../assets/socials/touchstone_logo.png';
-import imleagueLogo from '../assets/socials/imleague_logo.png';
-import cliffsLogo from '../assets/socials/cliffs_logo.png';
+import slackLogo from '../assets/membership/socials/slack_logo.png';
+import venmoLogo from '../assets/membership/socials/venmo_logo.png';
+import zelleLogo from '../assets/membership/socials/zelle_logo.png';
+import touchstoneLogo from '../assets/membership/socials/touchstone_logo.png';
+import imleagueLogo from '../assets/membership/socials/imleague_logo.png';
+import cliffsLogo from '../assets/membership/socials/cliffs_logo.png';
 import logo from '../assets/logo.png';
 
 const joinItems = [
