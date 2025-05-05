@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './Header.css';
 import logo from '../assets/logo.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFacebookF, faInstagram, faSlack } from '@fortawesome/free-brands-svg-icons';
+import { faInstagram, faSlack } from '@fortawesome/free-brands-svg-icons';
 import { faBars, faXmark, faHouse } from '@fortawesome/free-solid-svg-icons';
 import { NavLink } from 'react-router-dom';
 
@@ -33,9 +33,6 @@ const Header = () => {
                 </nav>
 
                 <div className="socials">
-                    <a href="https://www.facebook.com/SC.Climbing.Team/" target="_blank" rel="noopener noreferrer">
-                        <FontAwesomeIcon icon={faFacebookF} />
-                    </a>
                     <a href="https://www.instagram.com/trojanclimbing/" target="_blank" rel="noopener noreferrer">
                         <FontAwesomeIcon icon={faInstagram} />
                     </a>

@@ -22,6 +22,9 @@
     background-color: #e1e1df;
     padding: 0 4px;
     margin: 20px 40px 0;
+    width: 790px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .nav a {
@@ -78,7 +81,18 @@
     z-index: 999;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1190px) {
+    .logo img,
+    .socials {
+        display: none;
+    }
+
+    .nav {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 900px) {
     .desktop-nav {
         display: none;
     }
