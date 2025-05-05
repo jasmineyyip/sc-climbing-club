@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import InfoCard from '../components/InfoCard';
 import StepCard from '../components/StepCard';
 import './MembershipPage.css';
 
@@ -189,7 +188,7 @@ const MembershipPage = () => {
               {
                 logo: logo,
                 name: "More about practices",
-                link: "" // TODO: add practice page link
+                link: "/practice" // TODO: add practice page link
               }
             ]}
           />

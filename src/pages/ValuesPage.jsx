@@ -1,11 +1,20 @@
 import React from 'react';
+
+// components
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import StepCard from '../components/StepCard';
+
+// images
 import valueBanner from '../assets/banners/valuesbanner.png';
 import value1 from '../assets/values/value-1.png';
 import value2 from '../assets/values/value-2.png';
 import value3 from '../assets/values/value-3.png';
-import './ValuesPage.css'; // Create this CSS file accordingly
+
+// social logos
+import gformsLogo from '../assets/membership/socials/gforms.png';
+
+import './ValuesPage.css';
 
 const ValuesPage = () => {
     return (
@@ -122,6 +131,78 @@ const ValuesPage = () => {
                     </div>
                     <div className="scholarships-text">
                         <h2>Apply for Scholarships</h2>
+                        <div className="card-grid step-cards">
+                            {/* Step 1 */}
+                            <StepCard
+                                step="1"
+                                title="Submit Application"
+                                tag="Due the 28th"
+                                detail={
+                                    <>
+                                        To apply for a scholarship, please fill out the form below by the <strong>28th of the month</strong> (e.g. an application for an October scholarship is due September 28th).
+                                        <br /><br />
+                                        Applicants will be asked to detail their frequency of climbing, involvement in the club, and financial need. Please be as honest and thorough as possible.
+                                    </>
+                                }
+
+                                infoCards={[
+                                    {
+                                        logo: gformsLogo,
+                                        name: "Scholarship Application Form",
+                                        link: "https://forms.gle/9ZvqNM9556eZf9SC6"
+                                    }
+                                ]}
+                            />
+
+                            {/* Step 2 */}
+                            <StepCard
+                                step="2"
+                                tag="29th - 30th"
+                                title="Receive Scholarship"
+                                detail={
+                                    <>
+                                        Recipients will be notified by the <strong>29th of the month</strong> if they have been awarded a scholarship for the following month.
+                                        <br /><br />
+                                        The scholarship amount will be sent via <strong>Venmo, Zelle, or Cash App on the 30th</strong>.
+                                    </>
+                                }
+                            />
+
+                            {/* Step 3 */}
+                            <StepCard
+                                step="3"
+                                tag="Due the 3rd"
+                                title="Proof of the Charge"
+                                detail={
+                                    <>
+                                        By the <strong>3rd of the month</strong> the scholarship was sought for, recipients will need to provide proof of the charge from Touchstone (a screenshot of the charge) via the form below.
+                                        <br /><br />
+                                        <strong>Applicants who do not provide proof</strong> of the charge will not be eligible for scholarship reapplication and may be removed from club membership.
+                                    </>
+                                }
+                                infoCards={[
+                                    {
+                                        logo: gformsLogo,
+                                        name: "Proof of the Charge Form",
+                                        link: "https://forms.gle/P7nMk32Q4PWTBhiC9"
+                                    }
+                                ]}
+                            />
+
+                            {/* Step 4 */}
+                            <StepCard
+                                step="4"
+                                title="Reapplication"
+                                detail="Members are expected to apply (or reapply) for the scholarship each month. For reapplication, members will just be asked to note any changes in their situation."
+                            />
+
+                            {/* Step 5 */}
+                            <StepCard
+                                step="5"
+                                title="Questions?"
+                                detail="Please direct any questions about scholarships to Sophie (herant@usc.edu, or Slack). We appreciate you!"
+                            />
+                        </div>
                     </div>
                 </div>
             </div>
