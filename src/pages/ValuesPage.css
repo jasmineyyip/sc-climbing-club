@@ -1,3 +1,15 @@
+/* subheadings (h2) */
+.value-text h2,
+.dei-intro-text h2,
+.scholarships-text h2 {
+    font-family: "Thunder LC", sans-serif;
+    margin-bottom: 10px;
+    font-size: 50px;
+    color: #1e1e21;
+    text-transform: uppercase;
+}
+
+
 .banner-text {
     position: absolute;
     bottom: 30px;
@@ -47,17 +59,62 @@
     min-width: 300px;
 }
 
-.value-text h2 {
-    font-family: "Thunder LC", sans-serif;
-    margin-bottom: 10px;
-    font-size: 50px;
-    color: #1e1e21;
-    text-transform: uppercase;
-}
-
 .value-text p {
     font-size: 1rem;
     line-height: 1.6;
+}
+
+/* dei section */
+.dei-section {
+    width: 80%;
+    margin: auto;
+    padding-bottom: 50px;
+}
+
+/* affinity groups */
+.aff-groups {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+.aff-group-card {
+    background-color: #fff;
+    border-radius: 16px;
+    border: 1.5px solid #E5E5E5;
+    padding: 24px;
+    max-width: 220px;
+    width: 100%;
+    text-align: left;
+    transition: transform 0.2s ease-in-out;
+}
+
+.aff-group-card .emoji {
+    font-size: 32px;
+    margin-bottom: 12px;
+}
+
+.aff-group-card h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.aff-group-card p {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 16px;
+}
+
+.aff-group-card a {
+    color: #c30010;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.aff-group-card a:hover {
+    text-decoration: underline;
 }
 
 /* Mobile responsive */

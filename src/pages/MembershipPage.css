@@ -1,196 +1,202 @@
 .section {
-    padding: 80px 0;
-    text-align: center;
+  padding: 80px 0;
+  text-align: center;
 }
-  
+
 .subheading.big {
-    text-align: center;
-    font-size: 160px;
-    margin: 80px 0 -16px 0;
+  text-align: center;
+  font-size: 160px;
+  margin: 80px 0 -16px 0;
 }
-  
+
 .card-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
 }
-  
-  /* Tiny Cards (Join USC Climbing) */
+
+/* Tiny Cards (Join USC Climbing) */
+.perks-container {
+  background-color: white;
+  width: 1000px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1.5px solid #E5E5E5;
+}
+
+.perks-detail {
+  width: 45%;
+  padding-right: 2rem;
+  text-align: left;
+  position: relative;
+  height: 488px;
+}
+
+.perks-detail h3 {
+  font-size: 16px;
+}
+
+.perks-detail h2 {
+  font-size: 24px;
+}
+
+.perk-desc {
+  margin-top: 1rem;
+  font-size: 1rem;
+  color: #444;
+}
+
+.perk-nav-buttons {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  display: flex;
+  gap: 1rem;
+}
+
+.perk-nav-buttons button {
+  outline: none;
+  box-shadow: none;
+  border: none;
+  cursor: pointer;
+}
+
+.perk-nav-buttons button:focus,
+.perk-nav-buttons button:focus-visible,
+.perk-nav-buttons button:hover {
+  outline: none;
+  box-shadow: none;
+}
+
+.perk-nav-buttons button:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.perks-grid {
+  width: 50%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.tiny-card {
+  height: 120px;
+  width: 120px;
+  padding: 1rem;
+  background-color: #f4f3ee;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.tiny-card.selected {
+  background-color: #1e1e21;
+  color: white;
+}
+
+/* Step Cards */
+.card-grid.step-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: flex-start;
+  width: calc(3 * 340px + 2 * 20px);
+  margin: auto;
+  margin-bottom: 100px;
+}
+
+.step-card {
+  width: 340px;
+  background-color: #ffffff;
+  border: 1.5px solid #E5E5E5;
+  text-align: left;
+  padding: 20px;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+
+.step-header {
+  height: 100px;
+  display: flex;
+  align-items: flex-start;
+  /* Align items to top */
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.step-info {
+  position: relative;
+  height: 100px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  /* Pushes title to bottom */
+}
+
+.step-tag {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 12px;
+  color: #ffffff;
+  color: #1e1e21;
+  background-color: #FFCC02;
+  border-radius: 6px;
+  padding: 4px 8px 3px 8px;
+}
+
+.step-title {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  /* This pushes it 10px above the bottom */
+}
+
+.step-number {
+  font-size: 120px;
+  font-weight: bold;
+  font-family: "Thunder LC", sans-serif;
+  margin-right: 15px;
+  line-height: 1;
+}
+
+.step-detail {
+  margin: 10px 0 10px 0;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* Responsive */
+@media (max-width: 1000px) {
   .perks-container {
-    background-color: white;
-    width: 1000px;
-    margin: auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    margin-top: 2rem;
-    padding: 20px;
-    border-radius: 10px;
-    border: 1.5px solid #E5E5E5;
+    width: min-content;
   }
-  
+
   .perks-detail {
-    width: 45%;
-    padding-right: 2rem;
-    text-align: left;
-    position: relative;
-    height: 488px;
+    display: none;
   }
 
-  .perks-detail h3 {
-    font-size: 16px;
-  }
-  
-  .perks-detail h2 {
-    font-size: 24px;
-  }
-  
-  .perk-desc {
-    margin-top: 1rem;
-    font-size: 1rem;
-    color: #444;
-  }
-  
-  .perk-nav-buttons {
-    position: absolute;
-    bottom: 20px; 
-    left: 0;
-    display: flex;
-    gap: 1rem;
-  }
-
-  .perk-nav-buttons button {
-    outline: none;
-    box-shadow: none;
-    border: none;
-    cursor: pointer;
-  }
-  
-  .perk-nav-buttons button:focus,
-  .perk-nav-buttons button:focus-visible,
-  .perk-nav-buttons button:hover {
-    outline: none;
-    box-shadow: none;
-  }
-  
-  .perk-nav-buttons button:disabled {
-    opacity: 0.3;
-    cursor: not-allowed;
-  }
-  
-  .perks-grid {
-    width: 50%;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
-  }
-  
   .tiny-card {
-    height: 120px;
-    width: 120px;
-    padding: 1rem;
-    background-color: #f4f3ee;
-    text-align: center;
-    cursor: pointer;
-    transition: all 0.2s ease-in-out;
-  }
-  
-  .tiny-card.selected {
+    color: #ffffff;
     background-color: #1e1e21;
-    color: white;
-  }  
-  
-  /* Step Cards */
-  .card-grid.step-cards {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: flex-start;
-    width: calc(3 * 340px + 2 * 20px);
-    margin: auto;
-    margin-bottom: 100px;
   }
 
-  .step-card {
-    width: 340px;
-    background-color: #ffffff;
-    border: 1.5px solid #E5E5E5;
-    text-align: left;
-    padding: 20px;
-    border-radius: 10px;
-    box-sizing: border-box;
+  .card-grid.step-cards {
+    max-width: calc(2 * 340px + 1 * 20px);
   }
-  
-  .step-header {
-    height: 100px;
-    display: flex;
-    align-items: flex-start; /* Align items to top */
-    position: relative;
-    margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+  .card-grid.step-cards {
+    max-width: calc(1 * 323px);
   }
-  
-  .step-info {
-    position: relative;
-    height: 100px;
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end; /* Pushes title to bottom */
-  }
-  
-  .step-tag {
-    position: absolute;
-    top: 0;
-    right: 0;
-    font-size: 12px;
-    color: #ffffff;
-    color: #1e1e21;
-    background-color: #FFCC02;
-    border-radius: 6px;
-    padding: 4px 8px 3px 8px;
-  }
-  
-  .step-title {
-    font-size: 20px;
-    font-weight: 600;
-    margin-bottom: 10px; /* This pushes it 10px above the bottom */
-  }
-  
-  .step-number {
-    font-size: 120px;
-    font-weight: bold;
-    font-family: "Thunder LC", sans-serif;
-    margin-right: 15px;
-    line-height: 1;
-  }  
-  
-  .step-detail {
-    margin: 10px 0 10px 0;
-    font-size: 14px;
-    line-height: 1.5;
-  }
-  
-  /* Responsive */
-  @media (max-width: 1000px) {
-    .perks-container {
-      width: min-content;
-    }
-    .perks-detail {
-      display: none;
-    }
-    .tiny-card {
-      color: #ffffff;
-      background-color: #1e1e21;
-    }
-    .card-grid.step-cards {
-      max-width: calc(2 * 340px + 1 * 20px);
-    }
-  }
-  
-  @media (max-width: 768px) {  
-    .card-grid.step-cards {
-      max-width: calc(1 * 323px);
-    }
-  } 
+}

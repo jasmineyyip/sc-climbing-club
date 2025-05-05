@@ -135,7 +135,7 @@ const HomePage = () => {
                 {/* <h1 className="subheading">Welcome to the USC Climbing Team</h1> */}
                 <p className="body">We are USC’s largest sport club, dedicated to exploring the outdoors and being active in the climbing community. Whether you’re an experienced climber or completely new to the sport, we have outdoor trips and climbing events for everyone to explore, connect, and challenge themselves!</p>
                 <div className="button-var1">
-                    <a href="https://slack.com" target="_blank" rel="noopener noreferrer" className="button-text-var1">
+                    <a href="/membership" target="_blank" rel="noopener noreferrer" className="button-text-var1">
                         Become a Member
                     </a>
                 </div>
@@ -159,7 +159,7 @@ const HomePage = () => {
                     ))}
                 </div>
                 <div className="button-var1">
-                    <a href="https://slack.com" target="_blank" rel="noopener noreferrer" className="button-text-var1">
+                    <a href="/membership" target="_blank" rel="noopener noreferrer" className="button-text-var1">
                         Become a Member
                     </a>
                 </div>

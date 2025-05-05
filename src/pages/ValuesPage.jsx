@@ -81,6 +81,47 @@ const ValuesPage = () => {
                 </div>
             </div>
 
+            {/* DEI Section */}
+            <div className="dei-section">
+                <div className="dei-intro">
+                    <div className="dei-intro-text">
+                        <h2>DEI at USC Climbing</h2>
+                        <p>We take DEI very seriously, and hope that everyone feels included and encouraged to be themselves in our spaces. With our affinity group trips and channels (womxn, queer, BIPOC, and international climbers), we pride ourselves in representing people from all backgrounds, shapes, and colors, and are always trying to improve - please let us know if you have any concerns! </p>
+                    </div>
+                    <div className="aff-groups">
+                        <div className="aff-group-card">
+                            <div className="emoji">🌈</div>
+                            <h3>Queer Climbers</h3>
+                            <p>Celebrate and connect with fellow LGBTQ+ climbers.</p>
+                            <a href="#">Join Slack →</a>
+                        </div>
+                        <div className="aff-group-card">
+                            <div className="emoji">💪🏽</div>
+                            <h3>Womxn Climbers</h3>
+                            <p>Empowering all who identify as womxn through climbing.</p>
+                            <a href="#">Join Slack →</a>
+                        </div>
+                        <div className="aff-group-card">
+                            <div className="emoji">🧕🏾</div>
+                            <h3>BIPOC Climbers</h3>
+                            <p>Creating space for Black, Indigenous, and People of Color.</p>
+                            <a href="#">Join Slack →</a>
+                        </div>
+                        <div className="aff-group-card">
+                            <div className="emoji">🌍</div>
+                            <h3>International Climbers</h3>
+                            <p>New to USC? Let’s climb and build community together.</p>
+                            <a href="#">Join Slack →</a>
+                        </div>
+                    </div>
+                </div>
+                {/* <div className="scholarships">
+                    <div className="scholarships-text">
+                        <h2>Financial Access & Scholarships</h2>
+                    </div>
+                </div> */}
+            </div>
+
             <Footer />
         </>
     );
