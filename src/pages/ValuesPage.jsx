@@ -21,14 +21,14 @@ const ValuesPage = () => {
         <>
             <Header />
             {/* Banner Section */}
-            <div className="banner-section" style={{ padding: '20px 0 20px', width: '90%', margin: 'auto' }}>
+            <div className="banner-section" style={{ padding: '50px 0 20px', width: '90%', margin: 'auto' }}>
                 <div className="banner-image" style={{ position: 'relative' }}>
                     <img
                         src={valueBanner}
                         alt="Our Values"
                         style={{ width: '100%', height: 'auto', borderRadius: '0px' }}
                     />
-                    <div className="banner-text">
+                    <div className="banner-text values">
                         <h1>Our Values</h1>
                     </div>
                 </div>

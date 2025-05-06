@@ -11,14 +11,14 @@
     text-align: center;
 }
 
-.banner-text {
+.banner-text.values {
     position: absolute;
     bottom: 30px;
     width: 100%;
     text-align: center;
 }
 
-.banner-text h1 {
+.banner-text.values h1 {
     margin: 0;
     color: white;
     font-size: 160px;
@@ -147,7 +147,7 @@
 }
 
 @media (max-width: 1061px) {
-    .banner-text h1 {
+    .banner-text.values h1 {
         font-size: 120px;
     }
 
@@ -157,7 +157,7 @@
 }
 
 @media (max-width: 768px) {
-    .banner-text h1 {
+    .banner-text.values h1 {
         font-size: 90px;
     }
     
@@ -175,11 +175,11 @@
 }
 
 @media (max-width: 530px) {
-    .banner-text {
+    .banner-text.values {
         bottom: 10px;
     }
 
-    .banner-text h1 {
+    .banner-text.values h1 {
         font-size: 60px;
     }
 
