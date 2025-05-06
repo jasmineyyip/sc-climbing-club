@@ -23,37 +23,10 @@ const joinItems = [
   { text: 'Gear discounts from sponsors', icon: faTags, desc: 'Gear discounts from our sponsors (often free and highly discounted!)' },
   { text: 'Refunded $50 Cliffs of Id initiation fee', icon: faMoneyBillWave, desc: 'We refund the $50 initiation fee at Cliffs of Id, the gym we train at! It’s cheaper to pay our $30 dues and get the initiation fee waived than to go to Cliffs on your own!' },
   { text: 'Gear lending program', icon: faToolbox, desc: 'Need gear for a trip? Borrow from us at no cost.' },
-  { text: 'Social events: mixers, bonfires, etc.', icon: faPeopleGroup, desc: 'We organize social events throughout the semester - mixers, formals, bonfires, etc.' },
+  { text: 'Social events', icon: faPeopleGroup, desc: 'We organize social events throughout the semester - mixers, formals, bonfires, poker nights, and more!' },
   { text: 'Free team gear and merch', icon: faShirt, desc: 'Get free USC Climbing merch including t-shirts, stickers, and more!' },
   { text: 'Competition team', icon: faTrophy, desc: 'Join our comp team to represent USC and climb with fellow crushers.' },
   { text: 'Affinity groups (POC, womxn, queer)', icon: faHandshakeAngle, desc: 'Find your community through affinity groups for underrepresented communities, such as POC, womxn, queer, and international climbers.' },
-];
-
-const steps = [
-  {
-    step: '1',
-    title: 'Join Slack',
-    detail: 'This is our main point of contact: linktr.ee/uscclimbing',
-  },
-  {
-    step: '2',
-    title: 'Pay Dues',
-    detail:
-      'Send $30 to @oweneastman (Venmo) or 425-533-3969 (Zelle). This helps us keep trips and events running!',
-  },
-  {
-    step: '3',
-    title: 'Get Gym Access',
-    detail:
-      'Purchase a Touchstone student membership ($97/month). Mention USC Climbing to waive the $50 initiation.',
-  },
-  {
-    step: '4',
-    title: 'IM League Registration',
-    tag: 'optional',
-    detail:
-      'If you’re joining outdoor trips or the comp team, register on IM League and pay $25. https://myrecsports.usc.edu/Membership/Index',
-  },
 ];
 
 const MembershipPage = () => {
@@ -158,7 +131,7 @@ const MembershipPage = () => {
           <StepCard
             step="4"
             title="IM League Registration"
-            tag="For trips"
+            tag="For trips & competition"
             detail="If you are interested in going on outdoor trips or competing with our collegiate team, you have to create an account with IM League and pay an additional $25 to register yourself under USC’s student organizations (for safety and representation purposes)."
             infoCards={[
               {
@@ -174,8 +147,8 @@ const MembershipPage = () => {
             step="5"
             title="Come to Practice"
             detail={[
-              "We have practice twice a week at Cliffs of Id.",
-              "Tuesday 7:00pm–9:00pm",
+              "Monday: 7:00pm–9:00pm",
+              "Tuesday (Comp Team): 6:00pm–8:00pm",
               "Thursday 7:30pm–9:30pm",
               "No cars? No worries! Check out our #carpool channel on Slack and ask for a ride."
             ]}
