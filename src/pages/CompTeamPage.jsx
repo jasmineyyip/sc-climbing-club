@@ -50,14 +50,14 @@ const CompTeamPage = () => {
                     Come practice an additional day with USC Climbing if you are interested in competing in the USA Climbing Collegiate Circuit, or you just want a more structured training plan! Individualized training plans are given out at the beginning of the year to each climber, based on their strengths, weaknesses, and climbing goals! Training is separated into 6-8 week blocks, focused on things like strength, power, and endurance. Comp team practices are every Tuesday from 6-8pm at Cliffs of Id led by Chance Guyton and Devin Harmon.
                 </p>
                 <p className="body">Here's an example practice plan:</p>
-                <p className="body"><strong>Objective: get stronger (together), improve technique and awareness on the wall, let’s learnnnnn</strong></p>
+                <p className="body obj"><strong>Objective: get stronger (together), improve technique and awareness on the wall, let’s learnnnnn</strong></p>
 
                 <div className="training-plan">
                     {/* Step 1 */}
                     <TrainingCard
                         step="1"
                         title="Warm-Up"
-                        tag="0–45 minutes"
+                        tag="0–45 mins"
                         detail={[
                             "Arrive early and start moving.",
                             "Use dynamic stretches and warm-up routes.",
@@ -74,7 +74,7 @@ const CompTeamPage = () => {
                     <TrainingCard
                         step="2"
                         title="V Points"
-                        tag="45 minutes"
+                        tag="45 mins"
                         detail={[
                             "Teams have 45 minutes to collect as many V points as possible (V6 = 6 points).",
                             "Avoid resting off the wall — instead, do lower grade climbs and focus on breathing.",
@@ -92,7 +92,7 @@ const CompTeamPage = () => {
                     <TrainingCard
                         step="3"
                         title="Low % Repeats"
-                        tag="45-90 minutes"
+                        tag="45-90 mins"
                         detail={[
                             "Pick or create a move that is difficult for you, not because it’s physically hard, but because it’s difficult to execute the beta perfectly (e.g. techy slab moves, coordination moves, very precise heel hooks, or dynos)",
                             "Once you do the move, see how many times in a row you can repeat it",
@@ -108,12 +108,28 @@ const CompTeamPage = () => {
                             "This exercise helps build the habit of asking yourself “why?” after every time you fall",
                         ]}
                     />
+
+                    {/* Step 4 */}
+                    <TrainingCard
+                        step="4"
+                        title="Individual Conditioning"
+                        tag="1 hour 30 mins - 2 hours"
+                        detail={[
+                            "Pick workout from table that most targets weakness",
+                            "**Note that an easier variation for power has been provided",
+                        ]}
+                        motivation={[
+                            "Correct imbalances and prevent injuries.",
+                            "Tailoring your workout ensures you're progressing where you need it most.",
+                            "Conditioning is essential for climbing longevity and overall strength gains."
+                        ]}
+                    />
                 </div>
             </div>
 
             {/* how to */}
             <div className="section comp-membership">
-                <h1 className="subheading">How to become a member</h1>
+                <h1 className="subheading">How to Compete</h1>
                 <div className="card-grid step-cards">
                     {/* Step 1 */}
                     <StepCard

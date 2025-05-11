@@ -1,6 +1,11 @@
 import React from 'react';
 import './TrainingCard.css';
 
+// fontawesome
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faLightbulb } from '@fortawesome/free-solid-svg-icons';
+
+
 const TrainingCard = ({ step, title, tag, detail, motivation }) => {
     const renderSection = (data) => {
         if (Array.isArray(data)) {
@@ -29,7 +34,10 @@ const TrainingCard = ({ step, title, tag, detail, motivation }) => {
             </div>
 
             <div className="card-motivation">
-                <h4>Why:</h4>
+                <h4 className="card-motivation-title">
+                    <FontAwesomeIcon icon={faLightbulb} style={{ marginRight: '6px' }} />
+                    Why
+                </h4>
                 {renderSection(motivation)}
             </div>
         </div>

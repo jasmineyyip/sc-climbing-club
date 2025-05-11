@@ -1,3 +1,8 @@
 .section.comp-intro, .section.comp-plan {
     width: 70%;
+    padding-bottom: 0;
+}
+
+.section.comp-plan .body.obj {
+    margin-bottom: 50px;
 }
