@@ -1,0 +1,77 @@
+.training-card {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    border: 1.5px solid #E5E5E5;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #fff;
+    margin-bottom: 20px;
+    gap: 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.card-number {
+    font-size: 140px;
+    font-weight: bold;
+    font-family: "Thunder LC", sans-serif;
+    line-height: 1;
+    min-width: 60px;
+}
+
+.card-number-wrapper {
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 150px;
+}
+
+.card-content {
+    flex-grow: 1;
+    flex-basis: 50%;
+    text-align: left;
+}
+
+.card-header {
+    margin-bottom: 10px;
+}
+
+.card-title {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 12px 0 4px;
+}
+
+.card-time {
+    font-size: 13px;
+    color: #777;
+    margin: 8px 0;
+}
+
+.card-detail p {
+    margin: 0 0 6px 0;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.card-motivation {
+    flex-basis: 30%;
+    background-color: #f5f5f5;
+    padding: 16px;
+    border-left: 8px solid #FFCC02;
+    border-radius: 6px;
+    text-align: left;
+}
+
+.card-motivation h4 {
+    margin: 0 0 8px 0;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.card-motivation p {
+    font-size: 13px;
+    margin-bottom: 6px;
+}
