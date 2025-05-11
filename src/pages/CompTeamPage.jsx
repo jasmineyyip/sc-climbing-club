@@ -43,7 +43,49 @@ const CompTeamPage = () => {
                 </p>
             </div>
 
-            {/* intro section */}
+            {/* how to sign up */}
+            <div className="section comp-membership">
+                <h1 className="subheading">How to Compete</h1>
+                <div className="card-grid step-cards">
+                    {/* Step 1 */}
+                    <StepCard
+                        step="1"
+                        title="Sign up for membership"
+                        detail="Follow the instruction via the link below to sign up for a USA Climbing Collegiate membership."
+                        infoCards={[
+                            {
+                                logo: GDocLogo,
+                                name: "How to get your membership",
+                                link: "https://urldefense.com/v3/__https://docs.google.com/document/d/1PD0csmN1p8gSElYi9x2dAiB8u9hfcsL_jUFpR6FGC6s/edit?usp=sharing_eil&ts=66fcaf08__;!!LIr3w8kk_Xxm!uILbpR97Z5j48dNgr0s3xqxURIG5ofQUW1_I-Jz4V3HgwH8_1l5CX-9bIdrAb_olKV6gGkVjjMb6z6jsrb0OLdiB$"
+                            }
+                        ]}
+                    />
+
+                    {/* Step 2 */}
+                    <StepCard
+                        step="2"
+                        title="Reimbursement"
+                        detail="We will be reimbursing your collegiate membership, so after you purchase the $65 membership on the website, send an email to climb.usc@gmail.com with the receipt and bank statement of the purchase to get your money back."
+                    />
+
+                    {/* Step 3 */}
+                    <StepCard
+                        step="3"
+                        title="Read Important Competition Information"
+                        detail="Read this Google doc for more information on how to register for USA Climbing competitions, get your membership reimbursed, choose your division, and understand how to qualify for nationals."
+                        infoCards={[
+                            {
+                                logo: GDocLogo,
+                                name: "Important Competition Info",
+                                link: "https://docs.google.com/document/d/11BVuokE6glXOwGj4sRDb8xojQ2KKU-VTNscrssqTmSs/edit?tab=t.0"
+                            }
+                        ]}
+                    />
+                </div>
+            </div>
+
+
+            {/* practice plan example */}
             <div className="section comp-plan">
                 <h1 className="subheading">Comp Team Practice</h1>
                 <p className="body">
@@ -127,47 +169,31 @@ const CompTeamPage = () => {
                 </div>
             </div>
 
-            {/* how to */}
-            <div className="section comp-membership">
-                <h1 className="subheading">How to Compete</h1>
-                <div className="card-grid step-cards">
-                    {/* Step 1 */}
-                    <StepCard
-                        step="1"
-                        title="Sign up for membership"
-                        detail="Follow the instruction via the link below to sign up for a USA Climbing Collegiate membership."
-                        infoCards={[
-                            {
-                                logo: GDocLogo,
-                                name: "How to get your membership",
-                                link: "https://urldefense.com/v3/__https://docs.google.com/document/d/1PD0csmN1p8gSElYi9x2dAiB8u9hfcsL_jUFpR6FGC6s/edit?usp=sharing_eil&ts=66fcaf08__;!!LIr3w8kk_Xxm!uILbpR97Z5j48dNgr0s3xqxURIG5ofQUW1_I-Jz4V3HgwH8_1l5CX-9bIdrAb_olKV6gGkVjjMb6z6jsrb0OLdiB$"
-                            }
-                        ]}
-                    />
+            {/* season timeline */}
+            <div className="section season-timeline">
+                <h1 className="subheading">2024–2025 Collegiate Season</h1>
 
-                    {/* Step 2 */}
-                    <StepCard
-                        step="2"
-                        title="Reimbursement"
-                        detail="We will be reimbursing your collegiate membership, so after you purchase the $65 membership on the website, send an email to climb.usc@gmail.com with the receipt and bank statement of the purchase to get your money back."
-                    />
+                <div className="timeline-section">
+                    <h3>Local Qualifying Events</h3>
+                    <ul>
+                        <p><strong>10/13/24</strong> — Long Beach Rising</p>
+                        <p><strong>10/19/24</strong> — Flux Training Center</p>
+                        <p><strong>11/3/24</strong> — Rockreation LA</p>
+                        <p><strong>11/17/24</strong> — The Wall Climbing Gym</p>
+                        <p><strong>11/24/24</strong> — Aesthetic Climbing Gym</p>
+                    </ul>
+                </div>
 
-                    {/* Step 3 */}
-                    <StepCard
-                        step="3"
-                        title="Read Important Competition Information"
-                        detail="Read this Google doc for more information on how to register for USA Climbing competitions, get your membership reimbursed, choose your division, and understand how to qualify for nationals."
-                        infoCards={[
-                            {
-                                logo: GDocLogo,
-                                name: "Important Competition Info",
-                                link: "https://docs.google.com/document/d/11BVuokE6glXOwGj4sRDb8xojQ2KKU-VTNscrssqTmSs/edit?tab=t.0"
-                            }
-                        ]}
-                    />
+                <div className="timeline-section">
+                    <h3>Collegiate National Qualifier</h3>
+                    <p><strong>4/5/25</strong> — Long Beach Rising & Rockreation Costa Mesa</p>
+                </div>
+
+                <div className="timeline-section">
+                    <h3>Collegiate Nationals</h3>
+                    <p><strong>5/2/25–5/5/25</strong> — USA Climbing Training Center & Momentum Fort Union, Salt Lake City, UT</p>
                 </div>
             </div>
-
             <Footer />
         </>
     );

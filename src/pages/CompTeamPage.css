@@ -1,6 +1,10 @@
-.section.comp-intro, .section.comp-plan {
+.section.comp-intro, .section.comp-plan, .section.comp-membership {
     width: 70%;
     padding-bottom: 0;
+}
+
+.section.season-timeline p {
+    margin: 0;
 }
 
 .section.comp-plan .body.obj {
