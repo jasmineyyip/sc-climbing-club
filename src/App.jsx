@@ -5,6 +5,7 @@ import ValuesPage from "./pages/ValuesPage";
 import MembershipPage from "./pages/MembershipPage";
 import TripsPage from "./pages/TripsPage";
 import CompTeamPage from "./pages/CompTeamPage";
+import PracticesPage from "./pages/PracticesPage";
 
 const App = () => {
   return (
@@ -15,6 +16,7 @@ const App = () => {
         <Route path="/membership" element={<MembershipPage />} />
         <Route path="/trips" element={<TripsPage />} />
         <Route path="/comp-team" element={<CompTeamPage />} />
+        <Route path="/practice" element={<PracticesPage />} />
       </Routes>
     </Router>
   );

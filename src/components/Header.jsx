@@ -3,11 +3,16 @@ import './Header.css';
 import logo from '../assets/logo-notext.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faInstagram, faSlack } from '@fortawesome/free-brands-svg-icons';
-import { faBars, faXmark, faHouse } from '@fortawesome/free-solid-svg-icons';
+import { faBars, faXmark, faHouse, faCaretDown } from '@fortawesome/free-solid-svg-icons';
 import { NavLink } from 'react-router-dom';
 
 const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const [openDropdown, setOpenDropdown] = useState(null);
+
+    const handleDropdown = (menu) => {
+        setOpenDropdown(openDropdown === menu ? null : menu);
+    };
 
     return (
         <>
@@ -24,12 +29,36 @@ const Header = () => {
                     <NavLink to="/" end className={({ isActive }) => isActive ? "active" : ""}>
                         <FontAwesomeIcon icon={faHouse} />
                     </NavLink>
-                    <NavLink to="/values" className={({ isActive }) => isActive ? "active" : ""}>values</NavLink>
-                    <NavLink to="/membership" className={({ isActive }) => isActive ? "active" : ""}>membership</NavLink>
-                    <NavLink to="/practice" className={({ isActive }) => isActive ? "active" : ""}>practice</NavLink>
-                    <NavLink to="/trips" className={({ isActive }) => isActive ? "active" : ""}>trips</NavLink>
-                    <NavLink to="/comp-team" className={({ isActive }) => isActive ? "active" : ""}>comp team</NavLink>
-                    <NavLink to="/resources" className={({ isActive }) => isActive ? "active" : ""}>resources</NavLink>
+
+                    <div className="dropdown" onMouseEnter={() => handleDropdown('about')} onMouseLeave={() => handleDropdown(null)}>
+                        <span className="dropdown-title">
+                            About
+                            <span className="dropdown-caret"><FontAwesomeIcon icon={faCaretDown} /></span>
+                        </span>
+                        {openDropdown === 'about' && (
+                            <div className="dropdown-content">
+                                <NavLink to="/values">Values</NavLink>
+                                <NavLink to="/membership">Membership</NavLink>
+                            </div>
+                        )}
+                    </div>
+
+                    <NavLink to="/practice" className={({ isActive }) => isActive ? "active" : ""}>Practice</NavLink>
+                    <NavLink to="/trips" className={({ isActive }) => isActive ? "active" : ""}>Trips</NavLink>
+                    <NavLink to="/comp-team" className={({ isActive }) => isActive ? "active" : ""}>Comp Team</NavLink>
+
+                    <div className="dropdown" onMouseEnter={() => handleDropdown('resources')} onMouseLeave={() => handleDropdown(null)}>
+                        <span className="dropdown-title">
+                            Resources 
+                            <span className="dropdown-caret"><FontAwesomeIcon icon={faCaretDown} /></span>
+                        </span>
+                        {openDropdown === 'resources' && (
+                            <div className="dropdown-content">
+                                <NavLink to="/resources">Guides</NavLink>
+                                <NavLink to="/faq">FAQ</NavLink>
+                            </div>
+                        )}
+                    </div>
                 </nav>
 
                 <div className="socials">
@@ -42,24 +71,21 @@ const Header = () => {
                 </div>
             </header>
 
-            {/* Mobile slide-out menu */}
             <div className={`mobile-menu ${isMenuOpen ? 'open' : ''}`}>
                 <div className="close-btn" onClick={() => setIsMenuOpen(false)}>
                     <FontAwesomeIcon icon={faXmark} />
                 </div>
                 <nav className="mobile-nav">
-                    <NavLink to="/" end onClick={() => setIsMenuOpen(false)}>
-                        home
-                    </NavLink>
-                    <NavLink to="/values" onClick={() => setIsMenuOpen(false)}>values</NavLink>
-                    <NavLink to="/membership" onClick={() => setIsMenuOpen(false)}>membership</NavLink>
-                    <NavLink to="/practice" onClick={() => setIsMenuOpen(false)}>practice</NavLink>
-                    <NavLink to="/trips" onClick={() => setIsMenuOpen(false)}>trips</NavLink>
-                    <NavLink to="/comp-team" onClick={() => setIsMenuOpen(false)}>comp team</NavLink>
-                    <NavLink to="/resources" onClick={() => setIsMenuOpen(false)}>resources</NavLink>
+                    <NavLink to="/" end onClick={() => setIsMenuOpen(false)}>Home</NavLink>
+                    <NavLink to="/values" onClick={() => setIsMenuOpen(false)}>Values</NavLink>
+                    <NavLink to="/membership" onClick={() => setIsMenuOpen(false)}>Membership</NavLink>
+                    <NavLink to="/practice" onClick={() => setIsMenuOpen(false)}>Practice</NavLink>
+                    <NavLink to="/trips" onClick={() => setIsMenuOpen(false)}>Trips</NavLink>
+                    <NavLink to="/comp-team" onClick={() => setIsMenuOpen(false)}>Comp Team</NavLink>
+                    <NavLink to="/resources" onClick={() => setIsMenuOpen(false)}>Guides</NavLink>
+                    <NavLink to="/faq" onClick={() => setIsMenuOpen(false)}>FAQ</NavLink>
                 </nav>
             </div>
-
         </>
     );
 };
