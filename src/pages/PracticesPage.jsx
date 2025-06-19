@@ -42,7 +42,7 @@ const PracticesPage = () => {
 
             {/* Example Practices */}
             <div className="section example-practices">
-                <h1 className="subheading">What Does Practice Look Like?</h1>
+                <h1 className="subheading">What Do Practices Look Like?</h1>
 
                 <div className="practice-gallery">
                     <div className="practice-card">

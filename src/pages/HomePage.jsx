@@ -158,11 +158,6 @@ const HomePage = () => {
                         </div>
                     ))}
                 </div>
-                <div className="button-var1">
-                    <a href="/membership" rel="noopener noreferrer" className="button-text-var1">
-                        Become a Member
-                    </a>
-                </div>
             </div>
             {/* interactive map section */}
             <div className="section footprints">

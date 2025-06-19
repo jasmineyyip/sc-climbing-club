@@ -2,18 +2,12 @@ import React, { useState } from 'react';
 import './Header.css';
 import logo from '../assets/logo-notext.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faInstagram, faSlack } from '@fortawesome/free-brands-svg-icons';
-import { faBars, faXmark, faHouse, faCaretDown } from '@fortawesome/free-solid-svg-icons';
+import { faBars, faXmark } from '@fortawesome/free-solid-svg-icons';
 import { NavLink } from 'react-router-dom';
 
 const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
-    const [openDropdown, setOpenDropdown] = useState(null);
-
-    const handleDropdown = (menu) => {
-        setOpenDropdown(openDropdown === menu ? null : menu);
-    };
-
+    
     return (
         <>
             <header className="header">
@@ -26,49 +20,15 @@ const Header = () => {
                 </div>
 
                 <nav className="nav desktop-nav">
-                    <NavLink to="/" end className={({ isActive }) => isActive ? "active" : ""}>
-                        <FontAwesomeIcon icon={faHouse} />
-                    </NavLink>
-
-                    <div className="dropdown" onMouseEnter={() => handleDropdown('about')} onMouseLeave={() => handleDropdown(null)}>
-                        <span className="dropdown-title">
-                            About
-                            <span className="dropdown-caret"><FontAwesomeIcon icon={faCaretDown} /></span>
-                        </span>
-                        {openDropdown === 'about' && (
-                            <div className="dropdown-content">
-                                <NavLink to="/values">Values</NavLink>
-                                <NavLink to="/membership">Membership</NavLink>
-                            </div>
-                        )}
-                    </div>
-
+                    <NavLink to="/" className={({ isActive }) => isActive ? "active" : ""}>Home</NavLink>
+                    <NavLink to="/values" className={({ isActive }) => isActive ? "active" : ""}>Values</NavLink>
+                    <NavLink to="/membership" className={({ isActive }) => isActive ? "active" : ""}>Membership</NavLink>
                     <NavLink to="/practice" className={({ isActive }) => isActive ? "active" : ""}>Practice</NavLink>
                     <NavLink to="/trips" className={({ isActive }) => isActive ? "active" : ""}>Trips</NavLink>
                     <NavLink to="/comp-team" className={({ isActive }) => isActive ? "active" : ""}>Comp Team</NavLink>
-
-                    <div className="dropdown" onMouseEnter={() => handleDropdown('resources')} onMouseLeave={() => handleDropdown(null)}>
-                        <span className="dropdown-title">
-                            Resources 
-                            <span className="dropdown-caret"><FontAwesomeIcon icon={faCaretDown} /></span>
-                        </span>
-                        {openDropdown === 'resources' && (
-                            <div className="dropdown-content">
-                                <NavLink to="/resources">Guides</NavLink>
-                                <NavLink to="/faq">FAQ</NavLink>
-                            </div>
-                        )}
-                    </div>
+                    <NavLink to="/resources" className={({ isActive }) => isActive ? "active" : ""}>Guides</NavLink>
+                    <NavLink to="/faq" className={({ isActive }) => isActive ? "active" : ""}>FAQ</NavLink>
                 </nav>
-
-                <div className="socials">
-                    <a href="https://www.instagram.com/trojanclimbing/" target="_blank" rel="noopener noreferrer">
-                        <FontAwesomeIcon icon={faInstagram} />
-                    </a>
-                    <a href="https://scclimbingclub.slack.com/join/shared_invite/zt-2ufleb601-i6GfJqTQ0vcd1A8UPfRvsA#/shared-invite/email" target="_blank" rel="noopener noreferrer">
-                        <FontAwesomeIcon icon={faSlack} />
-                    </a>
-                </div>
             </header>
 
             <div className={`mobile-menu ${isMenuOpen ? 'open' : ''}`}>
