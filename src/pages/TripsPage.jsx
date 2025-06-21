@@ -77,7 +77,7 @@ const TripsPage = () => {
       filtered = filtered.filter((trip) =>
         selectedTags.some(
           (tag) => trip.tripType.toLowerCase() === tag.toLowerCase() ||
-                   trip.climbTypes.some((climb) => climb.toLowerCase() === tag.toLowerCase())
+            trip.climbTypes.some((climb) => climb.toLowerCase() === tag.toLowerCase())
         )
       );
     }
@@ -100,29 +100,30 @@ const TripsPage = () => {
   }
 
   return (
-    <div className="trips-container">
+    <>
       <Header />
-      <div className="banner">
-        <div className="banner-text">
-          <h1>Trips</h1>
+      <div className="trips-container">
+        <div className="banner">
+          <div className="banner-text">
+            <h1>Trips</h1>
+          </div>
         </div>
-      </div>
 
-      {/* 🔍 Search Bar */}
-      <div className="search-container">
-        <input
-          type="text"
-          placeholder="Search trips..."
-          value={searchTerm}
-          onChange={(e) => setSearchTerm(e.target.value)}
-          className="search-bar"
-        />
-      </div>
-      
-      {/* 🎛 Advanced Filter */}
-      <div className="filter-container">
+        {/* 🔍 Search Bar */}
+        <div className="search-container">
+          <input
+            type="text"
+            placeholder="Search trips..."
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
+            className="search-bar"
+          />
+        </div>
+
+        {/* 🎛 Advanced Filter */}
+        <div className="filter-container">
           <div className="filter-row">
-            <FontAwesomeIcon icon={faFilter} className="filter-icon"/> 
+            <FontAwesomeIcon icon={faFilter} className="filter-icon" />
             <p>Advanced Filter</p>
           </div>
           <div className="filter-tags">
@@ -136,19 +137,20 @@ const TripsPage = () => {
               </span>
             ))}
           </div>
-      </div>
+        </div>
 
-      {/* Display filtered trips */}
-      <div className="trips-list">
-        {filteredTrips.length > 0 ? (
-          filteredTrips.map((trip) => <Trip key={trip.id} trip={trip} />)
-        ) : (
-          <p className="no-results">No trips found.</p>
-        )}
-      </div>
+        {/* Display filtered trips */}
+        <div className="trips-list">
+          {filteredTrips.length > 0 ? (
+            filteredTrips.map((trip) => <Trip key={trip.id} trip={trip} />)
+          ) : (
+            <p className="no-results">No trips found.</p>
+          )}
+        </div>
 
-      <Footer />
-    </div>
+        <Footer />
+      </div>
+    </>
   );
 };
 

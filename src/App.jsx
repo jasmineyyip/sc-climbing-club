@@ -5,7 +5,8 @@ import ValuesPage from "./pages/ValuesPage";
 import MembershipPage from "./pages/MembershipPage";
 import TripsPage from "./pages/TripsPage";
 import CompTeamPage from "./pages/CompTeamPage";
-import PracticesPage from "./pages/PracticesPage";
+import PracticePage from "./pages/PracticePage";
+import ResourcesPage from "./pages/ResourcesPage";
 import FAQPage from "./pages/FAQPage";
 
 const App = () => {
@@ -17,7 +18,8 @@ const App = () => {
         <Route path="/membership" element={<MembershipPage />} />
         <Route path="/trips" element={<TripsPage />} />
         <Route path="/comp-team" element={<CompTeamPage />} />
-        <Route path="/practice" element={<PracticesPage />} />
+        <Route path="/practice" element={<PracticePage />} />
+        <Route path="/resources" element={<ResourcesPage />} />
         <Route path="/faq" element={<FAQPage />} />
       </Routes>
     </Router>

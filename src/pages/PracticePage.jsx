@@ -1,7 +1,7 @@
 import React from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import './PracticesPage.css';
+import './PracticePage.css';
 
 // Images
 import practiceBanner from '../assets/banners/practicesbanner.png';
@@ -9,9 +9,8 @@ import costume from '../assets/practices/costume.png';
 import bingo from '../assets/practices/bingo.png';
 import connect4 from '../assets/practices/connect4.png';
 import plank from '../assets/practices/plank.png';
-import action from '../assets/practices/action.png';
 
-const PracticesPage = () => {
+const PracticePage = () => {
     return (
         <>
             <Header />
@@ -76,4 +75,4 @@ const PracticesPage = () => {
     );
 };
 
-export default PracticesPage;
+export default PracticePage;

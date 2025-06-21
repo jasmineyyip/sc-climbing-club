@@ -26,7 +26,7 @@ const Header = () => {
                     <NavLink to="/practice" className={({ isActive }) => isActive ? "active" : ""}>Practice</NavLink>
                     <NavLink to="/trips" className={({ isActive }) => isActive ? "active" : ""}>Trips</NavLink>
                     <NavLink to="/comp-team" className={({ isActive }) => isActive ? "active" : ""}>Comp Team</NavLink>
-                    <NavLink to="/resources" className={({ isActive }) => isActive ? "active" : ""}>Guides</NavLink>
+                    <NavLink to="/resources" className={({ isActive }) => isActive ? "active" : ""}>Resources</NavLink>
                     <NavLink to="/faq" className={({ isActive }) => isActive ? "active" : ""}>FAQ</NavLink>
                 </nav>
             </header>
@@ -42,7 +42,7 @@ const Header = () => {
                     <NavLink to="/practice" onClick={() => setIsMenuOpen(false)}>Practice</NavLink>
                     <NavLink to="/trips" onClick={() => setIsMenuOpen(false)}>Trips</NavLink>
                     <NavLink to="/comp-team" onClick={() => setIsMenuOpen(false)}>Comp Team</NavLink>
-                    <NavLink to="/resources" onClick={() => setIsMenuOpen(false)}>Guides</NavLink>
+                    <NavLink to="/resources" onClick={() => setIsMenuOpen(false)}>Resources</NavLink>
                     <NavLink to="/faq" onClick={() => setIsMenuOpen(false)}>FAQ</NavLink>
                 </nav>
             </div>
