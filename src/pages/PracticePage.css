@@ -14,15 +14,14 @@
 }
 
 .practice-card {
-    background-color: #ffffff;
+    background-color: none;
     border-radius: 10px;
     overflow: hidden;
-    border: 1.5px solid #E5E5E5;
     text-align: center;
 }
 
 .practice-card img {
-    width: 100%;
+    width: 400px;
     height: auto;
     display: block;
 }
