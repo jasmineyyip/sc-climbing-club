@@ -43,9 +43,6 @@ const Trip = ({ trip }) => {
         </a> */}
       </div>
 
-      {/* Description */}
-      <p className="trip-description">{trip.description}</p>
-
       {/* Tags (Only display if there are valid tags) */}
       {tripTags.length > 0 && (
         <div className="trip-tags">

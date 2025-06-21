@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import FAQBanner from '../assets/banners/faqbanner.png'; // update to actual FAQ banner if available
+import FAQBanner from '../assets/banners/faqbanner.png';
 import './FAQPage.css';
 
 const faqs = [
@@ -78,7 +78,7 @@ const FAQPage = () => {
                 <div className="banner-image" style={{ position: 'relative' }}>
                     <img src={FAQBanner} alt="FAQ Banner" style={{ width: '100%', height: 'auto', borderRadius: '0px' }} />
                     <div className="banner-text values">
-                        <h1>Frequently Asked Questions</h1>
+                        <h1>FAQ</h1>
                     </div>
                 </div>
             </div>

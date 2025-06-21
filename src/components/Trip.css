@@ -59,18 +59,6 @@
     text-decoration: none;
 }
   
-.trip-description {
-    font-size: 16px;
-    color: #5c5c5c;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-    margin-top: 0;
-    margin-bottom: 16px;
-}
-  
 .trip-tags {
     display: flex;
     flex-wrap: wrap;
