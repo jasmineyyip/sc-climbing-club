@@ -4,6 +4,7 @@ import { db } from "../firebase";
 import { collection, getDocs } from "firebase/firestore";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import tripsBanner from '../assets/banners/tripsbanner.jpg'
 import Trip from "../components/Trip";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFilter } from "@fortawesome/free-solid-svg-icons";
@@ -102,50 +103,71 @@ const TripsPage = () => {
   return (
     <>
       <Header />
+      {/* Banner Section */}
       <div className="trips-container">
-        <div className="banner">
-          <div className="banner-text">
-            <h1>Trips</h1>
+        <div className="banner-section" style={{ padding: '50px 0 20px', width: '90%', margin: 'auto' }}>
+          <div className="banner-image" style={{ position: 'relative' }}>
+            <img src={tripsBanner} alt="Trips Banner" style={{ width: '100%', height: 'auto', borderRadius: '0px' }} />
+            <div className="banner-text values">
+              <h1>Trips</h1>
+            </div>
           </div>
         </div>
 
-        {/* 🔍 Search Bar */}
-        <div className="search-container">
-          <input
-            type="text"
-            placeholder="Search trips..."
-            value={searchTerm}
-            onChange={(e) => setSearchTerm(e.target.value)}
-            className="search-bar"
-          />
+        {/* Trips Intro */}
+        <div className="section trips-intro">
+          <h1 className="subheading">Join Our Trips</h1>
+          <p className="body">
+            Our weekend trips occur all around California, Nevada, Utah, and Arizona! We provide all the gear (though your gear is always appreciated!), and teach you all of the important safety and climbing tips.
+          </p>
+          <p className="body">
+            To accommodate for the high demand of trips, priority is given to students who have not attended a trip before and/or students who have a vehicle and are willing to be a driver for the trip - you will be reimbursed for gas. For the rest of our members, spots for trips are chosen in a general lottery system.
+          </p>
+          <p className="body">
+            We ask that you please keep up with school work and check with any scheduling conflicts before signing up for a trip, as those who cancel last minute or do not show up will be given lower priority for future SC Climbing trips.
+          </p>
         </div>
 
-        {/* 🎛 Advanced Filter */}
-        <div className="filter-container">
-          <div className="filter-row">
-            <FontAwesomeIcon icon={faFilter} className="filter-icon" />
-            <p>Advanced Filter</p>
+        <div className="section past-trips">
+          <h1 className="subheading">Past Trips</h1>
+          {/* 🔍 Search Bar */}
+          <div className="search-container">
+            <input
+              type="text"
+              placeholder="Search trips..."
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+              className="search-bar"
+            />
           </div>
-          <div className="filter-tags">
-            {filterTags.map((tag) => (
-              <span
-                key={tag}
-                className={`filter-tag ${selectedTags.includes(tag) ? "selected" : ""}`}
-                onClick={() => toggleTag(tag)}
-              >
-                {tag}
-              </span>
-            ))}
-          </div>
-        </div>
 
-        {/* Display filtered trips */}
-        <div className="trips-list">
-          {filteredTrips.length > 0 ? (
-            filteredTrips.map((trip) => <Trip key={trip.id} trip={trip} />)
-          ) : (
-            <p className="no-results">No trips found.</p>
-          )}
+          {/* 🎛 Advanced Filter */}
+          <div className="filter-container">
+            <div className="filter-row">
+              <FontAwesomeIcon icon={faFilter} className="filter-icon" />
+              <p>Advanced Filter</p>
+            </div>
+            <div className="filter-tags">
+              {filterTags.map((tag) => (
+                <span
+                  key={tag}
+                  className={`filter-tag ${selectedTags.includes(tag) ? "selected" : ""}`}
+                  onClick={() => toggleTag(tag)}
+                >
+                  {tag}
+                </span>
+              ))}
+            </div>
+          </div>
+
+          {/* Display filtered trips */}
+          <div className="trips-list">
+            {filteredTrips.length > 0 ? (
+              filteredTrips.map((trip) => <Trip key={trip.id} trip={trip} />)
+            ) : (
+              <p className="no-results">No trips found.</p>
+            )}
+          </div>
         </div>
 
         <Footer />

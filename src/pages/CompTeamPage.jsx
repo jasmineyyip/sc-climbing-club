@@ -8,7 +8,7 @@ import StepCardFlippable from '../components/StepCardFlippable';
 import TrainingCard from '../components/TrainingCard';
 
 // images
-import valueBanner from '../assets/banners/valuesbanner.png';
+import compTeamBanner from '../assets/banners/compteambanner.jpg';
 import value1 from '../assets/values/value-1.png';
 
 // social logos
@@ -24,7 +24,7 @@ const CompTeamPage = () => {
             <div className="banner-section" style={{ padding: '50px 0 20px', width: '90%', margin: 'auto' }}>
                 <div className="banner-image" style={{ position: 'relative' }}>
                     <img
-                        src={valueBanner}
+                        src={compTeamBanner}
                         alt="Our Values"
                         style={{ width: '100%', height: 'auto', borderRadius: '0px' }}
                     />

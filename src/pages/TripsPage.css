@@ -2,6 +2,12 @@
     display: flex;
     flex-direction: column;
 }
+
+.section.trips-intro {
+    width: 70%;
+    margin: auto;
+    padding-bottom: 40px;
+}
    
 .trips-list {
     display: flex;
