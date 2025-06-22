@@ -19,8 +19,8 @@ const locations = [
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
     nickname: "Red Rock",
     image: redRockImg,
-    x: 34.1,
-    y: 52.5
+    x: 52.5,
+    y: 56
   },
   {
     id: 2,
@@ -29,8 +29,8 @@ const locations = [
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
     nickname: "Bishop",
     image: bishopImg,
-    x: 32.1,
-    y: 80.5
+    x: 31,
+    y: 40
   },
   {
     id: 3,
@@ -39,8 +39,8 @@ const locations = [
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
     nickname: "Corona Del Mar",
     image: cdmImg,
-    x: 230,
-    y: 360
+    x: 32,
+    y: 70
   },
   {
     id: 4,
@@ -49,8 +49,8 @@ const locations = [
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
     nickname: "Malibu Creek",
     image: malibuImg,
-    x: 214,
-    y: 336
+    x: 26,
+    y: 64
   },
   {
     id: 5,
@@ -59,8 +59,8 @@ const locations = [
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
     nickname: "Point Dume",
     image: pointDumeImg,
-    x: 208,
-    y: 340
+    x: 27,
+    y: 65
   }
 ]
 
