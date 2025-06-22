@@ -2,6 +2,7 @@ import React from 'react';
 
 // components
 import Header from '../components/Header';
+import Banner from '../components/Banner'
 import Footer from '../components/Footer';
 import StepCard from '../components/StepCard';
 
@@ -21,17 +22,7 @@ const ValuesPage = () => {
         <>
             <Header />
             {/* Banner Section */}
-            <div className="banner-section">
-                <div className="banner-image">
-                    <img
-                        src={valueBanner}
-                        alt="Our Values"
-                    />
-                    <div className="banner-text values">
-                        <h1>Our Values</h1>
-                    </div>
-                </div>
-            </div>
+            <Banner image={valueBanner} text="Our Values" />
 
             {/* Section 1 */}
             <div className="value-section">

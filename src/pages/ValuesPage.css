@@ -159,7 +159,7 @@
     margin-bottom: 100px;
 }
 
-.card-grid {
+.card-grid.values {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -191,7 +191,7 @@
 @media (max-width: 768px) {
     .banner-text.values h1 {
         font-size: 90px;
-        padding-bottom: 20px;
+        padding-bottom: 40px;
     }
 
     .value-content,
@@ -202,6 +202,10 @@
 
     .card-grid.step-cards.values {
         max-width: calc(1 * 323px);
+    }
+
+    .step-card {
+        height: auto;
     }
 }
 
@@ -221,6 +225,7 @@
     }
 
     .banner-text.values h1 {
+        font-size: 60px;
         color: #1e1e20;
     }
 
@@ -231,10 +236,6 @@
     .banner-text.values {
         margin-top: 20px;
         bottom: 10px;
-    }
-
-    .banner-text.values h1 {
-        font-size: 60px;
     }
 
     .value-container,
