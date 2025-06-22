@@ -21,12 +21,11 @@ const ValuesPage = () => {
         <>
             <Header />
             {/* Banner Section */}
-            <div className="banner-section" style={{ padding: '50px 0 20px', width: '90%', margin: 'auto' }}>
-                <div className="banner-image" style={{ position: 'relative' }}>
+            <div className="banner-section">
+                <div className="banner-image">
                     <img
                         src={valueBanner}
                         alt="Our Values"
-                        style={{ width: '100%', height: 'auto', borderRadius: '0px' }}
                     />
                     <div className="banner-text values">
                         <h1>Our Values</h1>
@@ -132,7 +131,7 @@ const ValuesPage = () => {
                     </div>
                     <div className="scholarships-text">
                         <h2>Apply for Scholarships</h2>
-                        <div className="card-grid step-cards">
+                        <div className="card-grid step-cards values">
                             {/* Step 1 */}
                             <StepCard
                                 step="1"
@@ -201,7 +200,7 @@ const ValuesPage = () => {
                             <StepCard
                                 step="5"
                                 title="Questions?"
-                                detail="Please direct any questions about scholarships to Sophie (herant@usc.edu, or Slack). We appreciate you!"
+                                detail="Please direct any questions about scholarships to Jasmine Yip (yipjasmi@usc.edu, or Slack). We appreciate you!"
                             />
                         </div>
                     </div>

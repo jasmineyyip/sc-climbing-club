@@ -77,7 +77,7 @@ const FAQPage = () => {
             <div className="banner-section" style={{ padding: '50px 0 20px', width: '90%', margin: 'auto' }}>
                 <div className="banner-image" style={{ position: 'relative' }}>
                     <img src={FAQBanner} alt="FAQ Banner" style={{ width: '100%', height: 'auto', borderRadius: '0px' }} />
-                    <div className="banner-text values">
+                    <div className="banner-text faq">
                         <h1>FAQ</h1>
                     </div>
                 </div>

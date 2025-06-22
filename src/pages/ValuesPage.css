@@ -11,6 +11,22 @@
     text-align: center;
 }
 
+.banner-section {
+    padding: 50px 0 20px;
+    width: 90%;
+    margin: auto;
+}
+
+.banner-section .banner-image {
+    position: relative;
+}
+
+.banner-section .banner-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 0px;
+}
+
 .banner-text.values {
     position: absolute;
     bottom: 30px;
@@ -132,6 +148,17 @@
     padding-bottom: 50px;
 }
 
+/* Step Cards */
+.card-grid.step-cards.values {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: flex-start;
+    width: calc(3 * 340px + 2 * 20px);
+    margin: auto;
+    margin-bottom: 100px;
+}
+
 .card-grid {
     display: flex;
     flex-wrap: wrap;
@@ -147,13 +174,17 @@
     }
 }
 
-@media (max-width: 1061px) {
+@media (max-width: 1000px) {
     .banner-text.values h1 {
         font-size: 120px;
     }
 
     .aff-groups {
         max-width: calc(2 * 241px + 1 * 10px);
+    }
+
+    .card-grid.step-cards.values {
+        max-width: calc(2 * 340px + 1 * 20px);
     }
 }
 
@@ -168,6 +199,10 @@
         gap: 0px;
         flex-direction: column;
     }
+
+    .card-grid.step-cards.values {
+        max-width: calc(1 * 323px);
+    }
 }
 
 @media (max-width: 703px) {
@@ -177,7 +212,24 @@
 }
 
 @media (max-width: 530px) {
+    .banner-image img {
+        display: none;
+    }
+
+    .banner-section {
+        padding-top: 160px;
+    }
+
+    .banner-text.values h1 {
+        color: #1e1e20;
+    }
+
+    .value-section {
+        padding-top: 0;
+    }
+
     .banner-text.values {
+        margin-top: 20px;
         bottom: 10px;
     }
 
@@ -194,5 +246,24 @@
 
     .value-content {
         gap: 0;
+    }
+}
+
+@media (max-width: 370px) {
+    h2 {
+        line-height: 60px;
+    }
+
+    .card-grid.step-cards.values {
+        width: 100%;
+    }
+
+    .step-card {
+        width: 90%;
+        height: auto;
+    }
+
+    .info-name {
+        font-size: 14px;
     }
 }

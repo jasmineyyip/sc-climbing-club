@@ -103,7 +103,7 @@
 }
 
 /* Step Cards */
-.card-grid.step-cards {
+.card-grid.step-cards.membership {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
@@ -190,13 +190,13 @@
     background-color: #f4f3ee;
   }
 
-  .card-grid.step-cards {
+  .card-grid.step-cards.membership {
     max-width: calc(2 * 340px + 1 * 20px);
   }
 }
 
 @media (max-width: 768px) {
-  .card-grid.step-cards {
+  .card-grid.step-cards.membership {
     max-width: calc(1 * 323px);
   }
 }
