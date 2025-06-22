@@ -102,7 +102,7 @@ const HomePage = () => {
     }, []);
 
     return (
-        <div className="home">
+        <>
             <Header />
             {/* banner section */}
             <div className="banner home">
@@ -127,9 +127,6 @@ const HomePage = () => {
                 <source src="https://firebasestorage.googleapis.com/v0/b/sc-climbing-club.firebasestorage.app/o/banner.mp4?alt=media&token=59ca3831-edac-4a87-8826-542222eb5e84" type="video/mp4" />
                 Your browser does not support the video tag.
             </video>
-            <script>
-                document.getElementById('vid').play();
-            </script>
             {/* welcome section */}
             <div className="section welcome">
                 {/* <h1 className="subheading">Welcome to the USC Climbing Team</h1> */}
@@ -222,7 +219,7 @@ const HomePage = () => {
                 </div>
             </div>
             <Footer />
-        </div>
+        </>
     );
 };
 

@@ -207,7 +207,6 @@ const ValuesPage = () => {
                     </div>
                 </div>
             </div>
-
             <Footer />
         </>
     );

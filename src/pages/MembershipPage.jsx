@@ -150,7 +150,7 @@ const MembershipPage = () => {
               "Monday: 7:00pm–9:00pm",
               "Tuesday (Comp Team): 6:00pm–8:00pm",
               "Thursday 7:30pm–9:30pm",
-              "No cars? No worries! Check out our #carpool channel on Slack and ask for a ride."
+              "No cars? No worries! Check out #carpool channel on Slack and ask for a ride."
             ]}
             infoCards={[
               {

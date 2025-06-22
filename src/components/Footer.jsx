@@ -57,7 +57,7 @@ const Footer = () => {
                 </div>
                 <div className="liner">
                     <div className="liner-content">
-                        <p>© 2024 USC Climbing Team</p>
+                        <p>© 2025 USC Climbing Team</p>
                         <p>Privacy Notice | Notice of Non-Discrimination | Digital Accessibility</p>
                     </div>
                 </div>
