@@ -1,34 +1,36 @@
 @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400italic,700,700italic);
 
 svg.states {
-	color: white;
-	display: block;
-	margin: 0 auto;
+    color: white;
+    display: block;
+    margin: 0 auto;
 }
+
 path.state {
-	fill: #eae9e8;
-	stroke: #fff;
-	stroke-width: 1;
+    fill: #eae9e8;
+    stroke: #fff;
+    stroke-width: 1;
 }
 
 a.state {
-	transition: color 1s;
+    transition: color 1s;
 }
 
 a.state:hover {
-	color: #a00;
-	transition: color 0s;
+    color: #a00;
+    transition: color 0s;
 }
 
 .map-container {
     display: flex;
-    margin: 60px auto;
+    justify-content: space-between;
+    margin: 40px auto;
     width: 90%;
-    height: 520px;
+    height: 580px;
 }
 
 .details-box {
-    width: 320px;
+    width: 400px;
     height: min-content;
     border-radius: 10px;
     padding: 20px;
@@ -83,23 +85,30 @@ a.state:hover {
     margin: 6px 0;
 }
 
-/* Map Marker Styling */
-.map-marker {
-	stroke: white;
-	stroke-width: 1px;
-	cursor: pointer;
-	transition: r 0.2s ease-in-out;
+.map-image-container {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
 }
-  
-/* On hover, increase size by adjusting radius (r) instead of scaling */
-.map-marker:hover {
-	r: 6;
+
+.map-image {
+    width: 100%;
+    height: auto;
+    display: block;
 }
-  
-/* Label Style */
-.map-label {
-	font-size: 12px;
-	font-family: Arial, sans-serif;
-	fill: black;
+
+.map-dot {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    border: 2px solid white;
+    cursor: pointer;
+    transform: translate(-50%, -50%);
+    /* center the dot on x/y */
+    transition: background-color 0.2s;
 }
-  
+
+.map-dot:hover {
+    transform: translate(-50%, -50%) scale(1.2);
+}

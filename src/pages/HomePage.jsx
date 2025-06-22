@@ -51,7 +51,7 @@ const sponsorItems = [
     { logo: hitorii, url: "https://hitorii.com/" },
     { logo: stronghold, url: "https://strongholdclimb.com/" },
     { logo: touchstone, url: "https://touchstoneclimbing.com/" }
-  ];
+];
 
 const HomePage = () => {
     const [currentText, setCurrentText] = useState('');
@@ -64,64 +64,64 @@ const HomePage = () => {
     // auto typer
     useEffect(() => {
         const currentWord = teamNames[index];
-        
+
         if (isDeleting) {
-        // Delete effect
-        if (currentText.length > 0) {
-            setTimeout(() => {
-            setCurrentText(currentText.slice(0, -1));
-            }, deletingSpeed);
+            // Delete effect
+            if (currentText.length > 0) {
+                setTimeout(() => {
+                    setCurrentText(currentText.slice(0, -1));
+                }, deletingSpeed);
+            } else {
+                setIsDeleting(false);
+                setIndex((prevIndex) => (prevIndex + 1) % teamNames.length);
+            }
         } else {
-            setIsDeleting(false);
-            setIndex((prevIndex) => (prevIndex + 1) % teamNames.length);
-        }
-        } else {
-        // Typing effect
-        if (currentText.length < currentWord.length) {
-            setTimeout(() => {
-            setCurrentText(currentWord.slice(0, currentText.length + 1));
-            }, typingSpeed);
-        } else {
-            setTimeout(() => setIsDeleting(true), pauseTime);
-        }
+            // Typing effect
+            if (currentText.length < currentWord.length) {
+                setTimeout(() => {
+                    setCurrentText(currentWord.slice(0, currentText.length + 1));
+                }, typingSpeed);
+            } else {
+                setTimeout(() => setIsDeleting(true), pauseTime);
+            }
         }
     }, [currentText, index, isDeleting]);
 
     // video trigger
     useEffect(() => {
         const video = videoRef.current;
-    
+
         if (video) {
-          const playPromise = video.play();
-          if (playPromise !== undefined) {
-            playPromise.catch((error) => {
-              console.log("Autoplay blocked, user interaction required:", error);
-            });
-          }
+            const playPromise = video.play();
+            if (playPromise !== undefined) {
+                playPromise.catch((error) => {
+                    console.log("Autoplay blocked, user interaction required:", error);
+                });
+            }
         }
-      }, []);
-    
+    }, []);
+
     return (
         <div className="home">
-            <Header />   
+            <Header />
             {/* banner section */}
-            <div className="banner">
-                <div className="banner-text">
-                <h1>USC Climbing Team</h1>
-                <p className="typewriter">
-                    for {currentText}<span className="cursor"></span>
-                </p>
+            <div className="banner home">
+                <div className="banner-text home">
+                    <h1>USC Climbing Team</h1>
+                    <p className="typewriter">
+                        for {currentText}<span className="cursor"></span>
+                    </p>
                 </div>
             </div>
-            <video 
-                ref={videoRef} 
-                id="myVideo" 
-                width="1000" 
-                controls 
-                autoPlay 
-                muted 
-                loop 
-                playsInline 
+            <video
+                ref={videoRef}
+                id="myVideo"
+                width="1000"
+                controls
+                autoPlay
+                muted
+                loop
+                playsInline
                 style={{ display: 'block', margin: 'auto', borderRadius: 20 }}
             >
                 <source src="https://firebasestorage.googleapis.com/v0/b/sc-climbing-club.firebasestorage.app/o/banner.mp4?alt=media&token=59ca3831-edac-4a87-8826-542222eb5e84" type="video/mp4" />
@@ -147,9 +147,9 @@ const HomePage = () => {
                     {overviewItems.map((item, index) => (
                         <div key={index} className="rect">
                             <div className="image-container">
-                                <img 
-                                    src={item.img} 
-                                    alt={item.text} 
+                                <img
+                                    src={item.img}
+                                    alt={item.text}
                                 />
                             </div>
                             <div className="text-container">
@@ -166,7 +166,7 @@ const HomePage = () => {
                     <div className="footprints-text">
                         <h1 className="subheading">Our Footprints</h1>
                         <p className="subtitle">
-                            We organize free trips for our members every weekend, exploring new climbing spots and building community. 
+                            We organize free trips for our members every weekend, exploring new climbing spots and building community.
                             It’s our way of making climbing accessible and creating shared experiences.
                         </p>
                     </div>
@@ -197,30 +197,30 @@ const HomePage = () => {
                 <div className="footprints-header">
                     <img src={confettiLeft} alt="Left Image" className="confetti-image" />
                     <div className="footprints-text">
-                    <h1 className="subheading">Sponsors</h1>
-                    <p className="subtitle">
-                        We partner with local businesses and organizations to enhance the climbing community. Through shared resources, sponsorships, and events, we work together to support our climbers.
-                    </p>
-                    {/* Sponsors Grid */}
-                    <div className="logos-grid">
-                        {sponsorItems.map((sponsor, index) => (
-                        <a 
-                            key={index} 
-                            href={sponsor.url} 
-                            target="_blank" 
-                            rel="noopener noreferrer"
-                            className={`logo-container ${hoveredIndex !== null && hoveredIndex !== index ? "greyed-out" : ""}`}
-                            onMouseEnter={() => setHoveredIndex(index)}
-                            onMouseLeave={() => setHoveredIndex(null)}
-                        >
-                            <img src={sponsor.logo} alt={`Logo ${index + 1}`} />
-                        </a>
-                        ))}
-                    </div>
+                        <h1 className="subheading">Sponsors</h1>
+                        <p className="subtitle">
+                            We partner with local businesses and organizations to enhance the climbing community. Through shared resources, sponsorships, and events, we work together to support our climbers.
+                        </p>
+                        {/* Sponsors Grid */}
+                        <div className="logos-grid">
+                            {sponsorItems.map((sponsor, index) => (
+                                <a
+                                    key={index}
+                                    href={sponsor.url}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className={`logo-container ${hoveredIndex !== null && hoveredIndex !== index ? "greyed-out" : ""}`}
+                                    onMouseEnter={() => setHoveredIndex(index)}
+                                    onMouseLeave={() => setHoveredIndex(null)}
+                                >
+                                    <img src={sponsor.logo} alt={`Logo ${index + 1}`} />
+                                </a>
+                            ))}
+                        </div>
                     </div>
                     <img src={confettiRight} alt="Right Image" className="confetti-image" />
                 </div>
-            </div>   
+            </div>
             <Footer />
         </div>
     );

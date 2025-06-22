@@ -56,12 +56,18 @@
     margin: auto;
 }
 
-.banner-text {
+#myvideo {
+    display: 'block';
+    margin: 'auto';
+    border-radius: 20;
+}
+
+.banner-text.home {
     text-align: center;
     margin-bottom: 40px;
 }
 
-.banner-text h1 {
+.banner-text.home h1 {
     margin: 0;
     color: #1e1e21;
     font-size: 160px;
@@ -70,7 +76,7 @@
     text-transform: uppercase;
 }
 
-.banner-text p {
+.banner-text.home p {
     margin: 0;
     font-size: 22px;
     font-family: "PP Mori", sans-serif;
@@ -94,7 +100,8 @@
 
 .section.welcome .body {
     text-align: center;
-    max-width: 800px;
+    width: 90%;
+    max-width: 900px;
     font-size: 20px;
     font-weight: 400;
     line-height: 1.6em;
@@ -146,11 +153,11 @@
     border-color: black;
 }
 
-p.subtitle {
+.home p.subtitle {
     margin: auto;
     font-size: 18px;
     line-height: 1.6em;
-    width: 100%;
+    width: 90%;
     color: #5c5c5c;
 }
 
@@ -256,37 +263,46 @@ p.subtitle {
 .logos-grid {
     padding-top: 40px;
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 columns */
-    grid-template-rows: repeat(2, 1fr); /* 2 rows */
-    gap: 10px; /* Adjust spacing */
-    max-width: 600px; /* Adjust based on need */
+    grid-template-columns: repeat(3, 1fr);
+    /* 3 columns */
+    grid-template-rows: repeat(2, 1fr);
+    /* 2 rows */
+    gap: 10px;
+    /* Adjust spacing */
+    max-width: 600px;
+    /* Adjust based on need */
     margin: auto;
 }
 
 .logo-container img {
-    width: 100%; /* Adjust as needed */
-    transition: filter 0.3s ease-in-out, opacity 0.3s ease-in-out, transform 0.3s ease-in-out; /* Smooth transition effect */
+    width: 100%;
+    /* Adjust as needed */
+    transition: filter 0.3s ease-in-out, opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    /* Smooth transition effect */
 }
 
 .greyed-out img {
-    filter: grayscale(100%); /* Turns non-hovered images grey */
-    opacity: 0.4; /* Optional: reduce opacity for a faded effect */
+    filter: grayscale(100%);
+    /* Turns non-hovered images grey */
+    opacity: 0.4;
+    /* Optional: reduce opacity for a faded effect */
 }
-  
-  .logo-container {
-    width: 140px; /* Fixed square size */
+
+.logo-container {
+    width: 140px;
+    /* Fixed square size */
     height: 140px;
     display: flex;
     justify-content: center;
     align-items: center;
     overflow: hidden;
-  }
-  
-  .logo-container img {
+}
+
+.logo-container img {
     width: 100%;
     height: 100%;
     object-fit: contain;
-  }  
+}
 
 .confetti-image {
     width: 300px;
@@ -295,14 +311,67 @@ p.subtitle {
 }
 
 /* Responsive */
-@media (max-width: 1000px) {
-    .rect-container {
-        width: calc(2 * 350px + 2 * 20px);
+@media (max-width: 1024px) {
+    #myVideo {
+        width: 90%;
     }
-  }
-  
-  @media (max-width: 768px) {  
-    .rect-container {
-        width: calc(1 * 350px);
+
+    .banner-text.home h1 {
+        font-size: 120px;
     }
-  } 
+
+    .section.welcome .body {
+        font-size: 16px;
+    }
+
+    .home p.subtitle {
+        font-size: 16px;
+    }
+
+    .map-container {
+        height: max-content;
+        flex-direction: column-reverse;
+        height: auto !important;
+        align-items: center;
+    }
+
+    .details-box {
+        width: 90%;
+        margin: 20px auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .footprints-image,
+    .confetti-image {
+        display: none;
+    }
+
+    .banner.home {
+        margin-top: 60px;
+    }
+
+    .banner-text.home h1 {
+        font-size: 90px;
+    }
+
+    .banner-text.home p {
+        margin-top: 10px;
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 530px) {
+    .banner.home {
+        margin-top: 60px;
+    }
+
+    .banner-text.home h1 {
+        font-size: 60px;
+    }
+
+    .banner-text.home p {
+        margin-top: 10px;
+        font-size: 16px;
+    }
+}
