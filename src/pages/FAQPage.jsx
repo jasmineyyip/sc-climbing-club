@@ -3,6 +3,8 @@ import Header from '../components/Header';
 import Banner from '../components/Banner';
 import Footer from '../components/Footer';
 import faqBanner from '../assets/banners/faqbanner.png';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons';
 import './FAQPage.css';
 
 const faqs = [
@@ -82,7 +84,9 @@ const FAQPage = () => {
                     <div key={index} className="faq-item">
                         <div className="faq-question" onClick={() => toggleAccordion(index)}>
                             <h3>{faq.question}</h3>
-                            <span>{openIndex === index ? '-' : '+'}</span>
+                            <span className="chevron">
+                                <FontAwesomeIcon icon={openIndex === index ? faChevronUp : faChevronDown} />
+                            </span>
                         </div>
                         {openIndex === index && (
                             <div className="faq-answer">

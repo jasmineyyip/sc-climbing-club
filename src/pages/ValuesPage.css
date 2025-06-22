@@ -12,22 +12,6 @@
     text-align: center;
 }
 
-.banner-section {
-    padding: 50px 0 20px;
-    width: 90%;
-    margin: auto;
-}
-
-.banner-section .banner-image {
-    position: relative;
-}
-
-.banner-section .banner-image img {
-    width: 100%;
-    height: auto;
-    border-radius: 0px;
-}
-
 .value-section {
     padding: 50px 0;
     display: flex;
@@ -162,10 +146,6 @@
 @media (max-width: 530px) {
     .banner-image img {
         display: none;
-    }
-
-    .banner-section {
-        padding-top: 160px;
     }
 
     .value-section {

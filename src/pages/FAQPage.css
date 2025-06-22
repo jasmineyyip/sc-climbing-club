@@ -24,6 +24,10 @@
     color: #333;
 }
 
+span.chevron {
+    margin: auto 0;
+}
+
 .slack-tag {
     background-color: #e1e1df;
     font-family: 'Courier New', Courier, monospace;
@@ -40,6 +44,6 @@
     }
     
     .faq-container {
-        width: 95%;
+        width: 80%;
     }
 }

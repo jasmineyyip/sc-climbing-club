@@ -3,6 +3,8 @@ import Header from '../components/Header';
 import Banner from '../components/Banner';
 import Footer from '../components/Footer';
 import resourcesBanner from '../assets/banners/resourcesbanner.jpg';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons';
 import './FAQPage.css'; // Reuse the same styles
 
 const resources = [
@@ -64,7 +66,9 @@ const ResourcesPage = () => {
                     <div key={index} className="faq-item">
                         <div className="faq-question" onClick={() => toggleCategory(index)}>
                             <h3>{section.category}</h3>
-                            <span>{openCategory === index ? '-' : '+'}</span>
+                            <span className="chevron">
+                                <FontAwesomeIcon icon={openCategory === index ? faChevronUp : faChevronDown} />
+                            </span>
                         </div>
                         {openCategory === index && (
                             <div className="faq-answer">
