@@ -16,6 +16,7 @@ import value3 from '../assets/values/value-3.png';
 import gformsLogo from '../assets/membership/socials/gforms.png';
 
 import './ValuesPage.css';
+import '../components/CardGrid.css';
 
 const ValuesPage = () => {
     return (
@@ -122,7 +123,7 @@ const ValuesPage = () => {
                     </div>
                     <div className="scholarships-text">
                         <h2>Apply for Scholarships</h2>
-                        <div className="card-grid step-cards values">
+                        <div className="card-grid step-cards">
                             {/* Step 1 */}
                             <StepCard
                                 step="1"

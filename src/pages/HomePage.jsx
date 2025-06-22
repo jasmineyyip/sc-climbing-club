@@ -105,8 +105,8 @@ const HomePage = () => {
         <>
             <Header />
             {/* banner section */}
-            <div className="banner home">
-                <div className="banner-text home">
+            <div className="home-banner">
+                <div className="home-banner-text">
                     <h1>USC Climbing Team</h1>
                     <p className="typewriter">
                         for {currentText}<span className="cursor"></span>

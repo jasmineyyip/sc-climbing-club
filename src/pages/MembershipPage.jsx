@@ -3,6 +3,7 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import StepCard from '../components/StepCard';
 import './MembershipPage.css';
+import '../components/CardGrid.css';
 
 // font awesome
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -77,7 +78,7 @@ const MembershipPage = () => {
 
       <div className="section">
         <h1 className="subheading">How to become a member</h1>
-        <div className="card-grid step-card membership">
+        <div className="card-grid step-cards">
           {/* Step 1 */}
           <StepCard
             step="1"

@@ -58,12 +58,12 @@
     height: auto;
 }
 
-.banner-text.home {
+.home-banner-text {
     text-align: center;
-    margin-bottom: 40px;
+    margin: 40px auto;
 }
 
-.banner-text.home h1 {
+.home-banner-text h1 {
     margin: 0;
     color: #1e1e21;
     font-size: 160px;
@@ -72,7 +72,7 @@
     text-transform: uppercase;
 }
 
-.banner-text.home p {
+.home-banner-text p {
     margin: 0;
     font-size: 22px;
     font-family: "PP Mori", sans-serif;
@@ -311,7 +311,7 @@ p.subtitle {
         width: 90%;
     }
 
-    .banner-text.home h1 {
+    .home-banner-text h1 {
         font-size: 120px;
     }
 
@@ -350,11 +350,11 @@ p.subtitle {
         margin-top: 60px;
     }
 
-    .banner-text.home h1 {
+    .home-banner-text h1 {
         font-size: 90px;
     }
 
-    .banner-text.home p {
+    .home-banner-text p {
         margin-top: 10px;
         font-size: 18px;
     }
@@ -375,11 +375,11 @@ p.subtitle {
         margin-top: 60px;
     }
 
-    .banner-text.home h1 {
+    .home-banner-text h1 {
         font-size: 60px;
     }
 
-    .banner-text.home p {
+    .home-banner-text p {
         margin-top: 10px;
         font-size: 16px;
     }
@@ -423,15 +423,15 @@ p.subtitle {
         margin-top: 60px;
     }
 
-    .banner-text.home {
+    .home-banner-text {
         margin-bottom: 30px;
     }
 
-    .banner-text.home h1 {
+    .home-banner-text h1 {
         font-size: 50px;
     }
 
-    .banner-text.home p {
+    .home-banner-text p {
         margin-top: 15px;
         font-size: 16px;
     }

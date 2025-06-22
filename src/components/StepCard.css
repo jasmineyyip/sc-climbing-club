@@ -58,7 +58,7 @@
 }
 
 /* Responsive */
-@media (max-width: 1000px) {
+/* @media (max-width: 1000px) {
     .step-card {
         width: 100%;
         max-width: 340px;
@@ -71,4 +71,4 @@
         width: 100%;
         max-width: 323px;
     }
-}
+} */

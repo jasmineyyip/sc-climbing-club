@@ -4,10 +4,10 @@ import './Banner.css';
 
 const Banner = ({ image, text }) => {
     return (
-        <div className="banner-section values">
-            <div className="banner-image values">
+        <div className="banner-section">
+            <div className="banner-image">
                 <img src={image} alt={text} />
-                <div className="banner-text values">
+                <div className="banner-text">
                     <h1>{text}</h1>
                 </div>
             </div>

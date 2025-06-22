@@ -14,14 +14,14 @@
     border-radius: 0px;
 }
 
-.banner-text.values {
+.banner-text {
     position: absolute;
     bottom: 30px;
     width: 100%;
     text-align: center;
 }
 
-.banner-text.values h1 {
+.banner-text h1 {
     margin: 0;
     color: white;
     font-size: 160px;
@@ -33,13 +33,13 @@
 
 /* Responsive styles */
 @media (max-width: 1000px) {
-    .banner-text.values h1 {
+    .banner-text h1 {
         font-size: 120px;
     }
 }
 
 @media (max-width: 768px) {
-    .banner-text.values h1 {
+    .banner-text h1 {
         font-size: 90px;
     }
 }
@@ -53,12 +53,13 @@
         padding-top: 160px;
     }
 
-    .banner-text.values h1 {
+    .banner-text h1 {
         font-size: 60px;
         color: #1e1e20;
+        padding-bottom: 0;
     }
 
-    .banner-text.values {
+    .banner-text {
         margin-top: 20px;
         bottom: 10px;
     }

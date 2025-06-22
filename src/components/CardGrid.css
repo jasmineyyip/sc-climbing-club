@@ -1,0 +1,49 @@
+/* Step Cards Grid */
+.card-grid.step-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: flex-start;
+    width: calc(3 * 340px + 2 * 20px);
+    margin: auto;
+    margin-bottom: 100px;
+}
+
+.card-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Mobile responsive */
+@media (max-width: 1000px) {
+    .card-grid.step-cards {
+        max-width: calc(2 * 340px + 1 * 20px);
+    }
+}
+
+@media (max-width: 768px) {
+    .card-grid.step-cards {
+        max-width: calc(1 * 323px);
+    }
+
+    .step-card {
+        height: auto;
+    }
+}
+
+@media (max-width: 370px) {
+    .card-grid.step-cards {
+        width: 100%;
+    }
+
+    .step-card {
+        width: 90%;
+        height: auto;
+    }
+
+    .info-name {
+        font-size: 14px;
+    }
+}
