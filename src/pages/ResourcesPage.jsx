@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Header from '../components/Header';
+import Banner from '../components/Banner';
 import Footer from '../components/Footer';
 import resourcesBanner from '../assets/banners/resourcesbanner.jpg';
 import './FAQPage.css'; // Reuse the same styles
@@ -56,14 +57,7 @@ const ResourcesPage = () => {
     return (
         <>
             <Header />
-            <div className="banner-section" style={{ padding: '50px 0 20px', width: '90%', margin: 'auto' }}>
-                <div className="banner-image" style={{ position: 'relative' }}>
-                    <img src={resourcesBanner} alt="Resources Banner" style={{ width: '100%', height: 'auto', borderRadius: '0px' }} />
-                    <div className="banner-text values">
-                        <h1>Resources</h1>
-                    </div>
-                </div>
-            </div>
+            <Banner image={resourcesBanner} text="Resources" />
 
             <div className="faq-container">
                 {resources.map((section, index) => (

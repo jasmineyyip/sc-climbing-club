@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import { db } from "../firebase";
 import { collection, getDocs } from "firebase/firestore";
 import Header from "../components/Header";
+import Banner from '../components/Banner'
 import Footer from "../components/Footer";
 import tripsBanner from '../assets/banners/tripsbanner.jpg'
 import Trip from "../components/Trip";
@@ -34,11 +35,9 @@ const TripsPage = () => {
         for (const tripDoc of tripsSnapshot.docs) {
           const trip = { id: tripDoc.id, ...tripDoc.data() };
 
-          // ✅ Convert Firestore Timestamps to JS Date Strings
           trip.startDate = trip.startDate?.toDate().toLocaleDateString("en-US");
           trip.endDate = trip.endDate?.toDate().toLocaleDateString("en-US");
 
-          // Ensure trip name, tripType, and climbTypes are safe values
           trip.tripName = trip.tripName?.toString() || "";
           trip.tripType = trip.tripType?.toString() || "";
           trip.climbTypes = Array.isArray(trip.climbTypes) ? trip.climbTypes : [];
@@ -46,7 +45,6 @@ const TripsPage = () => {
           tripsData.push(trip);
         }
 
-        // 🔽 Sort trips from most recent to least recent
         tripsData.sort((a, b) => new Date(b.endDate) - new Date(a.endDate));
 
         setTrips(tripsData);
@@ -61,11 +59,11 @@ const TripsPage = () => {
     fetchTrips();
   }, []);
 
-  // 🔍 Filter trips based on searchTerm and selectedTags
+  // filter trips based on searchTerm and selectedTags
   useEffect(() => {
     let filtered = trips;
 
-    // Apply search filter
+    // apply search filter
     if (searchTerm) {
       const keyword = searchTerm.toLowerCase();
       filtered = filtered.filter((trip) =>
@@ -73,7 +71,7 @@ const TripsPage = () => {
       );
     }
 
-    // Apply tag filter (tripType or climbTypes must match)
+    // apply tag filter (tripType or climbTypes must match)
     if (selectedTags.length > 0) {
       filtered = filtered.filter((trip) =>
         selectedTags.some(
@@ -86,14 +84,14 @@ const TripsPage = () => {
     setFilteredTrips(filtered);
   }, [searchTerm, selectedTags, trips]);
 
-  // 🏷 Handle tag selection/deselection
+  // handle tag selection/deselection
   const toggleTag = (tag) => {
     setSelectedTags((prevTags) =>
       prevTags.includes(tag) ? prevTags.filter((t) => t !== tag) : [...prevTags, tag]
     );
   };
 
-  // 🎛 Available filter options
+  // available filter options
   const filterTags = ["Beginner", "Queer", "Top Rope", "Bouldering", "Lead"];
 
   if (loading) {
@@ -103,17 +101,8 @@ const TripsPage = () => {
   return (
     <>
       <Header />
-      {/* Banner Section */}
+      <Banner image={tripsBanner} text="Trips" />
       <div className="trips-container">
-        <div className="banner-section" style={{ padding: '50px 0 20px', width: '90%', margin: 'auto' }}>
-          <div className="banner-image" style={{ position: 'relative' }}>
-            <img src={tripsBanner} alt="Trips Banner" style={{ width: '100%', height: 'auto', borderRadius: '0px' }} />
-            <div className="banner-text values">
-              <h1>Trips</h1>
-            </div>
-          </div>
-        </div>
-
         {/* Trips Intro */}
         <div className="section trips-intro">
           <h1 className="subheading">Join Our Trips</h1>

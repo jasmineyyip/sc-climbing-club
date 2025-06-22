@@ -24,14 +24,6 @@
     color: #333;
 }
 
-.banner-text.faq {
-    position: absolute;
-    bottom: 20px;
-    color: white;
-    font-size: 2.5rem;
-    font-weight: 700;
-}
-
 .slack-tag {
     background-color: #e1e1df;
     font-family: 'Courier New', Courier, monospace;

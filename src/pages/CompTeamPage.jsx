@@ -2,9 +2,9 @@ import React from 'react';
 
 // components
 import Header from '../components/Header';
+import Banner from '../components/Banner'
 import Footer from '../components/Footer';
 import StepCard from '../components/StepCard';
-import StepCardFlippable from '../components/StepCardFlippable';
 import TrainingCard from '../components/TrainingCard';
 
 // images
@@ -20,19 +20,7 @@ const CompTeamPage = () => {
     return (
         <>
             <Header />
-            {/* Banner Section */}
-            <div className="banner-section" style={{ padding: '50px 0 20px', width: '90%', margin: 'auto' }}>
-                <div className="banner-image" style={{ position: 'relative' }}>
-                    <img
-                        src={compTeamBanner}
-                        alt="Our Values"
-                        style={{ width: '100%', height: 'auto', borderRadius: '0px' }}
-                    />
-                    <div className="banner-text values">
-                        <h1>Competition</h1>
-                    </div>
-                </div>
-            </div>
+            <Banner image={compTeamBanner} text="Competition" />
 
             {/* intro section */}
             <div className="section comp-intro">

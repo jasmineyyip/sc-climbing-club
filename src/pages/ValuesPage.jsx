@@ -22,9 +22,7 @@ const ValuesPage = () => {
     return (
         <>
             <Header />
-            {/* Banner Section */}
             <Banner image={valueBanner} text="Our Values" />
-
             {/* Section 1 */}
             <div className="value-section">
                 <div className="value-container">

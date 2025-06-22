@@ -1,7 +1,7 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMapMarkerAlt, faArrowRight } from '@fortawesome/free-solid-svg-icons';
-import './Trip.css'; // Import CSS file
+import './Trip.css';
 import placeholderImage from '../assets/trips/placeholder.png'
 
 const Trip = ({ trip }) => {
