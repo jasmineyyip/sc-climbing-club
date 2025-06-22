@@ -15,6 +15,7 @@ import value1 from '../assets/values/value-1.png';
 import GDocLogo from '../assets/membership/socials/gdoc_logo.png';
 
 import './CompTeamPage.css';
+import '../components/CardGrid.css';
 
 const CompTeamPage = () => {
     return (

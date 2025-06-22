@@ -10,3 +10,13 @@
 .section.comp-plan .body.obj {
     margin-bottom: 50px;
 }
+
+.section.season-timeline {
+    padding-bottom: 100px;
+}
+
+@media (max-width: 530px) {
+    .section.comp-membership {
+        width: 90%;
+    }
+}

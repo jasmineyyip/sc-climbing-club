@@ -1,12 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './TrainingCard.css';
 
 // fontawesome
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faLightbulb } from '@fortawesome/free-solid-svg-icons';
-
+import { faLightbulb, faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons';
 
 const TrainingCard = ({ step, title, tag, detail, motivation }) => {
+    const [isExpanded, setIsExpanded] = useState(false);
+    
     const renderSection = (data) => {
         if (Array.isArray(data)) {
             return data.map((item, idx) => <p key={idx}>{item}</p>);
@@ -34,11 +35,24 @@ const TrainingCard = ({ step, title, tag, detail, motivation }) => {
             </div>
 
             <div className="card-motivation">
-                <h4 className="card-motivation-title">
-                    <FontAwesomeIcon icon={faLightbulb} style={{ marginRight: '6px' }} />
-                    Why
-                </h4>
-                {renderSection(motivation)}
+                <div
+                    className="card-motivation-title"
+                    onClick={() => setIsExpanded(!isExpanded)}
+                    style={{ cursor: 'pointer' }}
+                >
+                    <h4 className="card-motivation-title-text">
+                        <FontAwesomeIcon icon={faLightbulb} style={{ marginRight: '6px' }} />
+                        Why
+                    </h4>
+                    <span className="chevron-var1">
+                        <FontAwesomeIcon icon={isExpanded ? faChevronUp : faChevronDown} />
+                    </span>
+                </div>
+                {isExpanded && (
+                    <div className="card-motivation-details expanded">
+                        {renderSection(motivation)}
+                    </div>
+                )}
             </div>
         </div>
     );
