@@ -1,5 +1,6 @@
 import React from 'react';
 import Header from '../components/Header';
+import Banner from '../components/Banner'
 import Footer from '../components/Footer';
 import './PracticePage.css';
 
@@ -15,14 +16,7 @@ const PracticePage = () => {
         <>
             <Header />
             {/* Banner Section */}
-            <div className="banner-section" style={{ padding: '50px 0 20px', width: '90%', margin: 'auto' }}>
-                <div className="banner-image" style={{ position: 'relative' }}>
-                    <img src={practiceBanner} alt="Practices Banner" style={{ width: '100%', height: 'auto' }} />
-                    <div className="banner-text values">
-                        <h1>Practices</h1>
-                    </div>
-                </div>
-            </div>
+            <Banner image={practiceBanner} text="Practice" />
 
             {/* Practice Intro */}
             <div className="section practice-intro">
