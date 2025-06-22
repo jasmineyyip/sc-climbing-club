@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { collection, getDocs } from "firebase/firestore";
+import { collection, getDocs, query, where } from "firebase/firestore";
 import { db } from "../firebase";
 import mapImage from '../assets/us-map.png';
+import placeholderImage from '../assets/trips/placeholder.png'
 import "./Map.css";
 
 const Map = () => {
@@ -13,8 +14,9 @@ const Map = () => {
   useEffect(() => {
     const fetchLocations = async () => {
       try {
-        const locationsRef = collection(db, "trips");
-        const snapshot = await getDocs(locationsRef);
+        const tripsRef = collection(db, "trips");
+        const q = query(tripsRef, where("showOnMap", "==", true));
+        const snapshot = await getDocs(q);
   
         const data = snapshot.docs.map(doc => {
           const d = doc.data();
@@ -23,24 +25,24 @@ const Map = () => {
             name: d.tripName,
             place: d.location,
             description: d.description,
-            imageURL: d.coverPicture,
-            nickname: d.tripName.split(" ")[0],
+            imageURL: d.coverPicture || placeholderImage,
+            nickname: d.nickName,
             x: d.x,
-            y: d.y
+            y: d.y,
           };
         });
   
+        console.log("Fetched trips for map:", data); // ✅ DEBUG
         setLocations(data);
         if (data.length > 0) setSelectedLocation(data[0]);
       } catch (err) {
-        console.error("Error fetching locations:", err);
+        console.error("Error fetching map locations:", err);
       }
     };
   
     fetchLocations();
   }, []);
   
-
   const handleNavigate = () => {
     navigate("/trips", { state: { searchQuery: selectedLocation.nickname } });
   };
