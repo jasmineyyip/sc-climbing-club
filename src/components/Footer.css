@@ -49,33 +49,37 @@
     display: flex;
 }
 
-.left-column, .right-column {
+.left-column,
+.right-column {
     padding: 30px;
     width: 50%;
 }
 
-.left-column p, .right-column p {
+.left-column p,
+.right-column p {
     color: white;
     font-weight: 700;
     margin: 4px 0;
     font-size: 14px;
 }
 
-.left-column a, .right-column a {
+.left-column a,
+.right-column a {
     display: block;
     text-decoration: none;
     color: #B0B0B0;
     font-size: 14px;
     padding: 2px 0;
     font-weight: 600;
-  }
+}
 
 
 .right-column .row {
     display: flex;
 }
 
-.right-column .row .footer-email, .right-column .row .footer-insta {
+.right-column .row .footer-email,
+.right-column .row .footer-insta {
     color: #B0B0B0;
     padding: 4px 17px 2px 0px;
 }
@@ -93,5 +97,55 @@
     color: #cecece;
     font-size: 14px;
     font-weight: 600;
-}   
-  
+}
+
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        width: 90%;
+    }
+
+    .left-panel {
+        width: 100%;
+        margin: 30px auto 0;
+        text-align: center;
+    }
+
+    .right-panel {
+        width: 100%;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .socials.footer {
+        padding-top: 10px;
+    }
+
+    .right-content {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        width: 100%;
+        margin: 0;
+    }
+
+    .left-column,
+    .right-column {
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    .right-column .row {
+        justify-content: center;
+    }
+
+    .liner-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .liner p {
+        margin: 10px 0;
+    }
+}

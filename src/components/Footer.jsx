@@ -34,10 +34,10 @@ const Footer = () => {
                         <div className="right-content">
                             <div className="left-column">
                                 <p>Other Links</p>
-                                <a>
+                                <a href="https://touchstoneclimbing.com/" target="_blank">
                                     Touchstone Climbing
                                 </a>
-                                <a>
+                                <a href="https://docs.google.com/document/d/1a2vJdkbxeVFga0kF3JgXIvISwtCA7QrupeirRYBP7q8/edit?tab=t.0" target="_blank">
                                     DEI and Resources Guide
                                 </a>
                             </div>
@@ -45,7 +45,9 @@ const Footer = () => {
                                 <p>Contact Us</p>
                                 <div className="row">
                                     <FontAwesomeIcon icon={faInstagram} className="footer-insta" />
-                                    <a>@trojanclimbing</a>
+                                    <a href="https://www.instagram.com/trojanclimbing/" target="_blank">
+                                        @trojanclimbing
+                                    </a>
                                 </div>
                                 <div className="row">
                                     <FontAwesomeIcon icon={faEnvelope} className="footer-email" />
@@ -58,7 +60,7 @@ const Footer = () => {
                 <div className="liner">
                     <div className="liner-content">
                         <p>© 2025 USC Climbing Team</p>
-                        <p>Privacy Notice | Notice of Non-Discrimination | Digital Accessibility</p>
+                        <p>Made by Jasmine Yip, Social & DEI Chair</p>
                     </div>
                 </div>
             </div>
