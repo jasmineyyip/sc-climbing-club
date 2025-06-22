@@ -15,6 +15,7 @@ import value3 from '../assets/values/value-3.png';
 // social logos
 import gformsLogo from '../assets/membership/socials/gforms.png';
 
+// styling
 import './ValuesPage.css';
 import '../components/CardGrid.css';
 

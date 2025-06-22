@@ -1,5 +1,5 @@
 .section {
-  padding: 20px 0;
+  padding: 60px 0;
   text-align: center;
 }
 
@@ -149,11 +149,18 @@
 
 /* Responsive */
 @media (max-width: 1000px) {
+  .section {
+    padding: 20px 0;  
+  }
   .perks-container {
-    width: min-content;
+    width: 80%;
   }
 
   .perks-detail {
+    width: 100%;
+  }
+
+  .perks-grid {
     display: none;
   }
 

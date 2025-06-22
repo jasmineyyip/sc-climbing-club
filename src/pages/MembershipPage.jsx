@@ -1,9 +1,13 @@
 import React, { useState } from 'react';
 import Header from "../components/Header";
+import Banner from '../components/Banner'
 import Footer from "../components/Footer";
 import StepCard from '../components/StepCard';
 import './MembershipPage.css';
 import '../components/CardGrid.css';
+
+// images
+import membershipBanner from '../assets/banners/membershipbanner.png';
 
 // font awesome
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -35,8 +39,9 @@ const MembershipPage = () => {
   return (
     <div className="home">
       <Header />
-      <h1 className='subheading big'>Membership</h1>
-      <div className="perks-section">
+      <Banner image={membershipBanner} text="Membership" />
+      <div className="section">
+        <h1 className="subheading">Membership Perks</h1>
         <div className="perks-container">
           {/* Left Side */}
           <div className="perks-detail">
