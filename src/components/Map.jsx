@@ -1,88 +1,61 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import mapImage from '../assets/us-map.png'
+import { collection, getDocs } from "firebase/firestore";
+import { db } from "../firebase";
+import mapImage from '../assets/us-map.png';
 import "./Map.css";
 
-// trips
-import redRockImg from '../assets/trips/redrocks.png'
-import bishopImg from '../assets/trips/bishop.jpeg'
-import cdmImg from '../assets/trips/coronadelmar.jpeg'
-import malibuImg from '../assets/trips/malibucreek.png'
-import pointDumeImg from '../assets/trips/pointdume.jpg'
-
-// list of trip locations with x, y coordinates
-const locations = [
-  {
-    id: 1,
-    name: "Red Rock Canyon",
-    place: "Las Vegas, NV",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-    nickname: "Red Rock",
-    image: redRockImg,
-    x: 52.5,
-    y: 56
-  },
-  {
-    id: 2,
-    name: "Bishop",
-    place: "Bishop, CA",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-    nickname: "Bishop",
-    image: bishopImg,
-    x: 31,
-    y: 40
-  },
-  {
-    id: 3,
-    name: "Corona Del Mar",
-    place: "Newport Beach, CA",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-    nickname: "Corona Del Mar",
-    image: cdmImg,
-    x: 32,
-    y: 70
-  },
-  {
-    id: 4,
-    name: "Malibu Creek",
-    place: "Malibu, CA",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-    nickname: "Malibu Creek",
-    image: malibuImg,
-    x: 26,
-    y: 64
-  },
-  {
-    id: 5,
-    name: "Point Dume",
-    place: "Malibu, CA",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-    nickname: "Point Dume",
-    image: pointDumeImg,
-    x: 27,
-    y: 65
-  }
-]
-
 const Map = () => {
-  const [selectedLocation, setSelectedLocation] = useState(locations[0]); // default location
+  const [locations, setLocations] = useState([]);
+  const [selectedLocation, setSelectedLocation] = useState(null);
   const navigate = useNavigate();
+
+  useEffect(() => {
+    const fetchLocations = async () => {
+      try {
+        const locationsRef = collection(db, "trips");
+        const snapshot = await getDocs(locationsRef);
+  
+        const data = snapshot.docs.map(doc => {
+          const d = doc.data();
+          return {
+            id: doc.id,
+            name: d.tripName,
+            place: d.location,
+            description: d.description,
+            imageURL: d.coverPicture,
+            nickname: d.tripName.split(" ")[0],
+            x: d.x,
+            y: d.y
+          };
+        });
+  
+        setLocations(data);
+        if (data.length > 0) setSelectedLocation(data[0]);
+      } catch (err) {
+        console.error("Error fetching locations:", err);
+      }
+    };
+  
+    fetchLocations();
+  }, []);
+  
 
   const handleNavigate = () => {
     navigate("/trips", { state: { searchQuery: selectedLocation.nickname } });
   };
 
+  if (!selectedLocation) return null; // or loading spinner
+
   return (
     <div className="map-container">
-      {/* Left Panel - Detail Box */}
       <div className="details-box">
-        <img src={selectedLocation.image} alt={selectedLocation.name} className="location-image" />
+        <img src={selectedLocation.imageURL} alt={selectedLocation.name} className="location-image" />
         <div className="location-info">
           <div className="location-header">
             <span className="location-name">{selectedLocation.name}</span>
             <span className="location-place">{selectedLocation.place}</span>
           </div>
-          <p className="location-description">{selectedLocation.description}</p>
           <button className="button-text-var2" onClick={handleNavigate}>
             View {selectedLocation.nickname} trips
           </button>
@@ -104,7 +77,7 @@ const Map = () => {
           />
         ))}
       </div>
-    </div >
+    </div>
   );
 };
 
