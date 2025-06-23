@@ -60,7 +60,7 @@ const Footer = () => {
                 <div className="liner">
                     <div className="liner-content">
                         <p>© 2025 USC Climbing Team</p>
-                        <p>Made by Jasmine Yip, Social & DEI Chair</p>
+                        <p>Made by <a href="https://www.linkedin.com/in/jasmine-yyy/" target='_blank'>Jasmine Yip</a>, Social & DEI Chair</p>
                     </div>
                 </div>
             </div>
