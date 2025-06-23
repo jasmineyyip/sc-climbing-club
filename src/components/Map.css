@@ -62,6 +62,7 @@ a.state:hover {
 
 .location-name {
     font-size: 32px;
+    line-height: 36px;
     font-family: "Thunder LC", sans-serif;
     text-transform: uppercase;
     font-weight: 400;
