@@ -1,5 +1,7 @@
-.section.comp-intro, .section.comp-plan, .section.comp-membership {
-    width: 70%;
+.section.comp-intro,
+.section.comp-plan,
+.section.season-timeline {
+    width: 80%;
     padding-bottom: 0;
 }
 
@@ -15,8 +17,9 @@
     padding-bottom: 100px;
 }
 
-@media (max-width: 530px) {
-    .section.comp-membership {
-        width: 90%;
+@media (max-width: 400px) {
+    .card-number-wrapper {
+        min-width: 0px;
+        padding-right: 20px;
     }
 }

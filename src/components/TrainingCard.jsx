@@ -20,17 +20,19 @@ const TrainingCard = ({ step, title, tag, detail, motivation }) => {
 
     return (
         <div className="training-card">
-            <div className="card-number-wrapper">
-                <div className="card-number">{step}</div>
-            </div>
-
-            <div className="card-content">
-                <div className="card-header">
-                    <h3 className="card-title">{title}</h3>
-                    {tag && <p className="card-time">{tag}</p>}
+            <div className="card-top">
+                <div className="card-number-wrapper">
+                    <div className="card-number">{step}</div>
                 </div>
-                <div className="card-detail">
-                    {renderSection(detail)}
+
+                <div className="card-content">
+                    <div className="card-header">
+                        <h3 className="card-title">{title}</h3>
+                        {tag && <p className="card-time">{tag}</p>}
+                    </div>
+                    <div className="card-detail">
+                        {renderSection(detail)}
+                    </div>
                 </div>
             </div>
 
