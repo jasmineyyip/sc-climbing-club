@@ -82,7 +82,7 @@ const MembershipPage = () => {
       </div>
 
       <div className="section">
-        <h1 className="subheading">How to become a member</h1>
+        <h1 className="subheading">How to sign up</h1>
         <div className="card-grid step-cards">
           {/* Step 1 */}
           <StepCard

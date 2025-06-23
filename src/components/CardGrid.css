@@ -6,7 +6,7 @@
     justify-content: flex-start;
     width: calc(3 * 340px + 2 * 20px);
     margin: auto;
-    margin-bottom: 100px;
+    margin-bottom: 60px;
 }
 
 .card-grid {

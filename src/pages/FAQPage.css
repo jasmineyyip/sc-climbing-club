@@ -45,5 +45,6 @@ span.chevron {
     
     .faq-container {
         width: 80%;
+        margin-bottom: 60px;
     }
 }
