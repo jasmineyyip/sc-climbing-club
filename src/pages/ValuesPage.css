@@ -66,8 +66,9 @@
 .aff-groups {
     display: flex;
     flex-wrap: wrap;
+    max-width: 1008px;
     justify-content: flex-start;
-    margin-top: 40px;
+    margin: 40px auto 0px;
     gap: 10px;
 }
 
