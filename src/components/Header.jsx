@@ -7,28 +7,28 @@ import { NavLink } from 'react-router-dom';
 
 const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
-    
+
     return (
         <>
             <header className="header">
-                <div className="logo">
-                    <img src={logo} alt="Club Logo" />
+                <div className="header-inner">
+                    <div className="logo">
+                        <img src={logo} alt="Club Logo" />
+                    </div>
+                    <nav className="nav desktop-nav">
+                        <NavLink to="/" className={({ isActive }) => isActive ? "active" : ""}>Home</NavLink>
+                        <NavLink to="/values" className={({ isActive }) => isActive ? "active" : ""}>Values</NavLink>
+                        <NavLink to="/membership" className={({ isActive }) => isActive ? "active" : ""}>Membership</NavLink>
+                        <NavLink to="/practice" className={({ isActive }) => isActive ? "active" : ""}>Practice</NavLink>
+                        <NavLink to="/trips" className={({ isActive }) => isActive ? "active" : ""}>Trips</NavLink>
+                        <NavLink to="/comp-team" className={({ isActive }) => isActive ? "active" : ""}>Comp Team</NavLink>
+                        <NavLink to="/resources" className={({ isActive }) => isActive ? "active" : ""}>Resources</NavLink>
+                        <NavLink to="/faq" className={({ isActive }) => isActive ? "active" : ""}>FAQ</NavLink>
+                    </nav>
+                    <div className="hamburger" onClick={() => setIsMenuOpen(true)}>
+                        <FontAwesomeIcon icon={faBars} />
+                    </div>
                 </div>
-
-                <div className="hamburger" onClick={() => setIsMenuOpen(true)}>
-                    <FontAwesomeIcon icon={faBars} />
-                </div>
-
-                <nav className="nav desktop-nav">
-                    <NavLink to="/" className={({ isActive }) => isActive ? "active" : ""}>Home</NavLink>
-                    <NavLink to="/values" className={({ isActive }) => isActive ? "active" : ""}>Values</NavLink>
-                    <NavLink to="/membership" className={({ isActive }) => isActive ? "active" : ""}>Membership</NavLink>
-                    <NavLink to="/practice" className={({ isActive }) => isActive ? "active" : ""}>Practice</NavLink>
-                    <NavLink to="/trips" className={({ isActive }) => isActive ? "active" : ""}>Trips</NavLink>
-                    <NavLink to="/comp-team" className={({ isActive }) => isActive ? "active" : ""}>Comp Team</NavLink>
-                    <NavLink to="/resources" className={({ isActive }) => isActive ? "active" : ""}>Resources</NavLink>
-                    <NavLink to="/faq" className={({ isActive }) => isActive ? "active" : ""}>FAQ</NavLink>
-                </nav>
             </header>
 
             <div className={`mobile-menu ${isMenuOpen ? 'open' : ''}`}>

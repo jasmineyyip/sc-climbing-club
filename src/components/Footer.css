@@ -96,7 +96,11 @@
     margin: 20px;
     color: #cecece;
     font-size: 14px;
-    font-weight: 600;
+}
+
+.liner a {
+    color: #cecece;
+    text-decoration: underline;
 }
 
 @media (max-width: 768px) {
