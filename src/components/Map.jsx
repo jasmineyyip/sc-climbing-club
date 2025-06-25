@@ -58,9 +58,9 @@ const Map = () => {
             <span className="location-name">{selectedLocation.name}</span>
             <span className="location-place">{selectedLocation.place}</span>
           </div>
-          <button className="button-text-var2" onClick={handleNavigate}>
+          {/* <button className="button-text-var2" onClick={handleNavigate}>
             View {selectedLocation.nickname} trips
-          </button>
+          </button> */}
         </div>
       </div>
 

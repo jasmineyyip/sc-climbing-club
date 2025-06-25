@@ -401,15 +401,11 @@ p.subtitle {
     }
 
     .map-container {
-        width: 95% !important;
+        width: 100% !important;
     }
 
     span.location-name {
         font-size: 30px;
-    }
-
-    span.location-place {
-        display: none;
     }
 
     .details-box {
