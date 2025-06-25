@@ -27,7 +27,7 @@ const CompTeamPage = () => {
             <div className="section comp-intro">
                 <h1 className="subheading">Represent USC and Compete With Us!</h1>
                 <p className="body">
-                    We're proud members of the <a target="_blank" href="https://docs.google.com/document/d/1p0O-tDTGiCVvzbG2ybF-bzRQfY_c-NnT282hOMla6zs/edit?tab=t.0">West Coast Division</a>, covering California, Idaho, Nevada, Oregon, Washington, Alaska, and Hawaii!
+                    We're proud members of the <a target="_blank" href="https://usaclimbing.org/compete/collegiate-west-coast-division/">West Coast Division</a>, covering California, Idaho, Nevada, Oregon, Washington, Alaska, and Hawaii!
                     Being in such a central region means most competitions are nearby — giving you a strong chance to represent USC without major travel barriers.
                 </p>
             </div>

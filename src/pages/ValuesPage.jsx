@@ -92,25 +92,21 @@ const ValuesPage = () => {
                             <div className="emoji">🌈</div>
                             <h3>Queer Climbers</h3>
                             <p>Celebrate and connect with fellow LGBTQ+ climbers.</p>
-                            <a href="#">Join Slack →</a>
                         </div>
                         <div className="aff-group-card">
                             <div className="emoji">💪🏽</div>
                             <h3>Womxn Climbers</h3>
                             <p>Empowering all who identify as womxn through climbing.</p>
-                            <a href="#">Join Slack →</a>
                         </div>
                         <div className="aff-group-card">
                             <div className="emoji">🧕🏾</div>
                             <h3>BIPOC Climbers</h3>
                             <p>Creating space for Black, Indigenous, and People of Color.</p>
-                            <a href="#">Join Slack →</a>
                         </div>
                         <div className="aff-group-card">
                             <div className="emoji">🌍</div>
                             <h3>International Climbers</h3>
                             <p>New to USC? Let’s climb and build community together.</p>
-                            <a href="#">Join Slack →</a>
                         </div>
                     </div>
                 </div>
@@ -174,7 +170,7 @@ const ValuesPage = () => {
                                 infoCards={[
                                     {
                                         logo: gformsLogo,
-                                        name: "Proof of the Charge Form",
+                                        name: "Proof of Charge Form",
                                         link: "https://forms.gle/P7nMk32Q4PWTBhiC9"
                                     }
                                 ]}

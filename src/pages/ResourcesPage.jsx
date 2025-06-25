@@ -14,6 +14,8 @@ const resources = [
             { label: 'DEI and Resources Guide', url: 'https://docs.google.com/document/d/1a2vJdkbxeVFga0kF3JgXIvISwtCA7QrupeirRYBP7q8/edit?tab=t.0' },
             { label: 'Spring 2025 Info Session', url: 'https://docs.google.com/presentation/d/1ZupobUWELqoVj56yf3SojFpzvZfqwZixTd5Sk5t39Pg/edit?slide=id.gcec4d27072_0_0' },
             { label: 'Reimbursements', url: 'https://docs.google.com/forms/d/e/1FAIpQLScWKHCQEYnkqt9Per4Ch9U_a4kThTETMA3lE1-ki8IY9CMMwA/viewform' },
+            { label: 'Scholarship Application Form', url: 'https://forms.gle/9ZvqNM9556eZf9SC6' },
+            { label: 'Scholarship Proof of Charge Form', url: 'https://forms.gle/P7nMk32Q4PWTBhiC9' },
         ],
     },
     {

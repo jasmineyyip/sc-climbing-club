@@ -25,7 +25,7 @@ const faqs = [
     },
     {
         question: 'What gear do I need to apply to trips?',
-        answer: 'We only require that you have your own climbing shoes! Besides that we can provide crash pads, ropes, and harnesses. For overnight trips, we recommend that you have our own sleeping bag and pad, but we also have a few extra of those, so not having those, should not deter you from applying for trips. ',
+        answer: 'We only require that you have your own climbing shoes! Besides that we can provide crash pads, ropes, and harnesses. For overnight trips, we recommend you bring your own sleeping bag and sleeping pad. Other members may have extra gear to spare, but it’s never guaranteed. Be sure to ask around ahead of time if you are interested in an overnight trip but don’t have any gear!',
     },
     {
         question: 'What climbing shoes should I get?',
