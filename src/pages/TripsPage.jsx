@@ -92,7 +92,7 @@ const TripsPage = () => {
   };
 
   // available filter options
-  const filterTags = ["Beginner", "Queer", "Top Rope", "Bouldering", "Lead"];
+  const filterTags = ["Beginner", "Queer", "BIPOC", "Top Rope", "Bouldering", "Lead"];
 
   if (loading) {
     return <p></p>;
