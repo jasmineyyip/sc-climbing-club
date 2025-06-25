@@ -139,8 +139,31 @@
 }
 
 @media (max-width: 703px) {
+    .value-section {
+        width: 80%;
+        margin: auto;
+        padding: 0;
+    }
+
+    .value-container,
+    .dei-section,
+    .scholarships-intro-text {
+        width: 90%;
+    }
+    
     .aff-groups {
-        max-width: calc(241px);
+        max-width: 1000px;
+    }
+
+    .aff-group-card {
+        max-width: 1000px;
+        width: 100%;
+        text-align: left;
+        transition: transform 0.2s ease-in-out;
+    }
+
+    .aff-group-card .emoji {
+        margin-bottom: 0;
     }
 }
 
@@ -149,14 +172,12 @@
         display: none;
     }
 
-    .value-section {
-        padding-top: 0;
+    .dei-intro {
+        width: 100%;
     }
 
-    .value-container,
-    .dei-section,
-    .dei-intro,
-    .scholarships-intro-text {
+    .dei-intro-text {
+        margin: auto;
         width: 90%;
     }
 

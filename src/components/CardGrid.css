@@ -25,10 +25,12 @@
 
 @media (max-width: 768px) {
     .card-grid.step-cards {
-        max-width: calc(1 * 323px);
+        width: 100%;
     }
 
     .step-card {
+        width: 100%;
+        margin: auto;
         height: auto;
     }
 }

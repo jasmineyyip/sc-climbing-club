@@ -88,6 +88,7 @@
 }
 
 .section.welcome {
+    width: 90%;
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -155,7 +156,6 @@ p.subtitle {
     margin: auto;
     font-size: 18px;
     line-height: 1.6em;
-    width: 90%;
     color: #5c5c5c;
 }
 
@@ -388,6 +388,7 @@ p.subtitle {
 
     .rect {
         width: 90%;
+        margin: auto;
         height: auto;
     }
 

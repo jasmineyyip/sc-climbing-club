@@ -119,4 +119,21 @@
     .search-bar {
         width: calc(1 * 363px - 40px);
     }
+
+    .section.trips-intro {
+        width: 80%;
+    }
+
+    .section.past-trips {
+        width: 90%;
+        margin: auto;
+    }
+
+    .trips-list {
+        width: 100%;
+    }
+
+    .trip-card {
+        width: 100%;
+    }
 }

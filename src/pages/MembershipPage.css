@@ -156,6 +156,7 @@
   .section {
     padding: 20px 0;  
   }
+
   .perks-container {
     width: 80%;
   }
@@ -172,5 +173,11 @@
   .tiny-card {
     color: #1e1e21;
     background-color: #f4f3ee;
+  }
+}
+
+@media (max-width: 703px) {
+  .section.sign-up-steps {
+      width: 90%;
   }
 }
