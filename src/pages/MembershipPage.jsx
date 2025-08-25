@@ -26,7 +26,7 @@ const joinItems = [
   { text: 'FREE outdoor trips every weekend', icon: faCampground, desc: 'We organize free outdoor trips every weekend - from local LA crags all the way to Nevada, Utah, and Arizona!' },
   { text: 'Monthly scholarships', icon: faAward, desc: 'We offer monthly scholarships to help reduce the barrier to access to climbing' },
   { text: 'Gear discounts from sponsors', icon: faTags, desc: 'Gear discounts from our sponsors (often free and highly discounted!)' },
-  { text: 'Refunded $50 Cliffs of Id initiation fee', icon: faMoneyBillWave, desc: 'We refund the $50 initiation fee at Cliffs of Id, the gym we train at! It’s cheaper to pay our $30 dues and get the initiation fee waived than to go to Cliffs on your own!' },
+  { text: 'Refunded $50 Cliffs of Id initiation fee', icon: faMoneyBillWave, desc: 'We refund the $50 initiation fee at Cliffs of Id, the gym we train at! It’s cheaper to pay our $45 dues and get the initiation fee waived than to go to Cliffs on your own!' },
   { text: 'Gear lending program', icon: faToolbox, desc: 'Need gear for a trip? Borrow from us at no cost.' },
   { text: 'Social events', icon: faPeopleGroup, desc: 'We organize social events throughout the semester - mixers, formals, bonfires, poker nights, and more!' },
   { text: 'Free team gear and merch', icon: faShirt, desc: 'Get free USC Climbing merch including t-shirts, stickers, and more!' },
@@ -93,7 +93,7 @@ const MembershipPage = () => {
               {
                 logo: slackLogo,
                 name: "Slack",
-                link: "https://scclimbingclub.slack.com/ssb/redirect"
+                link: "https://join.slack.com/t/scclimbingclub/shared_invite/zt-3bz5w8mc4-qI0ayiRF8phkj8qyFbzvJQ"
               }
             ]}
           />
@@ -102,7 +102,7 @@ const MembershipPage = () => {
           <StepCard
             step="2"
             title="Pay Dues"
-            detail="Pay $30 dues on either Venmo or Zelle. This helps us keep trips and events running!"
+            detail="Pay $45 dues on either Venmo or Zelle. This helps us keep trips and events running!"
             infoCards={[
               {
                 logo: venmoLogo,
