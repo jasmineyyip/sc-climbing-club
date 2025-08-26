@@ -134,7 +134,7 @@ const MembershipPage = () => {
           />
 
           {/* Step 4 */}
-          <StepCard
+          {/* <StepCard
             step="4"
             title="IM League Registration"
             tag="For trips & competition"
@@ -146,11 +146,11 @@ const MembershipPage = () => {
                 link: "https://myrecsports.usc.edu/Membership/Index"
               }
             ]}
-          />
+          /> */}
 
-          {/* Step 5 */}
+          {/* Step 4 */}
           <StepCard
-            step="5"
+            step="4"
             title="Come to Practice"
             detail={[
               "Monday: 7:00pm–9:00pm",
