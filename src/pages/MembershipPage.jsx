@@ -153,8 +153,9 @@ const MembershipPage = () => {
             step="4"
             title="Come to Practice"
             detail={[
-              "Monday: 7:00pm–9:00pm",
-              "Tuesday (Comp Team): 6:00pm–8:00pm",
+              // "Monday: 7:00pm–9:00pm",
+              "Tuesday: 7:30pm–9:30pm",
+              // "Tuesday (Comp Team): TBC",
               "Thursday 7:30pm–9:30pm",
               "No cars? No worries! Check out #carpool channel on Slack and ask for a ride."
             ]}

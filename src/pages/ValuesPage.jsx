@@ -136,7 +136,7 @@ const ValuesPage = () => {
                                     {
                                         logo: gformsLogo,
                                         name: "Scholarship Application Form",
-                                        link: "https://forms.gle/9ZvqNM9556eZf9SC6"
+                                        link: "https://docs.google.com/forms/d/e/1FAIpQLSf8xgqzGMsZMFsczpo20qQqOb3AEu8ydBnaL7h0XfMd_EjAHA/viewform?usp=header"
                                     }
                                 ]}
                             />

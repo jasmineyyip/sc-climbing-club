@@ -22,7 +22,7 @@ const PracticePage = () => {
             <div className="section practice-intro">
                 <h1 className="subheading">Join Our Practices</h1>
                 <p className="body">
-                Our club practices Monday (7-9pm) and Thursday (7:30-9:30) at Cliffs of Id in Culver City. Practices are open to all skill levels, from first-time climbers to seasoned veterans.
+                Our club practices Tuesday (7:30-9:30pm) and Thursday (7:30-9:30) at Cliffs of Id in Culver City. Practices are open to all skill levels, from first-time climbers to seasoned veterans.
                 </p>
                 <p className="body">
                 While practices are optional, if you want to get involved with the climbing team, practices are the best way to make friends since we go to the gym so consistently. 
