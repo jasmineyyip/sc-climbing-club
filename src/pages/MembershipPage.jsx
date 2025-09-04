@@ -93,7 +93,7 @@ const MembershipPage = () => {
               {
                 logo: slackLogo,
                 name: "Slack",
-                link: "https://join.slack.com/t/scclimbingclub/shared_invite/zt-3bz5w8mc4-qI0ayiRF8phkj8qyFbzvJQ"
+                link: "https://join.slack.com/t/scclimbingclub/shared_invite/zt-3chfr2ncn-AuZZb9rnEe~a6ScbzrmY1w"
               }
             ]}
           />
