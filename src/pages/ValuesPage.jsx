@@ -171,7 +171,7 @@ const ValuesPage = () => {
                                     {
                                         logo: gformsLogo,
                                         name: "Proof of Charge Form",
-                                        link: "https://forms.gle/P7nMk32Q4PWTBhiC9"
+                                        link: "https://docs.google.com/forms/d/e/1FAIpQLSc2gWq1cpA1YzQcXreDdqLsxG6Bn5o7g6QKx3H0Q-K-i-uEiA/viewform?usp=header"
                                     }
                                 ]}
                             />

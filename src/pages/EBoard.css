@@ -1,0 +1,146 @@
+/* Container + sections (kept similar to your Trips styles) */
+.eboard-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.section.eboard-intro {
+  width: 70%;
+  margin: auto;
+  padding-bottom: 32px;
+}
+
+.section.eboard-list {
+  width: 70%;
+  margin: 0 auto 100px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Card layout */
+.eboarder-card {
+  display: flex;
+  gap: 40px;
+  padding: 30px;
+  border: 1.5px solid #e5e5e5;
+  border-radius: 16px;
+  background-color: #ffffff;
+  align-items: flex-start;
+}
+
+/* Photo: fixed square, cover */
+.eboarder-photo-wrap {
+  width: 160px;
+  height: 160px;
+  flex: 0 0 160px;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #f7f7f7;
+}
+
+.eboarder-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* ensures square cover crop */
+  display: block;
+}
+
+/* Right side content */
+.eboarder-content {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1 1 auto;
+  text-align: left;
+}
+
+.eboarder-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+}
+
+.eboarder-name {
+  margin: 0;
+  font-size: 28px;
+  line-height: 1.6;
+  color: #1e1e21;
+  font-weight: 700;
+}
+
+.eboarder-position {
+  font-size: 12px;
+  padding: 4px 8px 2px 8px;
+  border-radius: 6px;
+  background-color: #FFCC02;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  top: -2px;
+}
+
+.eboarder-intro {
+  margin: 0;
+  color: #333338;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* Loading + empty */
+.eboard-loading {
+  text-align: center;
+  padding: 24px 0;
+  font-size: 16px;
+  color: #5c5c5c;
+}
+
+.no-results {
+  text-align: center;
+  font-size: 18px;
+  color: #5c5c5c;
+  margin-top: 10px;
+}
+
+/* Responsiveness */
+@media (max-width: 1100px) {
+  .section.eboard-intro,
+  .section.eboard-list {
+    width: 80%;
+  }
+}
+
+@media (max-width: 800px) {
+  .section.eboard-intro {
+    width: 85%;
+  }
+  .section.eboard-list {
+    width: 90%;
+  }
+
+  .eboarder-card {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .eboarder-photo-wrap {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1; /* keeps it square on mobile while filling width */
+    flex: none;
+  }
+
+  .eboarder-header {
+    gap: 8px;
+  }
+
+  .eboarder-name {
+    font-size: 20px;
+  }
+
+  .eboarder-intro {
+    font-size: 15px;
+  }
+}

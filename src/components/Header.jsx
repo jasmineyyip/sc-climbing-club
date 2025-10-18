@@ -18,6 +18,7 @@ const Header = () => {
                     <nav className="nav desktop-nav">
                         <NavLink to="/" className={({ isActive }) => isActive ? "active" : ""}>Home</NavLink>
                         <NavLink to="/values" className={({ isActive }) => isActive ? "active" : ""}>Values</NavLink>
+                        <NavLink to="/eboard" className={({ isActive }) => isActive ? "active" : ""}>EBoard</NavLink>
                         <NavLink to="/membership" className={({ isActive }) => isActive ? "active" : ""}>Membership</NavLink>
                         <NavLink to="/practice" className={({ isActive }) => isActive ? "active" : ""}>Practice</NavLink>
                         <NavLink to="/trips" className={({ isActive }) => isActive ? "active" : ""}>Trips</NavLink>
@@ -38,6 +39,7 @@ const Header = () => {
                 <nav className="mobile-nav">
                     <NavLink to="/" end onClick={() => setIsMenuOpen(false)}>Home</NavLink>
                     <NavLink to="/values" onClick={() => setIsMenuOpen(false)}>Values</NavLink>
+                    <NavLink to="/eboard" onClick={() => setIsMenuOpen(false)}>EBoard</NavLink>
                     <NavLink to="/membership" onClick={() => setIsMenuOpen(false)}>Membership</NavLink>
                     <NavLink to="/practice" onClick={() => setIsMenuOpen(false)}>Practice</NavLink>
                     <NavLink to="/trips" onClick={() => setIsMenuOpen(false)}>Trips</NavLink>
