@@ -24,7 +24,7 @@ const Footer = () => {
                             <a href="https://www.instagram.com/trojanclimbing/" target="_blank" rel="noopener noreferrer">
                                 <FontAwesomeIcon icon={faInstagram} />
                             </a>
-                            <a href="https://join.slack.com/t/scclimbingclub/shared_invite/zt-3chfr2ncn-AuZZb9rnEe~a6ScbzrmY1w" target="_blank" rel="noopener noreferrer">
+                            <a href="https://join.slack.com/t/scclimbingclub/shared_invite/zt-3nijqfgea-Nq6944vGaI6OkEbBLRWMyQ" target="_blank" rel="noopener noreferrer">
                                 <FontAwesomeIcon icon={faSlack} />
                             </a>
                         </div>                  
